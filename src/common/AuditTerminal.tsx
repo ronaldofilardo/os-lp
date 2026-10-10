@@ -10,7 +10,7 @@ const auditLines = [
 export function AuditTerminal(): JSX.Element {
   return (
     <section className="w-full py-space-xl" id="auditoria">
-      <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+      <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="flex flex-col gap-space-xs max-w-2xl mb-space-lg">
           <span className="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Telemetria e Diagnóstico</span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface">

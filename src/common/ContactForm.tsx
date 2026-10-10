@@ -1,6 +1,8 @@
+'use client'
+
 import { useContactForm } from '@/hooks'
 
-export function ContactForm(): JSX.Element {
+export function ContactForm(): React.JSX.Element {
   const { formData, isSubmitting, submitError, submitSuccess, handleChange, handleSubmit } = useContactForm()
 
   const interestOptions = [

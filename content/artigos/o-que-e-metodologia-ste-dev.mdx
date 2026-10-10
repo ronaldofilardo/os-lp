@@ -1,0 +1,51 @@
+---
+title: "O que é a Metodologia STE-DEV: Engenharia de Software Preventiva"
+description: "STE-DEV é a metodologia de engenharia preventiva da Omni Sistemas, baseada na norma aeroespacial ASD-STE100. Entenda os 4 pilares e como ela elimina dívida técnica na origem."
+slug: "o-que-e-metodologia-ste-dev"
+datePublished: "2025-06-01"
+dateModified: "2026-10-10"
+author: "Omni Sistemas"
+tags: ["STE-DEV", "Engenharia Preventiva", "ASD-STE100", "Clean Architecture"]
+takeaways:
+  - "STE-DEV é a metodologia proprietária da Omni Sistemas para engenharia de software preventiva, baseada na norma aeroespacial ASD-STE100."
+  - "Opera em duas frentes: DEV (desenvolvimento preventivo) e Engenharia Reversa para Auditorias de sistemas legados."
+  - "Regra fundamental: se um arquivo exigir refatoração posterior, ele não deve ser gerado dessa forma."
+  - "Módulos atômicos com menos de 100 linhas, tipagem zero-any e vocabulário controlado são mandatórios."
+  - "Aplicada pela Omni Sistemas desde 2020 em projetos de missão crítica nos setores de saúde, finanças e enterprise."
+faq:
+  - question: "O que é a Metodologia STE-DEV?"
+    answer: "A STE-DEV é uma metodologia de Engenharia de Software Preventiva criada e adotada pela Omni Sistemas, fundamentada nas normas aeroespaciais da ASD-STE100. Ela opera em duas frentes complementares: DEV (Desenvolvimento Preventivo), que impede na origem a geração de código que exija refatoração posterior, e Engenharia Reversa para Auditorias, protocolo de inspeção para diagnosticar e modernizar sistemas legados com segurança."
+  - question: "Existe um guardião ativo de IA na metodologia?"
+    answer: "Não. Não existe guardião ativo de IA operando como bot ou interceptador autônomo. A STE-DEV é um padrão de engenharia preventiva e governança técnica executado pelos engenheiros da Omni Sistemas, estabelecendo premissas determinísticas, invariantes de arquitetura e protocolos de auditoria sem margem para ambiguidade."
+  - question: "Qual é o princípio fundamental da Engenharia Preventiva?"
+    answer: "Se o arquivo exigir refatoração posterior, ele não deve ser gerado dessa forma. A refatoração no destino é a prova cabal de uma falha de geração na origem. Desenvolvemos com modularidade atômica, tipagem forte e vocabulário sem ambiguidades desde o primeiro commit."
+---
+
+## O que é a metodologia STE-DEV?
+
+A STE-DEV é um framework de Engenharia de Software Preventiva criado e adotado pela Omni Sistemas. Ela traduz as regras da norma aeroespacial ASD-STE100 — padrão internacional de linguagem técnica simplificada — para o desenvolvimento de software, eliminando ambiguidades que geram dívida técnica. O objetivo é claro: código que nasce modular, tipado e determinístico, sem necessidade de refatoração futura.
+
+## Como a ASD-STE100 se aplica ao código?
+
+A ASD-STE100 (Simplified Technical English) foi desenvolvida pela indústria aeroespacial para eliminar erros de interpretação em manutenção de aeronaves. A Omni Sistemas aplica os mesmos princípios ao software: unicidade semântica (um conceito = um nome), proibição de termos vagos como `handle`, `process`, `manage` e `utils`, e separação rígida entre código procedimental (hooks) e descritivo (UI e utilitários). Na prática, um identificador como `calculateInvoiceTotal` é aprovado; `processData` é rejeitado.
+
+## Quais são os 4 pilares da STE-DEV?
+
+1. **Filosofia ASD-STE100 aplicada ao código** — vocabulário controlado e proibição de termos ambíguos.
+2. **Arquitetura Limpa e SOLID mandatórios** — camadas separadas (UI, Aplicação, Domínio, Infraestrutura) com Design Patterns obrigatórios: Factory, Repository, Adapter e Facade.
+3. **Desenvolvimento Preventivo (DEV)** — limite de 100 linhas por arquivo, tipagem zero-any, `try/catch` obrigatório em I/O assíncrono e separação canônica entre DB-Row e DTO.
+4. **Engenharia Reversa para Auditorias** — protocolo de inspeção com Discovery de domínio, Testes de Caracterização e Strangler Pattern.
+
+## Como funciona o desenvolvimento preventivo (DEV) na prática?
+
+O DEV opera com regras inegociáveis de geração. Cada arquivo TypeScript da Omni Sistemas respeita: complexidade ciclomática ≤ 10, módulos com menos de 100 linhas, zero uso de `any` explícito ou permissivo, e design tokens sem magic numbers. A refatoração no destino é tratada como falha de geração na origem — por isso o código nasce com contratos estritos entre camadas, usando DTOs tipados e mappers dedicados entre persistência e apresentação.
+
+## Qual a diferença entre STE-DEV e Clean Architecture tradicional?
+
+A Clean Architecture descreve a estrutura de camadas; a STE-DEV a torna verificável e mandatória. Enquanto a Clean Architecture define que dependências apontam para o domínio, a STE-DEV estabelece métricas objetivas: 0 ocorrências de `any`, 0 componentes acima de 100 linhas, 0 chamadas async sem `try/catch`. A Omni Sistemas emite laudos de conformidade com esses indicadores auditados arquivo a arquivo.
+
+## Como iniciar um projeto com STE-DEV?
+
+Conte sobre seu desafio técnico à Omni Sistemas. O retorno acontece em até 24 horas úteis com parecer preliminar ou proposta técnica para desenvolvimento novo (DEV) ou auditoria de conformidade. Para projetos novos, a metodologia é aplicada desde a primeira linha de código; para bases existentes, o ponto de entrada é a Auditoria e Engenharia Reversa.
+
+<CtaInline label="Solicitar proposta STE-DEV" />

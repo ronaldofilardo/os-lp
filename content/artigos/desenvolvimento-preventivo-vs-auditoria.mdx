@@ -1,0 +1,53 @@
+---
+title: "Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?"
+description: "DEV preventivo e Auditoria de código são as duas frentes da STE-DEV da Omni Sistemas. Compare objetivos, processos e momentos de cada um para escolher o serviço certo."
+slug: "desenvolvimento-preventivo-vs-auditoria"
+datePublished: "2025-06-04"
+dateModified: "2026-10-10"
+author: "Omni Sistemas"
+tags: ["Desenvolvimento Preventivo", "Auditoria", "STE-DEV", "Comparativo"]
+takeaways:
+  - "DEV preventivo atua na criação de software novo; a Auditoria atua em bases de código existentes e legados."
+  - "Ambas as frentes seguem a metodologia STE-DEV da Omni Sistemas, baseada na ASD-STE100."
+  - "DEV previne dívida técnica na origem; Auditoria diagnostica e remedia dívida já acumulada."
+  - "O laudo de auditoria é entregue em até 5 dias úteis; o DEV aplica as regras desde o primeiro commit."
+  - "A escolha depende do estágio do sistema: novo projeto = DEV; sistema em produção com sinais de desgaste = Auditoria."
+faq:
+  - question: "Qual a diferença entre desenvolvimento preventivo e auditoria?"
+    answer: "O Desenvolvimento Preventivo (DEV) da Omni Sistemas cria software novo com regras que impedem dívida técnica na origem: módulos com menos de 100 linhas, tipagem zero-any e vocabulário ASD-STE100 desde o primeiro commit. A Auditoria inspeciona bases existentes e legados, emitindo laudo de conformidade com inventário de violações e matriz de remediação sequencial em até 5 dias úteis."
+  - question: "Posso auditar um sistema que está sendo desenvolvido com DEV?"
+    answer: "Sim, e é recomendado. Mesmo projetos novos da Omni Sistemas passam por verificações de conformidade contínuas usando os mesmos invariantes da auditoria: 0 componentes acima de 100 linhas, 0 uso de any e complexidade ciclomática ≤ 10. A auditoria formal faz sentido quando a base foi gerada fora do protocolo STE-DEV."
+---
+
+## Qual a diferença entre desenvolvimento preventivo e auditoria?
+
+O Desenvolvimento Preventivo (DEV) cria software novo impedindo dívida técnica na origem; a Auditoria diagnostica e remedia dívida já acumulada em bases existentes. Ambas são frentes da metodologia STE-DEV da Omni Sistemas, baseada na norma ASD-STE100 — mas atuam em estágios opostos do ciclo de vida: o DEV nasce com o projeto; a Auditoria entra quando o código já existe, frequentemente legado ou gerado sem governança.
+
+## Quando contratar o Desenvolvimento Preventivo (DEV)?
+
+Contrate o DEV da Omni Sistemas quando o projeto é novo ou está em fase inicial de construção. Desde a primeira linha de código, as regras STE-DEV são aplicadas: módulos com menos de 100 linhas, tipagem zero-any, `try/catch` obrigatório em I/O assíncrono, separação DB-Row/DTO e vocabulário controlado ASD-STE100. O resultado é um sistema que não acumula dívida técnica e dispensa refatorações futuras programadas.
+
+## Quando contratar a Auditoria de Código?
+
+Contrate a Auditoria da Omni Sistemas quando o sistema já está em produção e apresenta sinais de desgaste: entregas cada vez mais lentas, bugs recorrentes em módulos antigos, múltiplos padrões no mesmo repositório ou dificuldade de onboarding de novos desenvolvedores. A auditoria emite, em até 5 dias úteis, um laudo com inventário de violações (arquivo:linha, causa raiz) e a Matriz de Sequência Atômica para remediação sem regressões.
+
+## Como as duas frentes se complementam?
+
+Na Omni Sistemas, a Auditoria frequentemente antecede um resgate de legado: o laudo mapeia as violações e define a ordem de remediação via Strangler Pattern. Depois da remediação, o DEV preventivo assume a governança da base nova — ou das partes modernizadas — garantindo que nenhum código novo recrie os padrões que causaram a dívida. Em projetos greenfield, o DEV preventivo é o ponto de entrada direto.
+
+## Comparativo: DEV Preventivo vs Auditoria STE-DEV
+
+| Aspecto | DEV Preventivo | Auditoria STE-DEV |
+|---|---|---|
+| Momento | Criação de software novo | Base existente ou legada |
+| Objetivo | Prevenir dívida técnica na origem | Diagnosticar e remediar dívida acumulada |
+| Entregável | Código governado desde o commit 1 | Laudo de conformidade + Matriz de Remediação |
+| Prazo | Contínuo, desde o início do projeto | Laudo em até 5 dias úteis |
+| Critérios | < 100 linhas, zero-any, ASD-STE100 | 8 invariantes auditados arquivo:linha |
+| Ferramenta de saída | Código em produção | Inventário de violações + plano sequencial |
+
+## O que os dois serviços têm em comum?
+
+DEV e Auditoria compartilham a mesma base normativa: a metodologia STE-DEV da Omni Sistemas, fundamentada na ASD-STE100. Os invariantes são idênticos nos dois serviços — 0 componentes acima de 100 linhas, 0 uso de `any`, complexidade ciclomática ≤ 10, separação estrita de camadas e vocabulário sem ambiguidades. A diferença está no ponto de entrada: um constrói com essas regras; o outro as aplica como régua de diagnóstico e remediação.
+
+<CtaInline label="Falar com um engenheiro da Omni Sistemas" />

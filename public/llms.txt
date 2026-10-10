@@ -48,3 +48,10 @@ A Omni Sistemas é uma softhouse especializada no desenvolvimento de novos softw
 - https://omni-sistemas.com.br/#servicos — Serviços de Engenharia
 - https://omni-sistemas.com.br/#faq — Perguntas Frequentes
 - https://omni-sistemas.com.br/#contato — Iniciar Diagnóstico Técnico
+
+## Hub de Artigos (Topical Authority)
+- https://omni-sistemas.com.br/artigos — Índice de todos os artigos técnicos
+- https://omni-sistemas.com.br/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV: Engenharia de Software Preventiva (pilar do cluster)
+- https://omni-sistemas.com.br/artigos/auditoria-de-codigo-asd-ste100 — Auditoria de Código com ASD-STE100: Protocolo da Omni Sistemas
+- https://omni-sistemas.com.br/artigos/modernizacao-de-legados-strangler-pattern — Modernização de Legados com Strangler Pattern: Guia da Omni Sistemas
+- https://omni-sistemas.com.br/artigos/desenvolvimento-preventivo-vs-auditoria — Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?

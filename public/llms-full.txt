@@ -106,3 +106,12 @@ Uma vez concluída a modernização, os novos módulos e funcionalidades (DEV) p
 - https://omni-sistemas.com.br/#servicos
 - https://omni-sistemas.com.br/#faq
 - https://omni-sistemas.com.br/#contato
+
+---
+
+## Hub de Artigos (Topical Authority)
+- https://omni-sistemas.com.br/artigos — Índice de todos os artigos técnicos
+- https://omni-sistemas.com.br/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV: Engenharia de Software Preventiva (pilar do cluster)
+- https://omni-sistemas.com.br/artigos/auditoria-de-codigo-asd-ste100 — Auditoria de Código com ASD-STE100: Protocolo da Omni Sistemas
+- https://omni-sistemas.com.br/artigos/modernizacao-de-legados-strangler-pattern — Modernização de Legados com Strangler Pattern: Guia da Omni Sistemas
+- https://omni-sistemas.com.br/artigos/desenvolvimento-preventivo-vs-auditoria — Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?

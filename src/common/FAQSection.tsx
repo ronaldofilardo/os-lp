@@ -1,12 +1,12 @@
 import { FAQ_DB } from '@/data'
-import { useFAQSchema } from '@/hooks/useFAQSchema'
+import { JsonLd } from './JsonLd'
+import { buildFaqPageSchema } from '@/lib/schemas'
 
-export function FAQSection(): JSX.Element {
-  useFAQSchema(FAQ_DB)
-
+export function FAQSection(): React.JSX.Element {
   return (
     <section className="w-full py-space-xl" id="faq">
-      <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+      <JsonLd data={buildFaqPageSchema(FAQ_DB)} />
+      <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
           <span className="font-label-caps text-label-caps text-secondary uppercase tracking-wider">// Perguntas Frequentes</span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface">

@@ -19,7 +19,7 @@ const metrics: readonly MetricItem[] = [
 export function ComplianceSection(): JSX.Element {
   return (
     <section className="w-full py-space-xl border-t border-outline-variant/30" id="conformidade">
-      <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+      <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="flex flex-col gap-space-xs max-w-3xl mb-space-xl">
           <span className="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Laudo de Auditoria</span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface">

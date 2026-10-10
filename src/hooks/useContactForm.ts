@@ -36,14 +36,25 @@ export function useContactForm(): ContactFormState & ContactFormActions & { read
 
     const validation = validateContactForm(formData)
     if (!validation.success) {
-      const firstError = validation.errors.errors[0]?.message ?? 'Erro de validação'
+      const firstError = validation.errors.issues[0]?.message ?? 'Erro de validação'
       setSubmitError(firstError)
       setIsSubmitting(false)
       return
     }
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(validation.data),
+      })
+
+      if (!response.ok) {
+        const payload = (await response.json().catch(() => null)) as { error?: string } | null
+        setSubmitError(payload?.error ?? 'Falha ao enviar. Tente novamente.')
+        return
+      }
+
       setSubmitSuccess(true)
       setFormData({ fullName: '', email: '', interestType: 'auditoria', message: '' })
     } catch {

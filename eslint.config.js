@@ -3,24 +3,22 @@ import tsParser from '@typescript-eslint/parser'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import reactRefreshPlugin from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist', 'node_modules', '.vite', '*.config.*', 'tailwind.config.ts', 'vite.config.ts', 'vitest.config.ts'] },
+  { ignores: ['node_modules', '.next', '*.config.*', 'tailwind.config.ts'] },
   {
-    files: ['src/**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}', 'app/**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: { browser: true, es2020: true, React: 'writable', JSX: 'writable' },
+      ecmaVersion: 2022,
+      globals: { browser: true, es2022: true, React: 'writable', JSX: 'writable' },
       parser: tsParser,
       parserOptions: { ecmaVersion: 'latest', sourceType: 'module', ecmaFeatures: { jsx: true }, project: './tsconfig.json' },
     },
-    settings: { react: { version: '18.3' } },
+    settings: { react: { version: '19.2' } },
     plugins: {
       '@typescript-eslint': tsPlugin,
       react: reactPlugin,
       'react-hooks': reactHooksPlugin,
-      'react-refresh': reactRefreshPlugin,
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -30,7 +28,6 @@ export default [
       'react/jsx-no-target-blank': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-no-comment-textnodes': 'off',
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-undef': 'off',

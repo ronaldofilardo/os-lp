@@ -2,7 +2,7 @@ export function HeroSection(): JSX.Element {
   return (
     <section className="relative w-full overflow-hidden py-space-xl lg:py-24 pt-24" id="hero">
       <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: 'radial-gradient(#38bdf8 0.75px, transparent 0.75px)', backgroundSize: '24px 24px' }} />
-      <div className="relative max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+      <div className="relative max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
           <div className="lg:col-span-7 flex flex-col gap-space-md">
             <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high border border-outline-variant/60 w-fit">

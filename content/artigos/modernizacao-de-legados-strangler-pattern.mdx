@@ -1,0 +1,46 @@
+---
+title: "Modernização de Legados com Strangler Pattern: Guia da Omni Sistemas"
+description: "Como a Omni Sistemas moderniza sistemas legados sem interromper a operação: Strangler Pattern, testes de caracterização e engenharia reversa sob a metodologia STE-DEV."
+slug: "modernizacao-de-legados-strangler-pattern"
+datePublished: "2025-06-03"
+dateModified: "2026-10-10"
+author: "Omni Sistemas"
+tags: ["Modernização de Legados", "Strangler Pattern", "Testes de Caracterização", "Engenharia Reversa"]
+takeaways:
+  - "A modernização de legados da Omni Sistemas usa Strangler Pattern: substituição progressiva sem interromper a operação comercial."
+  - "Testes de caracterização prévios blindam o comportamento atual do sistema contra regressões durante a migração."
+  - "O Discovery de domínio unifica termos ambíguos antes de qualquer extração de código."
+  - "A metodologia STE-DEV exige extração em hooks e subcomponentes modulares com menos de 100 linhas."
+  - "O processo elimina regressões ao substituir módulos um a um, mantendo o sistema em produção durante toda a migração."
+faq:
+  - question: "Como é feita a modernização de sistemas legados?"
+    answer: "A modernização de sistemas legados é realizada via Engenharia Reversa com Strangler Pattern: primeiro realizamos o Discovery de domínio unificando termos; em seguida criamos Testes de Caracterização para blindar o comportamento atual contra regressões; e finalmente extraímos a lógica em hooks e subcomponentes modulares com substituição progressiva e segura."
+  - question: "O sistema fica fora do ar durante a modernização?"
+    answer: "Não. O Strangler Pattern adotado pela Omni Sistemas substitui módulos progressivamente enquanto o sistema continua em produção. Os testes de caracterização garantem que cada módulo extraído se comporta exatamente como o original antes do corte de tráfego."
+---
+
+## O que é modernização de legados com Strangler Pattern?
+
+A modernização de legados com Strangler Pattern é a técnica de engenharia reversa adotada pela Omni Sistemas para migrar sistemas críticos sem interromper a operação. Em vez de reescrever o sistema inteiro de uma vez — arrisco e caro — o padrão "estrangulador" envolve o legado com módulos novos e substitui cada parte progressivamente. O sistema antigo permanece em produção até que cada módulo extraído esteja validado e assuma o tráfego real.
+
+## Por que testes de caracterização são obrigatórios antes de migrar?
+
+Testes de caracterização capturam o comportamento atual do sistema legado sem presumir o comportamento "correto". Antes de qualquer extração, a Omni Sistemas grava esses testes para blindar a base contra regressões. Sem eles, uma extração aparentemente simples pode quebrar regras de negócio ocultas — como cálculos de comissionamento ou regras de laudo em sistemas HealthTech. Com eles, cada módulo extraído precisa reproduzir exatamente a saída original para passar na validação.
+
+## Qual o papel do Discovery de domínio na migração?
+
+O Discovery de domínio é a primeira etapa da engenharia reversa da Omni Sistemas. Sistemas legados acumulam sinônimos para o mesmo conceito: `client`, `customer`, `account` podem significar a mesma entidade em módulos diferentes. O Discovery unifica o vocabulário — um conceito, um nome — conforme a filosofia ASD-STE100. Sem essa unificação, a extração de módulos propaga a ambiguidade para o código novo.
+
+## Como o Strangler Pattern substitui módulos sem regressões?
+
+O Strangler Pattern da Omni Sistemas opera em ciclos curtos: (1) identificar o módulo legado candidato à extração; (2) criar testes de caracterização que validam o comportamento atual; (3) extrair a lógica em hooks e componentes modulares com menos de 100 linhas, tipagem zero-any e contratos DTO explícitos; (4) rotear tráfego progressivamente do módulo antigo para o novo; (5) remover o código legado apenas após validação em produção. Cada ciclo é independente e reversível.
+
+## Quais tecnologias a Omni Sistemas usa na modernização?
+
+A Omni Sistemas migra legados para stacks modernas conforme o contexto do cliente: React e TypeScript no front, Node.js ou Next.js no back, Rust ou WASM para camadas de performance, e bancos como PostgreSQL e EventStore. A escolha não é dogmática — o Strangler Pattern é independente de stack. O que é mandatório é o processo STE-DEV: testes de caracterização prévios, módulos atômicos e vocabulário controlado na base nova.
+
+## Quanto tempo leva um projeto de modernização?
+
+O prazo depende do tamanho da base e do número de módulos, mas a estrutura é sempre a mesma: o laudo de auditoria inicial (até 5 dias úteis) mapeia as violações e define a Matriz de Sequência Atômica. A partir dela, a migração avança módulo a módulo, com entregas incrementais em produção a cada ciclo validado. Não existe big bang — a Omni Sistemas entrega valor continuamente durante a migração.
+
+<CtaInline label="Modernizar meu sistema legado" />

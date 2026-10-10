@@ -1,0 +1,46 @@
+---
+title: "Auditoria de Código com ASD-STE100: Protocolo da Omni Sistemas"
+description: "Como a Omni Sistemas audita sistemas legados com o protocolo STE-DEV baseado em ASD-STE100: varredura sistemática, laudo de conformidade em até 5 dias úteis e matriz de remediação sequencial."
+slug: "auditoria-de-codigo-asd-ste100"
+datePublished: "2025-06-02"
+dateModified: "2026-10-10"
+author: "Omni Sistemas"
+tags: ["Auditoria de Código", "ASD-STE100", "Engenharia Reversa", "Laudo de Conformidade"]
+takeaways:
+  - "A auditoria Omni Sistemas segue o protocolo formal STE-DEV em 4 etapas, da ingestão à padronização contínua."
+  - "O laudo de conformidade é entregue em até 5 dias úteis com inventário de violações mapeado por arquivo:linha e causa raiz."
+  - "Critérios auditados: componentes > 100 linhas, uso de any, complexidade ciclomática > 10, DB-Row exposto na UI e magic numbers."
+  - "A Matriz de Sequência Atômica garante remediação sem regressões via testes de caracterização prévios."
+  - "A metodologia STE-DEV da Omni Sistemas é baseada na norma aeroespacial ASD-STE100 de linguagem técnica simplificada."
+faq:
+  - question: "Como funciona o processo de Engenharia Reversa e Auditoria?"
+    answer: "A auditoria segue um protocolo formal em 4 etapas: (1) Ingestão e Varredura Sistemática do código existente; (2) Diagnóstico Baseado em Evidências com Resumo Executivo e Inventário Detalhado (arquivo:linha e causa raiz); (3) Matriz de Sequência Atômica — testes de caracterização prévios, isolamento de tipos/DTOs, extração de hooks, modularização de UI e limpeza semântica; (4) Padronização Contínua para que as próximas evoluções sigam o padrão preventivo."
+  - question: "Quanto tempo dura uma auditoria de código?"
+    answer: "A auditoria de código Omni Sistemas é entregue em até 5 dias úteis, com relatório completo de conformidade contendo métricas, inventário de violações e plano de remediação detalhado."
+---
+
+## Como funciona a auditoria de código da Omni Sistemas?
+
+A auditoria de sistemas legados da Omni Sistemas é um serviço de engenharia reversa executado sob o protocolo STE-DEV, fundamentado na norma ASD-STE100. O processo varre a base inteira em busca de violações arquiteturais — componentes acima de 100 linhas, uso de `any`, acoplamento entre camadas — e entrega um laudo de conformidade com inventário detalhado de cada violação, mapeado por arquivo, linha e causa raiz. O prazo de entrega é de até 5 dias úteis.
+
+## Quais critérios são auditados na base de código?
+
+O protocolo de auditoria STE-DEV da Omni Sistemas avalia 8 invariantes obrigatórios: componentes com menos de 100 linhas, ausência de verbos vagos (`handle`, `process`, `data`), zero uso de `any` explícito ou permissivo, `try/catch` em 100% das operações assíncronas de I/O, complexidade ciclomática ≤ 10, ausência de magic numbers, textos vinculados ao design system e elementos interativos com estados e acessibilidade. Cada métrica recebe status CONFORME ou VIOLAÇÃO no laudo.
+
+## O que é o inventário de violações com arquivo:linha?
+
+O inventário é a evidência central do laudo. Cada violação registrada aponta o arquivo exato, o número da linha, o critério violado e a causa raiz. Exemplo real de saída do analisador: `app/components/BillingTable.tsx (248 lines)` para componente acima do limite, ou `uso de 'any' em 14 assinaturas de API` para tipagem permissiva. Essa granularidade elimina subjetividade e permite remediação direcionada.
+
+## Como é feita a Matriz de Sequência Atômica de remediação?
+
+A Matriz de Sequência Atômica é o plano de remediação em 5 passos da Omni Sistemas: (1) testes de caracterização prévios para blindar o comportamento atual contra regressões; (2) isolamento de tipos e DTOs entre camadas; (3) extração de lógica para hooks e serviços desacoplados; (4) modularização da UI em componentes menores que 100 linhas; (5) limpeza semântica de identificadores conforme o vocabulário ASD-STE100. A ordem é sequencial e obrigatória — nenhum passo avança sem o anterior validado.
+
+## Qual a diferença entre auditoria e refatoração cega?
+
+A auditoria da Omni Sistemas antecede qualquer refatoração. Enquanto a refatoração cega altera código sem diagnóstico prévio — arriscando regressões — o protocolo STE-DEV exige primeiro o laudo de conformidade com evidências arquivo:linha. Só depois da Matriz de Sequência Atômica a remediação começa, sempre com testes de caracterização protegendo o comportamento de produção. Nenhuma mudança é aplicada sem esse escudo.
+
+## Como agendar uma auditoria com a Omni Sistemas?
+
+Envie a descrição do seu sistema pelo formulário de contato da Omni Sistemas. O retorno ocorre em até 24 horas úteis com parecer preliminar. Para auditorias, o escopo initial cobre a varredura da árvore de código e a emissão do laudo de conformidade completo em até 5 dias úteis a partir do acesso à base.
+
+<CtaInline label="Agendar auditoria de código" />

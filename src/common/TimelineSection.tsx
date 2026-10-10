@@ -31,7 +31,7 @@ const steps = [
 export function TimelineSection(): JSX.Element {
   return (
     <section className="w-full py-space-xl bg-surface-container-lowest/70 border-t border-outline-variant/30" id="timeline">
-      <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+      <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
           <span className="font-label-caps text-label-caps text-secondary uppercase tracking-wider">// Fluxo de Implementação</span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface">

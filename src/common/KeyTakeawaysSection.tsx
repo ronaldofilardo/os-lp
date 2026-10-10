@@ -34,7 +34,7 @@ export function KeyTakeawaysSection(): JSX.Element {
       aria-labelledby="key-takeaways-heading"
       id="visao-geral"
     >
-      <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+      <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="p-space-lg rounded-xl bg-surface-container border border-primary/20 shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md border-b border-outline-variant/30 pb-space-sm">
             <div className="flex items-center gap-space-xs">
