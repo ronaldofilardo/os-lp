@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed": "#002113", "secondary-container": "#00a572", "on-primary-fixed-variant": "#004c69", "on-tertiary": "#68000a", "surface-container-low": "#161b2a", "tertiary": "#ffbcb7", "primary-fixed": "#c4e7ff", "surface-container-high": "#252a39", "primary-container": "#38bdf8", "surface": "#0e1321", "secondary": "#4edea3", "error-container": "#93000a", "background": "#0e1321", "tertiary-fixed-dim": "#ffb3ad", "outline": "#87929a", "surface-dim": "#0e1321", "primary-fixed-dim": "#7bd0ff", "on-error": "#690005", "on-tertiary-fixed": "#410004", "on-secondary-fixed-variant": "#005236", "surface-tint": "#7bd0ff", "tertiary-container": "#ff938c", "secondary-fixed": "#6ffbbe", "surface-bright": "#343948", "surface-container": "#1a1f2e", "error": "#ffb4ab", "on-surface-variant": "#bdc8d1", "surface-container-lowest": "#090e1c", "on-background": "#dee2f6", "on-surface": "#dee2f6", "on-secondary-container": "#00311f", "primary": "#8ed5ff", "surface-container-highest": "#303444", "surface-variant": "#303444", "secondary-fixed-dim": "#4edea3", "on-primary": "#00354a", "inverse-surface": "#dee2f6", "tertiary-fixed": "#ffdad7", "on-primary-fixed": "#001e2c", "on-tertiary-container": "#8d0012", "on-primary-container": "#004965", "on-error-container": "#ffdad6", "on-secondary": "#003824", "outline-variant": "#3e484f", "inverse-on-surface": "#2b303f", "on-tertiary-fixed-variant": "#930013", "inverse-primary": "#00668a" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "2.5rem", "space-md": "1rem", "margin": "3rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-tablet": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem" }, fontFamily: { "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "label-caps": ["JetBrains Mono"], "code-md": ["JetBrains Mono"], "body-lg": ["Inter"], "code-sm": ["JetBrains Mono"], "display-lg-mobile": ["Inter"], "code-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "code-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "code-lg": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Menu de Navegação" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="document.getElementById('mobile-drawer').classList.toggle('-translate-x-full')" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col"><span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">STE-DEV //</span><span class="font-code-sm text-code-sm uppercase text-on-surface-variant tracking-wider">SOFTWARE PREVENTIVO</span></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 bg-surface-container-lowest/95 backdrop-blur-2xl -translate-x-full transition-transform duration-300 flex flex-col pt-safe pb-safe" id="mobile-drawer"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex flex-col"><span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">STE-DEV //</span><span class="font-code-sm text-code-sm uppercase text-on-surface-variant">TERMINAL DE NAVEGAÇÃO</span></div><button aria-label="Fechar Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary" onclick="document.getElementById('mobile-drawer').classList.add('-translate-x-full')" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="flex-1 px-gutter-mobile py-space-md flex flex-col justify-between overflow-y-auto"><div class="flex flex-col gap-space-xs"><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="metodologia" href="#">Metodologia</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="auditoria" href="#">Auditoria</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="projetos" href="#">Projetos</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="servicos" href="#">Serviços</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="sobre" href="#">Sobre</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="contato" href="#">Contato</a></div><div class="pt-space-md pb-space-sm"><a class="w-full h-11 bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center rounded uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors" data-path="solicitar-auditoria" href="#">Solicitar Auditoria</a></div></div></div><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO MOBILE -->
+<section class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<!-- Ambient subtle coordinate glow -->
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs relative z-10">
+<div class="inline-flex items-center gap-1.5 self-start px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>// ENGENHARIA DISCIPLINE // PREVENTIVE IA</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-1">
+        Velocidade da IA. <span class="text-primary">Rigor de engenharia preventiva.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Software corporativo para HealthTech e FinTech construído com a metodologia STE-DEV: código auditável, seguro, tipado e escalável desde o primeiro commit.
+      </p>
+</div>
+<!-- CTA Stack -->
+<div class="flex flex-col gap-space-xs relative z-10">
+<a class="w-full h-11 bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center rounded tracking-wide shadow-md active:scale-[0.99] transition-transform" href="#metodologia">
+        Conhecer a metodologia
+      </a>
+<a class="w-full h-11 bg-surface-container text-on-surface font-headline-sm text-headline-sm flex items-center justify-center rounded active:scale-[0.99] transition-transform" href="#projetos">
+        Ver projetos
+      </a>
+</div>
+<!-- Runtime Status Badges -->
+<div class="flex flex-wrap gap-2 py-1">
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-lowest text-secondary font-code-sm text-code-sm">
+<span>●</span> Zero-any TS Standard
+      </div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-lowest text-secondary font-code-sm text-code-sm">
+<span>●</span> ASD-STE100 Verified
+      </div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-lowest text-secondary font-code-sm text-code-sm">
+<span>●</span> 99.9% Runtime Stability
+      </div>
+</div>
+<!-- Terminal Mockup Window -->
+<div class="w-full rounded-lg bg-surface-container-lowest overflow-hidden shadow-xl mt-2">
+<!-- Window Titlebar -->
+<div class="h-8 px-3 bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<span class="ml-2 font-code-sm text-code-sm text-on-surface-variant truncate max-w-[160px]">guardiao-ste-kernel.v3</span>
+</div>
+<span class="font-label-caps text-label-caps px-1.5 py-0.5 rounded bg-secondary/10 text-secondary">ACTIVE</span>
+</div>
+<!-- Mockup Surface / Visual Telemetry -->
+<div class="p-3 bg-surface-container flex flex-col gap-3">
+<div class="relative w-full h-44 rounded overflow-hidden bg-surface-container-low flex flex-col justify-end p-3">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Futuristic software telemetry dashboard monitor dark navy background electric cyan data visualization charts code graph widgets high precision minimal developer terminal interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-4AjOF2BpEqJjJabTPIV5WGqX6M3EZ-5YDSlLHfHmWPWMrqHXCgRuhEl1JL1SyQ9PdwBEBlvV6Rz5rLDJQ7EmOTeRcYuwUj3gwKVxforY0AUIur6Y-wPrRl90Bjj26yKf1-onkPXVUIWee11_JzYTnC85YbSXcsPgZwQBtgYs28JEbIBw6ZCOgiYRij2wWRPqcYdY2gAbCzCleOUOkUccrryiEXCLoQINLLct4fCqeU2S80O0VYRk"/>
+<div class="relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-2 rounded flex flex-col gap-0.5">
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">Mockup do projeto - Dashboard analítico</span>
+<div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm">
+<span class="text-secondary font-code-sm text-code-sm">Guardião Ativo // Auditoria em Tempo Real</span>
+<span class="text-secondary font-bold font-label-caps text-label-caps bg-secondary/20 px-1 rounded">100% CONFORME</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Metrics mini-row -->
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2 rounded bg-surface-container-lowest flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">INVARIANT COVERAGE</span>
+<span class="font-code-lg text-code-lg text-primary font-bold">100.0%</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">HALLUCINATION RATE</span>
+<span class="font-code-lg text-code-lg text-secondary font-bold">0.00%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: O PROBLEMA -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-error tracking-wider uppercase">// RISCO OPERACIONAL</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Por que código de IA sem supervisão custa caro
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Copilotos geram sintaxe plausível, mas acumulam alucinações de contexto, tipos genéricos e acoplamento silencioso em ambientes regulados.
+      </p>
+</div>
+<!-- Stacked Problem Cards -->
+<div class="flex flex-col gap-space-xs">
+<!-- Problem Card 1 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+<span class="font-label-caps text-label-caps text-error bg-error/10 px-2 py-0.5 rounded">▲ RISCO 01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dívida técnica acumulada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Geração desgovernada introduz centenas de dependências fantasma e trechos redundantes que tornam futuras alterações lentas e instáveis.
+        </p>
+</div>
+<!-- Problem Card 2 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">data_array</span>
+</div>
+<span class="font-label-caps text-label-caps text-error bg-error/10 px-2 py-0.5 rounded">▲ RISCO 02</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Código inconsistente</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Padrões estruturais alternando entre arquivos no mesmo repositório, quebra de contratos de API e anotações 'any' escapando do linter.
+        </p>
+</div>
+<!-- Problem Card 3 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+</div>
+<span class="font-label-caps text-label-caps text-error bg-error/10 px-2 py-0.5 rounded">▲ RISCO 03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bugs em produção</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Falhas de concorrência e mutações em estruturas imutáveis que só se manifestam com alto volume transacional em horários de pico.
+        </p>
+</div>
+<!-- Problem Card 4 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+<span class="font-label-caps text-label-caps text-error bg-error/10 px-2 py-0.5 rounded">▲ RISCO 04</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Custo de manutenção</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          O custo para auditar e corrigir código de IA gerado sem regras excede em até 3.4x o investimento de uma escrita correta desde o início.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: METODOLOGIA STE-DEV (4 PILARES) -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md" id="metodologia">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">// FUNDAMENTOS ARQUITETURAIS</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Metodologia STE-DEV
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Quatro pilares determinísticos que amarram a velocidade de LLMs a contratos matemáticos inegociáveis.
+      </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Pilar 1 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-bold">PILAR 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">spellcheck</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Semântica ASD-STE100</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Uso de vocabulário controlado aeroespacial adaptado ao código. Nomes de métodos sem ambiguidade, declarações atômicas e redução radical de redundância gramatical em comentários e assinaturas.
+        </p>
+</div>
+<!-- Pilar 2 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-bold">PILAR 02</span>
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Arquitetura Limpa &amp; SOLID</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Isolamento total de regras de domínio. Casos de uso puramente agnósticos de frameworks ou drivers externos de banco, viabilizando testes unitários instantâneos.
+        </p>
+</div>
+<!-- Pilar 3 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-bold">PILAR 03</span>
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Restrição Rígida</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Teto de 100 linhas por arquivo executável, tolerância zero para tipagem <code class="text-primary font-code-sm text-code-sm font-semibold">any</code> e separação física obrigatória entre tipos de banco (DB-Row) e objetos de transporte (DTO).
+        </p>
+</div>
+<!-- Pilar 4 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-bold">PILAR 04</span>
+<span class="material-symbols-outlined text-primary text-[20px]">shield_lock</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Skill Guardiã de IA</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Sub-rotina de validação pré-commit configurada para interceptar alucinações de modelos generativos antes que alcancem o branch de staging ou produção.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: LINHA DO TEMPO: PROTOCOLO DE 4 ETAPAS -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">// WORKFLOW DE EXECUÇÃO</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Protocolo de 4 Etapas
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Da auditoria preliminar à entrega de software blindado contra regressões.
+      </p>
+</div>
+<!-- Timeline Container -->
+<div class="relative flex flex-col gap-space-md pl-6">
+<!-- Continuous vertical hairline line -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-surface-container-highest"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<span class="font-label-caps text-label-caps text-primary">ETAPA 01 // 24H</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ingestão e varredura</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Clonagem segura em sandbox auditada, extração de métricas de acoplamento e análise estática rigorosa das árvores de dependência do repositório.
+        </p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<span class="font-label-caps text-label-caps text-primary">ETAPA 02 // 48H</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Relatório de conformidade</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Mapeamento pontual de violações de invariantes com categorização de gravidade (bloqueante, degenerativa ou cosmética) e pontuação percentual.
+        </p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col gap-2">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">ETAPA 03 // ITERAÇÃO</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Plano de ação atômico</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Execução de sprints de correção estruturadas em camadas desacopladas com validação incremental contínua.
+        </p>
+<!-- Horizontal scrollable sub-chips for Step 3 -->
+<div class="flex gap-2 overflow-x-auto py-1 pr-2 no-scrollbar">
+<span class="shrink-0 px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-sm text-code-sm">
+            Testes automatizados
+          </span>
+<span class="shrink-0 px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-sm text-code-sm">
+            Tipagem e DTOs
+          </span>
+<span class="shrink-0 px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-sm text-code-sm">
+            Extração de lógica
+          </span>
+<span class="shrink-0 px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-sm text-code-sm">
+            Refatoração de UI
+          </span>
+<span class="shrink-0 px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-sm text-code-sm">
+            Limpeza semântica
+          </span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container">ETAPA 04 // DEPLOY</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Integração e prevenção</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Instalação de linters com gating bloqueante de CI/CD para que o time continue escalando funcionalidades sem degradar a arquitetura.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 5: RELATÓRIO DE CONFORMIDADE (TERMINAL AUDIT) -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-secondary tracking-wider uppercase">// TELEMETRIA EM TEMPO REAL</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Relatório de Conformidade
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Resultado da auditoria de invariantes em módulo desprotegido gerado por assistente LLM genérico.
+      </p>
+</div>
+<!-- Terminal Window -->
+<div class="w-full rounded-lg bg-surface-container-lowest overflow-hidden shadow-2xl">
+<div class="h-8 px-3 bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="ml-2 font-code-sm text-code-sm text-on-surface-variant">ste-audit --strict --report</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">UTF-8</span>
+</div>
+<div class="p-3 flex flex-col gap-3">
+<!-- Metric callout box -->
+<div class="p-3 rounded bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">SCORE DE INVARIANTES</span>
+<span class="font-display-lg-mobile text-display-lg-mobile text-error font-bold leading-none mt-1">58.0%</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-error/20 text-error font-semibold">
+              3 BLOQUEIOS
+            </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1">7 regras violadas</span>
+</div>
+</div>
+<!-- Monospace Log Stream with Horizontal Scroll -->
+<div class="p-3 rounded bg-surface-container-lowest overflow-x-auto text-left">
+<pre class="font-code-sm text-code-sm leading-relaxed whitespace-pre font-normal text-on-surface"><span class="text-error font-semibold">▲ VIOLAÇÃO [INV-01]</span> : Arquivo excede teto max-length (284 &gt; 100 linhas).
+  <span class="text-on-surface-variant">└─ src/domains/user/UserDashboard.tsx:1:1</span>
+
+<span class="text-error font-semibold">▲ VIOLAÇÃO [INV-02]</span> : Tipo implícito/explícito 'any' detectado em 6 pontos.
+  <span class="text-on-surface-variant">└─ payload: any / handleAction(event: any)</span>
+
+<span class="text-error font-semibold">▲ VIOLAÇÃO [INV-03]</span> : Objeto de banco exposto diretamente no cliente.
+  <span class="text-on-surface-variant">└─ UserEntity vazando atributos sensíveis (sem camada DTO)</span>
+
+<span class="text-secondary font-semibold">● CONFORME [INV-04]</span> : Nomenclatura ASD-STE100 nos handlers de eventos.
+<span class="text-secondary font-semibold">● CONFORME [INV-05]</span> : Ausência de chamadas síncronas bloqueantes no render.
+<span class="text-secondary font-semibold">● CONFORME [INV-06]</span> : Configuração de Strict Mode ativa no tsconfig.
+          </pre>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: ANTES E DEPOIS (PATCH PREVENTIVO) -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">// COMPARAÇÃO DE CÓDIGO</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Antes e Depois: O Patch Preventivo
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Como a disciplina da metodologia transforma scripts frágeis em engenharia auditável.
+      </p>
+</div>
+<!-- Panel 1: Red (Before / AI Unsupervised) -->
+<div class="rounded-lg bg-surface-container overflow-hidden shadow-md">
+<div class="p-3 bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-code-sm text-code-sm text-error font-semibold">Código de IA sem supervisão</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">UserDashboard.tsx</span>
+</div>
+<div class="p-3 flex flex-col gap-2">
+<div class="p-2.5 rounded bg-surface-container-lowest overflow-x-auto">
+<pre class="font-code-sm text-code-sm text-error leading-relaxed whitespace-pre">// 284 linhas com efeitos colaterais misturados
+export const UserDashboard = ({ data }: any) =&gt; {
+  const [user, setUser] = useState<any>(data);
+  useEffect(() =&gt; {
+    fetch('/api/user').then(res =&gt; res.json())
+      .then(d =&gt; setUser(d)); // vazamento de estado
+  }, []);
+  return &lt;div&gt;{user?.raw_db_password_hash}&lt;/div&gt;;
+};
+          </any></pre>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-center gap-1.5 text-error font-code-sm text-code-sm">
+<span>▲</span> Acoplamento direto com endpoint dentro da UI
+          </div>
+<div class="flex items-center gap-1.5 text-error font-code-sm text-code-sm">
+<span>▲</span> Dependência de `any` anulando segurança do compilador
+          </div>
+<div class="flex items-center gap-1.5 text-error font-code-sm text-code-sm">
+<span>▲</span> Risco de vazamento de credenciais na renderização
+          </div>
+</div>
+</div>
+</div>
+<!-- Panel 2: Green (After / STE-DEV Clean) -->
+<div class="rounded-lg bg-surface-container overflow-hidden shadow-md">
+<div class="p-3 bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">Código STE-DEV</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">UserDashboard.clean.tsx</span>
+</div>
+<div class="p-3 flex flex-col gap-2">
+<div class="p-2.5 rounded bg-surface-container-lowest overflow-x-auto">
+<pre class="font-code-sm text-code-sm text-secondary leading-relaxed whitespace-pre">// 42 linhas: Hook desacoplado + DTO higienizado
+export const UserDashboard: FC&lt;DashboardProps&gt; = ({ userId }) =&gt; {
+  const { userProfile, status } = useUserProfile(userId);
+
+  if (status === 'LOADING') return &lt;DashboardSkeleton /&gt;;
+  if (!userProfile) return &lt;ProfileNotFound /&gt;;
+
+  return &lt;ProfileDisplay view={userProfile.toDTO()} /&gt;;
+};
+          </pre>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-center gap-1.5 text-secondary font-code-sm text-code-sm">
+<span>●</span> Hook desacoplado e 100% testável com Mock State
+          </div>
+<div class="flex items-center gap-1.5 text-secondary font-code-sm text-code-sm">
+<span>●</span> Objeto sanitizado explicitamente via método DTO
+          </div>
+<div class="flex items-center gap-1.5 text-secondary font-code-sm text-code-sm">
+<span>●</span> Sob 48 linhas de código sem complexidade ciclomática
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: PROJETOS EM DESTAQUE -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md" id="projetos">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">// CASOS DE PRODUÇÃO</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Projetos em Destaque
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Aplicações de missão crítica entregues com zero regressões arquiteturais.
+      </p>
+</div>
+<!-- Stacked Project Cards -->
+<div class="flex flex-col gap-space-md">
+<!-- Project 1: Omni Saúde -->
+<div class="rounded-lg bg-surface-container overflow-hidden flex flex-col shadow-lg">
+<div class="relative w-full h-44 bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Modern medical healthtech app interface on tablet showing clinical telemetry patient records dark mode neon cyan accents high fidelity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKSTdTBUPfMYhbcy_Kn9vZApvY8qWO5m7RwMJ9pF7q0sa-6KCRJ8pjXsoSpPbYKMcK2sIv7EypLVqQgWVMTxlQ4nvAxj1F8d_fxhf_RrxkI8Y0TzlkmUMOLM9glqydeBUDQ6u5XgZUq_rx-L37cakpfBwnra9r8wGzcB_wFNNJ3hq7lSEZJGvf1YyyLQg88aZSz6zveM9599v2DWhN6r_LhCa2vp9fSU0B0pDykw7vnHmIy1FmBGkV"/>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-caps text-label-caps">
+            HEALTHTECH // PRODUÇÃO
+          </div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Omni Saúde</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Plataforma para prontuário eletrônico interoperável com isolamento estrito de dados conforme padrão LGPD e auditoria de acesso.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Next.js 14</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">PostgreSQL</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-code-sm text-code-sm">ASD-STE100</span>
+</div>
+<button class="w-full h-10 rounded bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 active:scale-[0.99] transition-transform" type="button">
+            Ver estudo de caso
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project 2: QWork -->
+<div class="rounded-lg bg-surface-container overflow-hidden flex flex-col shadow-lg">
+<div class="relative w-full h-44 bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Fintech banking reconciliation analytics dashboard dark ocean blue clean charts tabular transactions audit logs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaYznN3m1QaV8hsnToPdEVwph2Cj4_dTfjhUxVRvGMKV4lL_nyJdIe-qGfid004K3HWBmAtcRes3fim9DjLHG1RqWSLQnN3RfUlnZEh9C3nZN7fN4SMpjyM0AyDj3A0o3BbCjobwZhJmawXNdn1UzgIA9fiphpp1AU4SLENIYUyVzz11ArAq8akLYZmpBLvpT-zuh3U2yiHY5w8eUCTi5nKyhqk7HnU7hY-qTevqQ5mrH73hGsD4rO"/>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-caps text-label-caps">
+            FINTECH // PRODUÇÃO
+          </div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">QWork</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Motor de liquidação financeira e split de pagamentos distribuídos com reconciliação matemática em tempo real.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Kafka</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Clean Arch</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-code-sm text-code-sm">Zero-Any</span>
+</div>
+<button class="w-full h-10 rounded bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 active:scale-[0.99] transition-transform" type="button">
+            Ver estudo de caso
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project 3: LWOS -->
+<div class="rounded-lg bg-surface-container overflow-hidden flex flex-col shadow-lg">
+<div class="relative w-full h-44 bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Cloud infrastructure monitoring nodes network topology graph glowing dark tech interface blue and cyan server topology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ytNJcBdwHa5wvpziT1Si2s7KfsKbJ2lJp6-wRQADKHGq14ctSJWRJzU3IxFKS5yv3fyHigqywmjifZZGoyss4qk-ZrZ_bIp7P_6zi_av3Ei1FoLxei3VwUEz7uzoSVoJlyPeMMO9Lk2BozppQBKwn0Eo9uW64x45xYG1f6_PWoesAkX4OsPJYxV12np4zpRy7uQso4jdAESm37j6MGGHJnfw3Oab7y4zxtvN_SxUxg-x85skejjN"/>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-tertiary-fixed-dim font-label-caps text-label-caps">
+            INFRA // EM DEV
+          </div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">LWOS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Kernel leve de orquestração de microsserviços voltado para baixa latência e observabilidade ponta a ponta sem agentes pesados.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Rust / WASM</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Go</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">OTel</span>
+</div>
+<button class="w-full h-10 rounded bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 active:scale-[0.99] transition-transform" type="button">
+            Ver estudo de caso
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project 4: AQUI -->
+<div class="rounded-lg bg-surface-container overflow-hidden flex flex-col shadow-lg">
+<div class="relative w-full h-44 bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Telemedicine video consultation software interface on mobile device clean dark aesthetic medical graphs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLfU7ciRQ7V-m3A7BZmGDmWG4_m5B581aD8vtHUXzczLtSd-eB9shllTAjyPQw2bQrbyeN_EaHtSBwRJlPAeaNgC8T-qqWDyVyQlmlEP6NF25Hik66i5-GnyBIyBqSJnvuvuLog_2eX3ygEFNCjblktLm4BwtNuWfd9gyL3GJIVBFXYPyzY56haYS8Ogv9EOKYg74xNXh8VpYebVdBmG_u7uFS6FDh0KfPbWKF9Xb4peh3sOLaDUAY"/>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-caps text-label-caps">
+            HEALTHTECH // PRODUÇÃO
+          </div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AQUI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Sistema de telemedicina instantânea de alta disponibilidade com triagem assistida por IA preventiva e conformidade HIPAA/LGPD.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">React Native</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">WebRTC</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-code-sm text-code-sm">End-to-End Enc</span>
+</div>
+<button class="w-full h-10 rounded bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 active:scale-[0.99] transition-transform" type="button">
+            Ver estudo de caso
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project 5: mundoas -->
+<div class="rounded-lg bg-surface-container overflow-hidden flex flex-col shadow-lg">
+<div class="relative w-full h-44 bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Sports analytics and biometric athlete tracking dashboard dark visual interface with line graphs electric accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1GFeZM6oPLHFWZNoJ90gFe3n68JLuEPz-Qd38CL6oMIS3Ex9aJiM0qVHrpZAenXERCSc2iq0Vhb11B9iSOMq2KuKGfSCt31p8njC3tIaNY8skAD9d6zTFgtNFO_-hOTwL_Mb0ZNDDszjLRoswQDJQ6l6zRsU6pxj01bwJCuD-KHcudkZFkq4i9Oo6dsHcOZDTZqI_MF2t1QYXO3knBcOI436Gsw06eiib-zGZ8FvtU5tZDfHjF9C6"/>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-caps text-label-caps">
+            SPORTSTECH // PRODUÇÃO
+          </div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">mundoas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Plataforma de métricas biomecânicas e engajamento esportivo com pipeline de dados em streaming e baixíssima latência.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Next.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Redis</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Tailwind</span>
+</div>
+<button class="w-full h-10 rounded bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 active:scale-[0.99] transition-transform" type="button">
+            Ver estudo de caso
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project 6: RKT -->
+<div class="rounded-lg bg-surface-container overflow-hidden flex flex-col shadow-lg">
+<div class="relative w-full h-44 bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Enterprise logistics and supply chain digital twin monitor showing inventory route nodes in futuristic dark UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMVTl2x0ev6S2VxvgAiO6hLJKOcepxjrby_0XGLPnuVG2GLozIdp4DzSi9a6Fb30fLSVYpQFGXQiGpuijL4qGzPxR6EP2EL-IjOVhezDab8-rKx8EVmL27GsE5uBH8hARnw_eIdgreFgEMvB7EVrsASWZtn56qGMXUY72Uo8Jme7-HmQX6tdMHJ09lO0d0WXzyidKcHx_Z7FxZIMxoWuDZGYyE72SfKA6CO0x7qAYqV6jKFWlMkRvr"/>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-tertiary-fixed-dim font-label-caps text-label-caps">
+            ENTERPRISE // EM DEV
+          </div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">RKT</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Backbone corporativo para integração ERP e reconciliação contábil com auditoria assíncrona baseada em eventos determinísticos.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">EventStore</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">Docker</span>
+</div>
+<button class="w-full h-10 rounded bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 active:scale-[0.99] transition-transform" type="button">
+            Ver estudo de caso
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: SERVIÇOS DE ENGENHARIA -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">// MODELOS DE CONTRATAÇÃO</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Serviços de Engenharia
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Engenharia sob demanda orientada por objetivos arquiteturais claros.
+      </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Service 1 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[22px]">rocket_launch</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">SQUAD REDUZIDO</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Desenvolvimento do zero</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Construção completa de MVPs robustos e produtos corporativos com arquitetura desacoplada, tipagem ponta a ponta e testes integrados desde a primeira linha.
+        </p>
+</div>
+<!-- Service 2: Highlighted -->
+<div class="p-4 rounded-lg bg-surface-container-high shadow-lg flex flex-col gap-2 relative">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+<span class="font-label-caps text-label-caps text-secondary bg-secondary/10 px-2 py-0.5 rounded font-bold">
+            ★ RECOMENDADO
+          </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Auditoria de código STE-DEV</h3>
+<span class="font-code-sm text-code-sm text-secondary block mt-0.5">Porta de entrada recomendada</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Varredura cirúrgica de repositórios existentes com foco em vazamento de invariantes, alucinações de IA e criação de um roadmap atômico de saneamento.
+        </p>
+</div>
+<!-- Service 3 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[22px]">build_circle</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">LEGACY REPAIR</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Resgate e modernização</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Intervenção em bases de código legadas ou paralisadas por débito técnico severo, migrando para padrões modernos sem necessidade de recriação total.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 9: FAIXA STE-DEV PREVENTIVE COMPLIANCE -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">PADRÃO CERTIFICADO</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">STE-DEV Preventive Compliance</h3>
+</div>
+</div>
+<!-- 3 Stacked Guarantee Items -->
+<div class="flex flex-col gap-2">
+<div class="p-3 rounded bg-surface-container-lowest flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">gavel</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">LGPD no desenho do sistema</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dados sensíveis criptografados e isolados do escopo client-side.</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-lowest flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">schema</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Separação DB-Row vs DTO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Camadas de interface jamais acessam tabelas brutas diretamente.</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-lowest flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">checklist</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Auditoria contínua de tipos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nenhum escape de tipagem fraca passa pelos checks automatizados.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: SOBRE O DESENVOLVEDOR -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">// QUEM EXECUTA</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Sobre o Desenvolvedor
+      </h2>
+</div>
+<!-- Dev Profile Card -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-4 shadow-md">
+<!-- Portrait Photo Frame -->
+<div class="relative w-full h-56 rounded bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional tech portrait of a senior software engineer in a modern dark ambient workspace subtle blue screen glow focused analytical posture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB9v0suqDjp6CxgnqozYkLB-1UjTplDqHYYXqS9H0xyHKGrH5ggq9mWitKv3ftpkKpmgtsETN5h3qu59tsStQxss81dADgsn1aM9yp9mwZJWGBqPU2W2ubpipmq4AAfUpjXVbZVyDqURm3eWp8uzaLaLQzmb5pmRC1vIEtMD4gxmOiCfMNmUcRnYh2i8BJY0fsss0poDUXzBgtsSqfw7XNn8JDuWBngXj_eJJVeo2ZMWR3d0vBIywb"/>
+<div class="absolute bottom-2 left-2 right-2 bg-surface-container-lowest/90 backdrop-blur-md p-2 rounded flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">Engenheiro Solo - STE-DEV</span>
+<span class="font-label-caps text-label-caps text-secondary">DISPONÍVEL PARA CONTRATOS</span>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- First Person Bio -->
+<div class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+          "Atuo como engenheiro solo focado em eliminar a lacuna entre a agilidade extrema da inteligência artificial e a solidez requerida por setores regulados."
+        </p>
+<p>
+          "Minha atuação combina arquitetura limpa, princípios aeroespaciais de documentação semântica e restrições automatizadas para garantir que cada linha de código entregue tenha valor duradouro e zero débitos ocultos."
+        </p>
+</div>
+<!-- Skills Chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm">Next.js</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm">TypeScript</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm">PostgreSQL</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm">Clean Architecture</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-secondary font-code-sm text-code-sm">AI Governance</span>
+</div>
+</div>
+</section>
+<!-- SECTION 11: FORMULÁRIO DE CONTATO & FOOTER -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-lowest" id="contato">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">// INICIAR AUDITORIA OU PROJETO</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Contato Direto
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Conte sobre seu desafio técnico. Resposta em até 24 horas úteis com proposta ou parecer preliminar.
+      </p>
+</div>
+<!-- Contact Form -->
+<form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault(); alert('Solicitação registrada com sucesso no protocolo STE-DEV.');">
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Nome Completo</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:bg-surface-container-high transition-colors" placeholder="Ex.: Lucas Mendes" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">E-mail Corporativo</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:bg-surface-container-high transition-colors" placeholder="lucas@suaempresa.com.br" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Tipo de Interesse</label>
+<select class="w-full h-11 px-3 rounded bg-surface-container text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-high transition-colors">
+<option value="auditoria">Auditoria de Código STE-DEV</option>
+<option value="desenvolvimento">Desenvolvimento de Novo Software</option>
+<option value="resgate">Resgate e Modernização de Legado</option>
+<option value="outro">Consultoria em Governança de IA</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Contexto do Projeto / Repositório</label>
+<textarea class="w-full p-3 rounded bg-surface-container text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:bg-surface-container-high transition-colors resize-none" placeholder="Descreva sua stack atual, prazos e principais pontos de atenção..." rows="4"></textarea>
+</div>
+<button class="w-full h-11 mt-2 bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center rounded tracking-wide active:scale-[0.99] transition-transform shadow-md" type="submit">
+        Enviar solicitação de auditoria / projeto
+      </button>
+</form>
+<!-- Direct Channels -->
+<div class="flex flex-col gap-2 pt-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">// CANAIS DIRETOS</span>
+<div class="grid grid-cols-1 gap-2">
+<a class="h-10 px-3 rounded bg-surface-container text-on-surface flex items-center justify-between font-code-sm text-code-sm active:bg-surface-container-high transition-colors" href="mailto:contato@ste-dev.io">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">mail</span>
+            contato@ste-dev.io
+          </span>
+<span class="text-on-surface-variant text-[12px]">→</span>
+</a>
+<a class="h-10 px-3 rounded bg-surface-container text-on-surface flex items-center justify-between font-code-sm text-code-sm active:bg-surface-container-high transition-colors" href="https://linkedin.com" rel="noopener" target="_blank">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">link</span>
+            LinkedIn Profile
+          </span>
+<span class="text-on-surface-variant text-[12px]">→</span>
+</a>
+<a class="h-10 px-3 rounded bg-surface-container text-on-surface flex items-center justify-between font-code-sm text-code-sm active:bg-surface-container-high transition-colors" href="https://github.com" rel="noopener" target="_blank">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+            GitHub Repos
+          </span>
+<span class="text-on-surface-variant text-[12px]">→</span>
+</a>
+</div>
+</div>
+<!-- Compact Mobile Footer -->
+<div class="mt-space-md pt-4 flex flex-col gap-2 text-on-surface-variant">
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps">
+<span>© 2025 STE-DEV</span>
+<span>ASD-STE100 COMPLIANT</span>
+</div>
+<p class="font-code-sm text-code-sm leading-relaxed">
+        Engenharia de Software Preventiva orientada por contratos determinísticos e mitigação ativa de alucinações.
+      </p>
+<div class="flex items-center gap-3 pt-1 font-label-caps text-label-caps">
+<a class="hover:text-primary transition-colors" href="#">PRIVACIDADE</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">TERMOS TÉCNICOS</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">STATUS SYSTEM</a>
+</div>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-code-sm"><div class="flex justify-around items-center h-14 px-gutter-mobile"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 transition-colors text-primary font-code-sm" data-path="metodologia" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-caps text-label-caps">Método</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 text-on-surface-variant hover:text-primary transition-colors" data-path="auditoria" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-caps text-label-caps">Auditoria</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 text-on-surface-variant hover:text-primary transition-colors" data-path="projetos" href="#"><span class="material-symbols-outlined text-[20px]">stacks</span><span class="font-label-caps text-label-caps">Projetos</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 text-on-surface-variant hover:text-primary transition-colors" data-path="servicos" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span class="font-label-caps text-label-caps">Serviços</span></a></div></nav></body></html>

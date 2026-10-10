@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#161b2a", "background": "#0e1321", "tertiary-fixed-dim": "#ffb3ad", "on-primary-container": "#004965", "on-primary-fixed-variant": "#004c69", "on-tertiary-fixed-variant": "#930013", "surface-variant": "#303444", "primary-container": "#38bdf8", "on-tertiary-container": "#8d0012", "surface-container-lowest": "#090e1c", "surface-container-high": "#252a39", "on-tertiary": "#68000a", "on-secondary-fixed-variant": "#005236", "on-secondary": "#003824", "on-surface-variant": "#bdc8d1", "secondary-fixed": "#6ffbbe", "primary": "#8ed5ff", "outline": "#87929a", "on-tertiary-fixed": "#410004", "surface-container-highest": "#303444", "error-container": "#93000a", "secondary": "#4edea3", "secondary-container": "#00a572", "on-secondary-fixed": "#002113", "on-primary": "#00354a", "error": "#ffb4ab", "on-background": "#dee2f6", "on-error": "#690005", "tertiary": "#ffbcb7", "on-primary-fixed": "#001e2c", "primary-fixed": "#c4e7ff", "surface": "#0e1321", "on-surface": "#dee2f6", "inverse-on-surface": "#2b303f", "secondary-fixed-dim": "#4edea3", "tertiary-container": "#ff938c", "on-secondary-container": "#00311f", "surface-bright": "#343948", "on-error-container": "#ffdad6", "surface-dim": "#0e1321", "surface-container": "#1a1f2e", "inverse-surface": "#dee2f6", "tertiary-fixed": "#ffdad7", "outline-variant": "#3e484f", "primary-fixed-dim": "#7bd0ff", "surface-tint": "#7bd0ff", "inverse-primary": "#00668a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "3rem", "margin-tablet": "2rem", "space-xl": "2.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-lg": [ "Inter" ], "code-lg": [ "JetBrains Mono" ], "display-lg-mobile": [ "Inter" ], "label-caps": [ "JetBrains Mono" ], "code-md": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "headline-md": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Inter" ], "body-sm": [ "Inter" ], "code-sm": [ "JetBrains Mono" ], "headline-lg-mobile": [ "Inter" ], "display-lg": [ "Inter" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "code-lg": [ "14px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-caps": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "code-md": [ "13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "code-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-[#1e293b]/40"><div class="h-16 max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Omni Sistemas Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VCo3sAg01ERlfrCc4KJOXwXj4DY6hggrsvIjCy6T-NCioGDd7q2VFXHKq57CgIQ_4xZ-INOrH0SfdOs8HEt_vsJ-OSO49zA5rDOTOP4BGfyvc-NNNoYZa-mgflWS83xAi5l1-TVjO5qdJ2EikUPpUJNhnla6-TxiYVDT9TaA1fE7Pus_u1YgAzkjnPVv7sJ_59fPcVQZqllxDb_Sy3rL0XPewd4KhaHMQiAhXi-zzFqRGKVEx7Obb-wYU"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Omni Sistemas</span><span class="font-code-sm text-code-sm text-on-surface-variant uppercase tracking-wider">Software Preventivo</span></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-code-md text-code-md"><a aria-current="page" class="transition-colors text-primary font-code-md text-code-md" data-path="metodologia" href="#metodologia">Metodologia</a><a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="auditoria" href="#auditoria">Auditoria</a><a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="projetos" href="#projetos">Projetos</a><a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="servicos" href="#servicos">Serviços</a><a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre" href="#sobre">Sobre</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold hover:bg-primary transition-colors shadow-[0_0_12px_rgba(56,189,248,0.25)]" data-path="solicitar-auditoria" href="#contato">Solicitar Auditoria</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Menu de Navegação" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors lg:hidden" onclick="document.getElementById('mobile-drawer').classList.toggle('-translate-x-full')" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div></header><div class="fixed inset-0 z-50 bg-surface-container-lowest/95 backdrop-blur-2xl -translate-x-full transition-transform duration-300 flex flex-col pt-safe pb-safe" id="mobile-drawer"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex flex-col"><span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Omni Sistemas //</span><span class="font-code-sm text-code-sm uppercase text-on-surface-variant">TERMINAL DE NAVEGAÇÃO</span></div><button aria-label="Fechar Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary" onclick="document.getElementById('mobile-drawer').classList.add('-translate-x-full')" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="flex-1 px-gutter-mobile py-space-md flex flex-col justify-between overflow-y-auto"><div class="flex flex-col gap-space-xs"><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="metodologia" href="#">Metodologia</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="auditoria" href="#">Auditoria</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="projetos" href="#">Projetos</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="servicos" href="#">Serviços</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="sobre" href="#">Sobre</a><a class="h-11 px-space-sm flex items-center font-code-md text-code-md text-on-surface-variant hover:text-primary transition-colors" data-path="contato" href="#">Contato</a></div><div class="pt-space-md pb-space-sm"><a class="w-full h-11 bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center rounded uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors" data-path="solicitar-auditoria" href="#">Solicitar Auditoria</a></div></div></div><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- ==========================================
+       HERO SECTION: PRECISION ENGINEERING
+       ========================================== -->
+<section class="relative w-full overflow-hidden py-space-xl lg:py-24">
+<!-- Matrix dot pattern overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-image: radial-gradient(#38bdf8 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
+<div class="relative max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Hero Content (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high border border-outline-variant/60 w-fit">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">ENGINEERING DISCIPLINE // PREVENTIVE IA</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-bold tracking-tight">
+            Velocidade da IA.<br/>
+<span class="text-primary-container">Rigor de engenharia</span> preventiva.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Software corporativo para HealthTech e FinTech construído com a metodologia Omni Sistemas: código auditável, seguro, tipado e escalável desde o primeiro commit.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded bg-primary-container text-on-primary-container font-headline-sm text-body-lg font-semibold hover:bg-primary transition-all duration-200 shadow-[0_0_16px_rgba(56,189,248,0.3)]" href="#metodologia">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span>Conhecer a metodologia</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded bg-surface-container-high border border-outline-variant text-on-surface font-headline-sm text-body-lg font-semibold hover:bg-surface-variant transition-colors" href="#projetos">
+<span>Ver projetos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Micro Terminal Telemetry Footnote -->
+<div class="flex items-center gap-space-lg pt-space-sm font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="text-secondary font-semibold">●</span>
+<span>Zero-any TS Standard</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-semibold">◈</span>
+<span>ASD-STE100 Verified</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-on-surface font-semibold">99.9%</span>
+<span>Runtime Stability</span>
+</div>
+</div>
+</div>
+<!-- Hero Mockup Frame (5 Cols) -->
+<div class="lg:col-span-5 relative">
+<div class="w-full rounded-xl bg-surface-container-low border border-outline-variant/60 shadow-2xl overflow-hidden">
+<!-- IDE / Browser Header -->
+<div class="h-9 bg-surface-container-lowest px-4 flex items-center justify-between border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant/70 flex items-center gap-1 bg-surface-container-high/40 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+<span>telemetry.omni-sistemas.internal/console</span>
+</div>
+<div class="w-12"></div>
+</div>
+<!-- Empty Architectural Canvas Viewport -->
+<div class="relative h-80 sm:h-96 w-full flex flex-col items-center justify-center p-6 bg-surface-container-lowest/70">
+<div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10 flex flex-col items-center text-center p-6 rounded-lg border border-dashed border-outline-variant/50 bg-surface-container/40 max-w-xs">
+<span class="material-symbols-outlined text-outline text-[40px] mb-2">dashboard_customize</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Mockup do projeto</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1">Dashboard analítico • Painel de controle de telemetria</span>
+</div>
+<!-- Floating Micro-Widget -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container border border-outline-variant/50 rounded p-2.5 flex items-center justify-between text-left">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-on-surface">Guardião Ativo // Auditoria em Tempo Real</span>
+</div>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">100% CONFORME</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 2: O PROBLEMA
+       ========================================== -->
+<section class="w-full py-space-xl bg-surface-container-lowest/50 border-y border-outline-variant/30">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
+<span class="font-label-caps text-label-caps text-error uppercase tracking-wider">// Dívida Oculta em Escala</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Por que código de IA sem supervisão custa caro
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          O atalho imediato promovido por copilotos sem isolamento arquitetural resulta em alucinações silenciosas, acoplamento perigoso e estagnação precoce de squads inteiros.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="p-space-lg rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col gap-space-sm hover:border-error/40 transition-colors">
+<div class="w-10 h-10 rounded bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">timer_off</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Dívida técnica acumulada</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Bases inchadas e complexidade acidental que tornam cada nova feature 3x mais lenta.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col gap-space-sm hover:border-error/40 transition-colors">
+<div class="w-10 h-10 rounded bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">shuffle</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Código inconsistente</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Múltiplos padrões no mesmo repositório, quebrando a manutenibilidade do time.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col gap-space-sm hover:border-error/40 transition-colors">
+<div class="w-10 h-10 rounded bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">bug_report</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Bugs em produção</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Vazamento de estados nulos e falhas silenciosas em runtime por ausência de contratos.
+          </p>
+</div>
+<!-- Card 4 -->
+<div class="p-space-lg rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col gap-space-sm hover:border-error/40 transition-colors">
+<div class="w-10 h-10 rounded bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Custo de manutenção</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Refatorações constantes e horas gastas apagando incêndios em vez de tracionar produto.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 3: METODOLOGIA Omni Sistemas — OS 4 PILARES
+       ========================================== -->
+<section class="w-full py-space-xl" id="metodologia">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col gap-space-xs max-w-3xl mb-space-xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Governança Determinística</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Metodologia Omni Sistemas
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Engenharia de software determinística aplicada à geração de código assistida por IA. O agente propõe, mas o protocolo invariante audita e impõe conformidade estrita.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Pilar 1 -->
+<div class="p-space-xl rounded-lg bg-surface-container-low border border-outline-variant/60 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-semibold">PILAR 01</span>
+<span class="material-symbols-outlined text-primary text-[24px]">spellcheck</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Semântica ASD-STE100</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Um conceito = um nome. Vocabulário estritamente controlado que elimina ambiguidades em classes, métodos e assinaturas de domínio corporativo.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 font-code-sm text-code-sm text-on-surface-variant">
+            Regra: Tolerância zero a sinônimos polimórficos não mapeados.
+          </div>
+</div>
+<!-- Pilar 2 -->
+<div class="p-space-xl rounded-lg bg-surface-container-low border border-outline-variant/60 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-semibold">PILAR 02</span>
+<span class="material-symbols-outlined text-primary text-[24px]">layers</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Arquitetura Limpa &amp; SOLID</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Separação estrita de camadas: regras de negócio puras isoladas de infraestrutura, bancos de dados, integrações de terceiros e frameworks web.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 font-code-sm text-code-sm text-on-surface-variant">
+            Regra: Dependências sempre apontam em direção ao domínio central.
+          </div>
+</div>
+<!-- Pilar 3 -->
+<div class="p-space-xl rounded-lg bg-surface-container-low border border-outline-variant/60 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-semibold">PILAR 03</span>
+<span class="material-symbols-outlined text-primary text-[24px]">rule</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Restrição Rígida</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Limite estrito de 100 linhas por arquivo, proibição irrestrita de "any", encapsulamento try/catch obrigatório em toda operação assíncrona e segregação formal entre DB-Row e DTO.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 font-code-sm text-code-sm text-on-surface-variant">
+            Regra: Invariante de compilação sem casts ou supressões de erro.
+          </div>
+</div>
+<!-- Pilar 4 -->
+<div class="p-space-xl rounded-lg bg-surface-container-low border border-outline-variant/60 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-semibold">PILAR 04</span>
+<span class="material-symbols-outlined text-primary text-[24px]">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Skill Guardiã de IA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Agente/linter guardião determinístico que valida conformidade arquitetural e tipagem estrita antes de permitir a emissão ou commit de qualquer trecho de código.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 font-code-sm text-code-sm text-on-surface-variant">
+            Regra: Feedback em milissegundos com veto de merge automático.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 4: AS 4 ETAPAS + PLANO DE AÇÃO
+       ========================================== -->
+<section class="w-full py-space-xl bg-surface-container-lowest/70 border-t border-outline-variant/30">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">// Fluxo de Implementação</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Linha do Tempo: Protocolo de 4 Etapas
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Do diagnóstico inicial à barreira contínua contra entropia de software.
+        </p>
+</div>
+<!-- Timeline Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="flex flex-col gap-space-sm p-space-md rounded bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-primary">
+<span class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center font-bold">01</span>
+<span class="font-semibold uppercase tracking-wider">Etapa 01</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Ingestão e varredura</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Mapeamento estático integral da base, identificando vazamentos de escopo, duplicidades e acoplamentos.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col gap-space-sm p-space-md rounded bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-primary">
+<span class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center font-bold">02</span>
+<span class="font-semibold uppercase tracking-wider">Etapa 02</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Relatório de conformidade</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Emissão de inventário detalhado separando violações críticas de invariantes operacionais validados.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-space-sm p-space-md rounded bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-secondary">
+<span class="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center font-bold">03</span>
+<span class="font-semibold uppercase tracking-wider">Etapa 03</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Plano de ação atômico</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sequenciamento estruturado de refatoração para neutralizar riscos sem paralisar deploys.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col gap-space-sm p-space-md rounded bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-primary">
+<span class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center font-bold">04</span>
+<span class="font-semibold uppercase tracking-wider">Etapa 04</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Integração e prevenção</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Implementação da Skill Guardiã no CI/CD para impedir a reentrada de código degenerativo gerado por IA.
+          </p>
+</div>
+</div>
+<!-- Action Plan Atomic Chips Detail Block -->
+<div class="mt-space-lg p-space-lg rounded-lg bg-surface-container border border-outline-variant/50">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">alt_route</span>
+<span class="font-semibold">Detalhamento dos 5 Passos do Plano de Ação Atômico (Etapa 03):</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Execução Sequencial • Sem Regressão</span>
+</div>
+<div class="flex flex-wrap gap-space-sm pt-space-xs">
+<span class="px-3 py-1.5 rounded bg-surface-container-high border border-outline-variant/60 font-code-sm text-code-sm text-on-surface flex items-center gap-1.5">
+<span class="text-secondary font-bold">1.</span> Testes automatizados
+          </span>
+<span class="px-3 py-1.5 rounded bg-surface-container-high border border-outline-variant/60 font-code-sm text-code-sm text-on-surface flex items-center gap-1.5">
+<span class="text-secondary font-bold">2.</span> Tipagem e DTOs
+          </span>
+<span class="px-3 py-1.5 rounded bg-surface-container-high border border-outline-variant/60 font-code-sm text-code-sm text-on-surface flex items-center gap-1.5">
+<span class="text-secondary font-bold">3.</span> Extração de lógica
+          </span>
+<span class="px-3 py-1.5 rounded bg-surface-container-high border border-outline-variant/60 font-code-sm text-code-sm text-on-surface flex items-center gap-1.5">
+<span class="text-secondary font-bold">4.</span> Refatoração de UI
+          </span>
+<span class="px-3 py-1.5 rounded bg-surface-container-high border border-outline-variant/60 font-code-sm text-code-sm text-on-surface flex items-center gap-1.5">
+<span class="text-secondary font-bold">5.</span> Limpeza semântica
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 5: RELATÓRIO DE CONFORMIDADE CLI
+       ========================================== -->
+<section class="w-full py-space-xl" id="auditoria">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col gap-space-xs max-w-2xl mb-space-lg">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Telemetria e Diagnóstico</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Relatório de Conformidade
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Console de telemetria emitido pelo analisador estático Omni Sistemas durante a varredura da árvore de código.
+        </p>
+</div>
+<!-- CLI Shell Mockup -->
+<div class="rounded-lg bg-surface-container-lowest border border-outline-variant/60 shadow-xl overflow-hidden">
+<!-- IDE / Terminal Topbar -->
+<div class="px-space-md py-2.5 bg-surface-container-low border-b border-outline-variant/40 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">omni-sistemas audit --strict --workspace=enterprise-core</span>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant border border-outline-variant/40">
+            Exemplo ilustrativo
+          </span>
+</div>
+<!-- Terminal Output -->
+<div class="p-space-lg font-code-sm text-code-sm flex flex-col gap-2.5 leading-relaxed overflow-x-auto">
+<div class="text-on-surface-variant/70 pb-1">
+            [Omni Sistemas GUARDIAN v4.12.0] Iniciando análise estática de invariantes em 184 módulos...
+          </div>
+<!-- Line 1: VIOLACAO -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2 rounded bg-error-container/10 border border-error/30 text-error">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-error/20 font-bold text-label-caps">[VIOLAÇÃO]</span>
+<span>Componentes &gt; 100 linhas</span>
+</div>
+<span class="text-on-surface-variant font-mono">app/components/BillingTable.tsx (248 lines)</span>
+</div>
+<!-- Line 2: VIOLACAO -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2 rounded bg-error-container/10 border border-error/30 text-error">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-error/20 font-bold text-label-caps">[VIOLAÇÃO]</span>
+<span>Tipagem permissiva detectada</span>
+</div>
+<span class="text-on-surface-variant font-mono">uso de 'any' em 14 assinaturas de API</span>
+</div>
+<!-- Line 3: VIOLACAO -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2 rounded bg-error-container/10 border border-error/30 text-error">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-error/20 font-bold text-label-caps">[VIOLAÇÃO]</span>
+<span>Falha de acoplamento</span>
+</div>
+<span class="text-on-surface-variant font-mono">DB-Row exposto diretamente na camada de apresentação</span>
+</div>
+<!-- Line 4: CONFORME -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2 rounded bg-secondary-container/10 border border-secondary/30 text-secondary">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-secondary/20 font-bold text-label-caps">[CONFORME]</span>
+<span>Tratamento de exceções assíncronas</span>
+</div>
+<span class="text-on-surface-variant font-mono">100% dos hooks com boundaries protegidos</span>
+</div>
+<!-- Line 5: CONFORME -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2 rounded bg-secondary-container/10 border border-secondary/30 text-secondary">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-secondary/20 font-bold text-label-caps">[CONFORME]</span>
+<span>Separação DB-Row / DTO</span>
+</div>
+<span class="text-on-surface-variant font-mono">Entidade Tenant isolada via mapper</span>
+</div>
+<!-- Line 6: CONFORME -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2 rounded bg-secondary-container/10 border border-secondary/30 text-secondary">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-secondary/20 font-bold text-label-caps">[CONFORME]</span>
+<span>Cobertura semântica ASD-STE100</span>
+</div>
+<span class="text-on-surface-variant font-mono">Vocabulário padronizado</span>
+</div>
+<div class="pt-2 text-on-surface-variant/80 flex items-center justify-between border-t border-outline-variant/30 mt-2">
+<span>Score de Invariantes: <strong class="text-primary font-bold">50.0%</strong> (3 violações bloqueantes detectadas)</span>
+<span class="text-error font-semibold">// BUILD VETOED BY GUARD SKILL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 6: COMPARAÇÃO ANTES E DEPOIS DE CÓDIGO
+       ========================================== -->
+<section class="w-full py-space-xl bg-surface-container-lowest/50 border-t border-outline-variant/30">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Inspeção de Sintaxe</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Anatomia de um Patch Preventivo
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Compare como o código gerado por IA genérica degrada a base versus a versão refinada sob restrição rígida Omni Sistemas.
+          </p>
+</div>
+<span class="font-label-caps text-label-caps px-3 py-1 rounded bg-surface-container-high text-on-surface-variant border border-outline-variant/40 w-fit">
+          Exemplo ilustrativo
+        </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Left Pane: AI Sem Supervisao -->
+<div class="rounded-lg bg-surface-container-low border border-error/40 overflow-hidden flex flex-col justify-between">
+<div>
+<div class="px-space-md py-2.5 bg-error-container/10 border-b border-error/30 flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-error font-code-sm text-code-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Código de IA sem supervisão</span>
+</div>
+<span class="font-code-sm text-code-sm text-error/80">UserDashboard.tsx</span>
+</div>
+<!-- Code block -->
+<div class="p-space-md font-code-sm text-code-sm bg-surface-container-lowest text-on-surface-variant overflow-x-auto leading-relaxed">
+<pre class="font-code-sm"><span class="text-outline">// UI + Fetch acoplados, sem tipagem e sem try/catch</span>
+<span class="text-error">export default function UserDashboard() {</span>
+  <span class="text-tertiary">const</span> [data, setData] = useState&lt;<span class="text-error font-bold">any</span>&gt;(null);
+
+  useEffect(() =&gt; {
+    <span class="text-outline">// Alucinação comum: fetch direto no useEffect sem abort ou erro</span>
+    fetch(<span class="text-primary-container">'/api/users/billing'</span>)
+      .then(res =&gt; res.json())
+      .then(resData =&gt; {
+        <span class="text-outline">// Exposição direta de campos brutos da tabela</span>
+        setData(resData.raw_user_row);
+      });
+  }, []);
+
+  <span class="text-tertiary">return</span> (
+    &lt;div&gt;
+      &lt;h1&gt;{data?.usr_nm_full || <span class="text-primary-container">'Carregando...'</span>}&lt;/h1&gt;
+      &lt;span&gt;Saldo: {data?.acc_bal_cents}&lt;/span&gt;
+    &lt;/div&gt;
+  );
+<span class="text-error">}</span></pre>
+</div>
+</div>
+<!-- Problem Checklist -->
+<div class="p-space-md border-t border-error/20 bg-error-container/5 flex flex-col gap-1.5 font-code-sm text-code-sm text-error">
+<div class="flex items-center gap-2">
+<span>✕</span> <span>Sem tipagem estrita: uso indiscriminado de <code>any</code></span>
+</div>
+<div class="flex items-center gap-2">
+<span>✕</span> <span>Lógica de API acoplada no componente de apresentação</span>
+</div>
+<div class="flex items-center gap-2">
+<span>✕</span> <span>Sem tratamento de erro: falha silenciosa em caso de 500</span>
+</div>
+</div>
+</div>
+<!-- Right Pane: Omni Sistemas Code -->
+<div class="rounded-lg bg-surface-container-low border border-secondary/40 overflow-hidden flex flex-col justify-between">
+<div>
+<div class="px-space-md py-2.5 bg-secondary-container/10 border-b border-secondary/30 flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-secondary font-code-sm text-code-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Código Omni Sistemas</span>
+</div>
+<span class="font-code-sm text-code-sm text-secondary/80">UserDashboard.view.tsx</span>
+</div>
+<!-- Code block -->
+<div class="p-space-md font-code-sm text-code-sm bg-surface-container-lowest text-on-surface-variant overflow-x-auto leading-relaxed">
+<pre class="font-code-sm"><span class="text-outline">// Clean View • DTO tipado rigidamente • Hook isolado</span>
+<span class="text-tertiary">export function</span> <span class="text-secondary font-semibold">UserDashboardView</span>() {
+  <span class="text-tertiary">const</span> { account, isLoading, error } = <span class="text-primary font-medium">useUserBilling</span>();
+
+  <span class="text-tertiary">if</span> (error) <span class="text-tertiary">return</span> &lt;<span class="text-secondary">ErrorTelemetryNotice</span> error={error} /&gt;;
+  <span class="text-tertiary">if</span> (isLoading || !account) <span class="text-tertiary">return</span> &lt;<span class="text-secondary">SkeletonMetricCard</span> /&gt;;
+
+  <span class="text-tertiary">return</span> (
+    &lt;<span class="text-secondary">MetricCardContainer</span>&gt;
+      &lt;<span class="text-secondary">TypographyHeadline</span>&gt;{account.customerName}&lt;/<span class="text-secondary">TypographyHeadline</span>&gt;
+      &lt;<span class="text-secondary">FormattedBalanceBadge</span> value={account.formattedBalance} /&gt;
+    &lt;/<span class="text-secondary">MetricCardContainer</span>&gt;
+  );
+}</pre>
+</div>
+</div>
+<!-- Gains Checklist -->
+<div class="p-space-md border-t border-secondary/20 bg-secondary-container/5 flex flex-col gap-1.5 font-code-sm text-code-sm text-secondary">
+<div class="flex items-center gap-2">
+<span>✓</span> <span>Hook isolado reutilizável com proteção de ciclo de vida</span>
+</div>
+<div class="flex items-center gap-2">
+<span>✓</span> <span>Tipagem forte com contratos e DTOs imutáveis</span>
+</div>
+<div class="flex items-center gap-2">
+<span>✓</span> <span>Manutenibilidade garantida: UI sob 40 linhas legíveis</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 7: PROJETOS EM DESTAQUE
+       ========================================== -->
+<section class="w-full py-space-xl" id="projetos">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Portfólio de Engenharia</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Projetos em Destaque
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Aplicações de missão crítica projetadas com tolerância zero à falha arquitetural.
+        </p>
+</div>
+<!-- 6 Projects Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Project 1: AQUI -->
+<div class="rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-200">
+  <div>
+    <div class="h-44 bg-surface-container-lowest flex flex-col items-center justify-center p-4 border-b border-outline-variant/30 relative text-center">
+      <span class="material-symbols-outlined text-outline text-[32px] mb-1">query_stats</span>
+      <span class="font-code-sm text-code-sm text-on-surface font-medium">Mockup do projeto</span>
+      <span class="font-code-sm text-code-sm text-on-surface-variant">Metas • Comissionamento</span>
+    </div>
+    <div class="p-space-lg flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-headline-md text-headline-md text-on-surface">AQUI</span>
+        <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/30 font-semibold uppercase">FinTech</span>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" style="line-height: 1.6;">
+        <strong class="text-on-surface">Objetivo:</strong> Sistema focado no módulo de "comissionamento", auxiliando na gestão de metas, produção e cálculos de equipes comerciais.<br/>
+        <strong class="text-on-surface mt-1 block">Público:</strong> Profissionais de vendas e gestores.<br/>
+        <strong class="text-on-surface mt-1 block">Info:</strong> Arquitetura monorepo com controle em tempo real de metas financeiras e salvamento em lote.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 2: Omni Saúde e OmniSite -->
+<div class="rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-200">
+  <div>
+    <div class="h-44 bg-surface-container-lowest flex flex-col items-center justify-center p-4 border-b border-outline-variant/30 relative text-center">
+      <span class="material-symbols-outlined text-outline text-[32px] mb-1">monitor_heart</span>
+      <span class="font-code-sm text-code-sm text-on-surface font-medium">Mockup do projeto</span>
+      <span class="font-code-sm text-code-sm text-on-surface-variant">Laudos • Notificações</span>
+    </div>
+    <div class="p-space-lg flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-headline-md text-headline-md text-on-surface">Omni Saúde</span>
+        <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-secondary/10 text-secondary border border-secondary/30 font-semibold uppercase">HealthTech</span>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" style="line-height: 1.6;">
+        <strong class="text-on-surface">Objetivo:</strong> Sistema de gestão e processamento de laudos médicos laboratoriais.<br/>
+        <strong class="text-on-surface mt-1 block">Público:</strong> Laboratórios, médicos, pacientes.<br/>
+        <strong class="text-on-surface mt-1 block">Info:</strong> Portal e APIs de alta conformidade com Central de Notificações.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 3: LWOS -->
+<div class="rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-200">
+  <div>
+    <div class="h-44 bg-surface-container-lowest flex flex-col items-center justify-center p-4 border-b border-outline-variant/30 relative text-center">
+      <span class="material-symbols-outlined text-outline text-[32px] mb-1">account_balance</span>
+      <span class="font-code-sm text-code-sm text-on-surface font-medium">Mockup do projeto</span>
+      <span class="font-code-sm text-code-sm text-on-surface-variant">Wealth • Family Office</span>
+    </div>
+    <div class="p-space-lg flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-headline-md text-headline-md text-on-surface truncate pr-2">LWOS</span>
+        <div class="flex items-center gap-1 shrink-0">
+          <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-tertiary-container/20 text-on-surface border border-tertiary-container/40 uppercase">Em dev</span>
+        </div>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" style="line-height: 1.6;">
+        <strong class="text-on-surface">Objetivo:</strong> Sistema operacional para o mercado de Wealth Management.<br/>
+        <strong class="text-on-surface mt-1 block">Público:</strong> Famílias de alto patrimônio, escritórios.<br/>
+        <strong class="text-on-surface mt-1 block">Info:</strong> Captação, gestão de recursos e triagem interna.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 4: QWork -->
+<div class="rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-200">
+  <div>
+    <div class="h-44 bg-surface-container-lowest flex flex-col items-center justify-center p-4 border-b border-outline-variant/30 relative text-center">
+      <span class="material-symbols-outlined text-outline text-[32px] mb-1">psychology</span>
+      <span class="font-code-sm text-code-sm text-on-surface font-medium">Mockup do projeto</span>
+      <span class="font-code-sm text-code-sm text-on-surface-variant">Psicossocial • Riscos</span>
+    </div>
+    <div class="p-space-lg flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-headline-md text-headline-md text-on-surface">QWork</span>
+        <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/30 font-semibold uppercase">Enterprise</span>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" style="line-height: 1.6;">
+        <strong class="text-on-surface">Objetivo:</strong> Plataforma para avaliação psicossocial e riscos ocupacionais.<br/>
+        <strong class="text-on-surface mt-1 block">Público:</strong> Clínicas, médicos, gestores de RH.<br/>
+        <strong class="text-on-surface mt-1 block">Info:</strong> Core que processa avaliações e emite laudos rigorosos (LGPD).
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 5: QWork - Landing Page -->
+<div class="rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-200">
+  <div>
+    <div class="h-44 bg-surface-container-lowest flex flex-col items-center justify-center p-4 border-b border-outline-variant/30 relative text-center">
+      <span class="material-symbols-outlined text-outline text-[32px] mb-1">campaign</span>
+      <span class="font-code-sm text-code-sm text-on-surface font-medium">Mockup do projeto</span>
+      <span class="font-code-sm text-code-sm text-on-surface-variant">Marketing • SEO</span>
+    </div>
+    <div class="p-space-lg flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-headline-md text-headline-md text-on-surface">QWork LP</span>
+        <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-secondary/10 text-secondary border border-secondary/30 font-semibold uppercase">Marketing</span>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" style="line-height: 1.6;">
+        <strong class="text-on-surface">Objetivo:</strong> Site focado em vendas e marketing.<br/>
+        <strong class="text-on-surface mt-1 block">Público:</strong> Departamentos de RH e médicos.<br/>
+        <strong class="text-on-surface mt-1 block">Info:</strong> Landing page otimizada para SEO, funil de vendas e hub de artigos.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 6: RKT -->
+<div class="rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-200">
+  <div>
+    <div class="h-44 bg-surface-container-lowest flex flex-col items-center justify-center p-4 border-b border-outline-variant/30 relative text-center">
+      <span class="material-symbols-outlined text-outline text-[32px] mb-1">sports_tennis</span>
+      <span class="font-code-sm text-code-sm text-on-surface font-medium">Mockup do projeto</span>
+      <span class="font-code-sm text-code-sm text-on-surface-variant">Ranking • Ligas</span>
+    </div>
+    <div class="p-space-lg flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-headline-md text-headline-md text-on-surface">RKT</span>
+        <div class="flex items-center gap-1">
+          <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-tertiary-container/20 text-on-surface border border-tertiary-container/40 uppercase">Em dev</span>
+        </div>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" style="line-height: 1.6;">
+        <strong class="text-on-surface">Objetivo:</strong> Aplicativo esportivo para atletas e controle de rankings de ligas.<br/>
+        <strong class="text-on-surface mt-1 block">Público:</strong> Atletas de raquete, federações e clubes.<br/>
+        <strong class="text-on-surface mt-1 block">Info:</strong> Gestão visual refinada de categorias unindo jogadores.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 7: mundoas -->
+<div class="rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-200">
+  <div>
+    <div class="h-44 bg-surface-container-lowest flex flex-col items-center justify-center p-4 border-b border-outline-variant/30 relative text-center">
+      <span class="material-symbols-outlined text-outline text-[32px] mb-1">account_tree</span>
+      <span class="font-code-sm text-code-sm text-on-surface font-medium">Mockup do projeto</span>
+      <span class="font-code-sm text-code-sm text-on-surface-variant">Infra • Liderança</span>
+    </div>
+    <div class="p-space-lg flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-headline-md text-headline-md text-on-surface">mundoas</span>
+        <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/30 font-semibold uppercase">Infra</span>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" style="line-height: 1.6;">
+        <strong class="text-on-surface">Objetivo:</strong> Ecossistema de infraestrutura sendo a espinha dorsal de microsserviços.<br/>
+        <strong class="text-on-surface mt-1 block">Público:</strong> Uso corporativo interno ou grandes clientes.<br/>
+        <strong class="text-on-surface mt-1 block">Info:</strong> Resiliência da arquitetura e padronização em larga escala.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</section>
+<!-- ==========================================
+       SECTION 8: SERVIÇOS
+       ========================================== -->
+<section class="w-full py-space-xl bg-surface-container-lowest/50 border-t border-outline-variant/30" id="servicos">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Modelos de Engajamento</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Serviços de Engenharia
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Formatos focados em resolver gargalos estruturais em bases de missão crítica.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+<!-- Service 1 -->
+<div class="p-space-xl rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Desenvolvimento do zero</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Da arquitetura ao deploy com rigor de engenharia preventiva e esteira pronta para escala sustentada sem refações.
+            </p>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center px-space-md py-2.5 rounded bg-surface-container-high border border-outline-variant text-on-surface font-headline-sm text-body-md font-semibold hover:bg-surface-variant transition-colors" href="#contato">
+              Solicitar Proposta
+            </a>
+</div>
+</div>
+<!-- Service 2: Highlighted Auditoria -->
+<div class="p-space-xl rounded-lg bg-surface-container-low border-2 border-primary-container shadow-[0_0_24px_rgba(56,189,248,0.18)] flex flex-col justify-between relative">
+<div class="absolute -top-3 left-6">
+<span class="px-3 py-1 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold uppercase tracking-wider">
+              Porta de entrada recomendada
+            </span>
+</div>
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">troubleshoot</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Auditoria de código Omni Sistemas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Varredura profunda, detecção de dívida técnica oculta, auditoria de invariantes e entrega de plano de remediação em até 5 dias úteis.
+            </p>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center px-space-md py-2.5 rounded bg-primary-container text-on-primary-container font-headline-sm text-body-md font-semibold hover:bg-primary transition-colors shadow-md" href="#contato">
+              Agendar Auditoria
+            </a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="p-space-xl rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">autorenew</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Resgate e modernização</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Refatoração cirúrgica de sistemas críticos com IA governada sem interromper a operação comercial nem introduzir regressões.
+            </p>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center px-space-md py-2.5 rounded bg-surface-container-high border border-outline-variant text-on-surface font-headline-sm text-body-md font-semibold hover:bg-surface-variant transition-colors" href="#contato">
+              Modernizar Sistema
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 9: SEGURANÇA E CONFORMIDADE
+       ========================================== -->
+<section class="w-full py-space-xl border-t border-outline-variant/30">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="rounded-xl bg-surface-container-low border border-outline-variant/60 p-space-xl relative overflow-hidden">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg pb-space-lg border-b border-outline-variant/40">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">gavel</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-wider">PROTOCOLO RIGOROSO</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Omni Sistemas Preventive Compliance</h2>
+</div>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-3 py-1.5 rounded border border-outline-variant/40">
+            Padrão Operacional para HealthTech &amp; FinTech
+          </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-lg">
+<div class="flex flex-col gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="text-secondary font-bold">1.</span> LGPD no desenho do sistema
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Privacy by Design intrínseco e minimização de dados sensíveis aplicada no nível dos DTOs de transporte.
+            </p>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="text-secondary font-bold">2.</span> Separação DB-Row vs DTO
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Zero Data Leaks: nenhum campo de banco é serializado para a interface sem conversão e validação estrita.
+            </p>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="text-secondary font-bold">3.</span> Auditoria contínua de tipos
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Invariantes garantidos por testes automatizados de regressão e checagem de tipos em modo restrito permanente.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 10: SOBRE O DESENVOLVEDOR
+       ========================================== -->
+<section class="w-full py-space-xl bg-surface-container-lowest/50 border-t border-outline-variant/30" id="sobre">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl items-center">
+<!-- Profile Picture Mockup Frame (4 Cols) -->
+<div class="md:col-span-4">
+<div class="w-full aspect-[4/5] rounded-xl bg-surface-container-low border border-outline-variant/60 flex flex-col items-center justify-center p-6 text-center shadow-lg relative overflow-hidden">
+<div class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-3 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[40px]">person</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Foto de perfil / Desenvolvedor</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1">Engenheiro Solo • Omni Sistemas</span>
+<div class="mt-4 px-3 py-1 rounded bg-surface-container border border-outline-variant/50 font-code-sm text-code-sm text-secondary">
+              ● Disponível para contratos
+            </div>
+</div>
+</div>
+<!-- Bio & Philosophy (8 Cols) -->
+<div class="md:col-span-8 flex flex-col gap-space-md">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Liderança Técnica Solo</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Engenharia de precisão para produtos que não podem falhar.
+          </h2>
+<div class="p-space-lg rounded-lg bg-surface-container-low border-l-4 border-primary text-on-surface">
+<p class="font-body-lg text-body-lg italic text-on-surface leading-relaxed">
+              "Desenvolvo software como engenheiro solo aliando a alta velocidade dos agentes de IA ao controle estrito de padrões consolidados de engenharia. A IA é uma multiplicadora fantástica, mas apenas se contida por restrições arquiteturais rígidas. Na Omni Sistemas, garanto que cada linha gerada seja auditável, tipada e sustentável no longo prazo."
+            </p>
+</div>
+<!-- Specialty Tags -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Especialidades Centrais:</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded bg-surface-container-high border border-outline-variant/50 font-code-sm text-code-sm text-on-surface">Next.js</span>
+<span class="px-3 py-1 rounded bg-surface-container-high border border-outline-variant/50 font-code-sm text-code-sm text-on-surface">TypeScript</span>
+<span class="px-3 py-1 rounded bg-surface-container-high border border-outline-variant/50 font-code-sm text-code-sm text-on-surface">PostgreSQL</span>
+<span class="px-3 py-1 rounded bg-surface-container-high border border-outline-variant/50 font-code-sm text-code-sm text-on-surface">Clean Architecture</span>
+<span class="px-3 py-1 rounded bg-surface-container-high border border-outline-variant/50 font-code-sm text-code-sm text-primary font-semibold">AI Governance</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 11: CONTATO & FORMULÁRIO
+       ========================================== -->
+<section class="w-full py-space-xl border-t border-outline-variant/30" id="contato">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left: Direct Channels (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Conexão Direta</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              Inicie uma auditoria ou novo projeto
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Sem intermediários comerciais. Converse diretamente com o engenheiro responsável pela arquitetura e entrega técnica da sua aplicação.
+            </p>
+<!-- Channels Box -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant/40 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">mail</span>
+<div>
+<span class="font-code-sm text-code-sm text-on-surface-variant block">E-mail direto</span>
+<a class="font-code-md text-code-md text-on-surface hover:text-primary transition-colors font-medium" href="mailto:contato@omni-sistemas.internal">contato@omni-sistemas.internal</a>
+</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant/40 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<div>
+<span class="font-code-sm text-code-sm text-on-surface-variant block">Redes Técnicas</span>
+<div class="flex items-center gap-space-md pt-0.5">
+<a class="font-code-md text-code-md text-on-surface hover:text-primary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">LinkedIn →</a>
+<a class="font-code-md text-code-md text-on-surface hover:text-primary transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SLA Response Guarantee -->
+<div class="mt-space-lg p-space-md rounded bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">
+              Tempo de resposta garantido: <strong>até 24 horas úteis</strong> com triagem arquitetural prévia.
+            </span>
+</div>
+</div>
+<!-- Right: High-Conversion Form (7 Cols) -->
+<div class="lg:col-span-7">
+<form class="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/60 shadow-xl flex flex-col gap-space-md" id="contact-audit-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden');">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Formulário de Solicitação</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Audit / Build Request</span>
+</div>
+<!-- Name Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-code-sm text-code-sm text-on-surface-variant" for="full-name">Nome completo *</label>
+<input class="w-full px-space-md py-2.5 rounded bg-surface-container-lowest border border-outline-variant/50 text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" id="full-name" placeholder="Ex.: Dra. Helena Silveira ou Gabriel Ramos" required="" type="text"/>
+</div>
+<!-- Corporate Email Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-code-sm text-code-sm text-on-surface-variant" for="corp-email">E-mail corporativo *</label>
+<input class="w-full px-space-md py-2.5 rounded bg-surface-container-lowest border border-outline-variant/50 text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" id="corp-email" placeholder="nome@suaempresa.com.br" required="" type="email"/>
+</div>
+<!-- Interest Select -->
+<div class="flex flex-col gap-1.5">
+<label class="font-code-sm text-code-sm text-on-surface-variant" for="interest-type">Tipo de interesse *</label>
+<div class="relative">
+<select class="w-full px-space-md py-2.5 rounded bg-surface-container-lowest border border-outline-variant/50 text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all appearance-none cursor-pointer" id="interest-type" required="">
+<option disabled="" selected="" value="">Selecione o formato de engajamento</option>
+<option value="novo-projeto">Projeto novo do zero</option>
+<option value="auditoria">Auditoria de código Omni Sistemas (Porta de entrada)</option>
+<option value="resgate">Resgate de legado e modernização</option>
+<option value="duvida">Outro / Dúvida arquitetural</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Project Context / Message -->
+<div class="flex flex-col gap-1.5">
+<label class="font-code-sm text-code-sm text-on-surface-variant" for="project-msg">Mensagem / Contexto do projeto *</label>
+<textarea class="w-full px-space-md py-2.5 rounded bg-surface-container-lowest border border-outline-variant/50 text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" id="project-msg" placeholder="Descreva brevemente a stack atual, volumetria transacional ou sintomas observados no código gerado..." required="" rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded bg-primary-container text-on-primary-container font-headline-sm text-body-lg font-semibold hover:bg-primary transition-all duration-200 shadow-[0_0_16px_rgba(56,189,248,0.25)] cursor-pointer" type="submit">
+<span>Enviar solicitação de auditoria / projeto</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+<!-- Success Alert Placeholder -->
+<div class="hidden p-space-md rounded bg-secondary-container/20 border border-secondary/40 text-secondary font-code-sm text-code-sm flex items-center gap-2" id="form-feedback">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Solicitação gravada no pipeline. Retornaremos em até 24h úteis.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-[#1e293b]/40 py-space-xl"><div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl pb-space-lg border-b border-[#1e293b]/30"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Omni Sistemas Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VCo3sAg01ERlfrCc4KJOXwXj4DY6hggrsvIjCy6T-NCioGDd7q2VFXHKq57CgIQ_4xZ-INOrH0SfdOs8HEt_vsJ-OSO49zA5rDOTOP4BGfyvc-NNNoYZa-mgflWS83xAi5l1-TVjO5qdJ2EikUPpUJNhnla6-TxiYVDT9TaA1fE7Pus_u1YgAzkjnPVv7sJ_59fPcVQZqllxDb_Sy3rL0XPewd4KhaHMQiAhXi-zzFqRGKVEx7Obb-wYU"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Omni Sistemas</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Engenharia de Software Preventiva orientada por Inteligência Artificial determinística para ambientes de missão crítica e alta densidade transacional.</p><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-secondary"><span class="material-symbols-outlined text-[14px]">verified</span><span>Protocolo Invariante Ativo • Tolerância Zero à Falha</span></div></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Navegação do Sistema</span><div class="flex flex-col gap-space-xs font-code-md text-code-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#metodologia">// 01. Metodologia Preventiva</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#auditoria">// 02. Auditoria e Telemetria</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#projetos">// 03. Projetos e Invariantes</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#servicos">// 04. Serviços Especializados</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#sobre">// 05. Sobre a Omni Sistemas</a></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Status &amp; Governança</span><div class="p-space-sm rounded-lg bg-surface-container-low border border-[#1e293b]/60 flex flex-col gap-space-xs"><div class="flex items-center justify-between font-code-sm text-code-sm"><span class="text-on-surface-variant">SLA Invariante</span><span class="text-secondary font-semibold">99.998%</span></div><div class="flex items-center justify-between font-code-sm text-code-sm"><span class="text-on-surface-variant">Compliance</span><span class="text-primary font-semibold">ISO/IEC 25010</span></div><div class="flex items-center justify-between font-code-sm text-code-sm"><span class="text-on-surface-variant">Engenharia</span><span class="text-on-surface">IA Verificada</span></div></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-code-sm text-code-sm text-on-surface-variant"><span>© 2025 Omni Sistemas. Todos os direitos reservados. Engenharia de Software Preventiva.</span><div class="flex items-center gap-space-md"><span>Segurança Criptográfica</span><span>Termos de Conformidade</span></div></div></div></footer></body></html>

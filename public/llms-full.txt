@@ -1,0 +1,108 @@
+# Omni Sistemas — Engenharia Preventiva STE-DEV
+
+> Versão completa para modelos de linguagem e crawlers LLM.
+
+---
+
+## Quem somos
+
+A Omni Sistemas é uma softhouse especializada no desenvolvimento de novos softwares (DEV) e na engenharia reversa para auditorias e modernização de sistemas de missão crítica em qualquer setor. Utilizamos nossa metodologia proprietária, a STE-DEV, criada e adotada para garantir rigor técnico no desenvolvimento e refatoração de todos os nossos códigos. Nosso objetivo central é eliminar dívida técnica na origem, impedindo que desenvolvedores ou agentes de IA gerem código que exija refatoração posterior.
+
+Atuamos regulando o código conforme as regras da ASD-STE100 — padrão internacional de linguagem técnica controlada originalmente da indústria aeroespacial.
+
+---
+
+## Serviços Especializados
+
+### 1. Desenvolvimento do Zero (DEV)
+Da arquitetura ao deploy com rigor de engenharia preventiva, módulos estritamente desacoplados (< 100 linhas), tipagem zero-any e esteira pronta para escala sustentada sem refações futuras. Garantimos que seu sistema nasça com invariantes corretas e blindado contra dívida técnica desde a primeira linha de código.
+
+### 2. Auditoria e Engenharia Reversa
+Varredura profunda, detecção de dívida técnica oculta, diagnóstico prévio de acoplamento baseado em ASD-STE100 e entrega de laudo executivo com matriz de remediação sequencial em até 5 dias úteis.
+
+### 3. Modernização e Resgate de Legados
+Engenharia reversa cirúrgica de sistemas críticos com testes de caracterização prévios e Strangler Pattern para modernizar sem interromper a operação comercial nem introduzir regressões.
+
+---
+
+## Metodologia STE-DEV — 4 Pilares Fundamentais
+
+### Pilar 1: Filosofia ASD-STE100 Aplicada ao Código
+Tradução das regras de Inglês Técnico Simplificado para a engenharia de software:
+- Unicidade semântica (um conceito = um nome em todo o projeto)
+- Proibição absoluta de termos vagos (`handle`, `process`, `manage`, `utils`, `data`, `temp`)
+- Separação rígida entre lógica procedimental (hooks) e descritiva (UI/utils)
+
+### Pilar 2: Arquitetura Limpa e SOLID Mandatórios
+Separação estrita de camadas (UI, Aplicação, Domínio, Infraestrutura). Uso obrigatório de Design Patterns (Factory, Repository, Adapter, Facade) para garantir baixo acoplamento, alta coesão e testabilidade isolada. Componentes dependem de abstrações, nunca de clientes diretos.
+
+### Pilar 3: Desenvolvimento Preventivo (DEV)
+Regras inegociáveis de geração preventiva:
+- Limite de 100 linhas por arquivo
+- Proibição de tipos `any` (Zero-Any TS Standard)
+- Obrigatoriedade de `try/catch` em operações assíncronas de I/O
+- Separação clara entre `DB-Row` e `DTO`
+- Design Tokens sem magic numbers
+- Complexidade ciclomática ≤ 10 (teto máximo 15)
+
+### Pilar 4: Engenharia Reversa para Auditorias e Legados
+Protocolo metódico de auditoria e inspeção de código existente e sistemas legados:
+- Discovery e unificação semântica de domínio
+- Testes de Caracterização prévios como salvaguarda contra regressões
+- Strangler Pattern cirúrgico para evisceração segura de monólitos
+- Emissão de Laudo Executivo com inventário detalhado de violações mapeadas por linha e causa raiz
+
+---
+
+## Processo de Auditoria e Engenharia Reversa STE-DEV
+
+### Etapa 01: Engenharia Reversa e Varredura Sistemática
+O código existente é submetido ao protocolo formal de auditoria STE-DEV, varrendo a base em busca de violações das Proibições Absolutas da metodologia.
+
+### Etapa 02: Diagnóstico Baseado em Evidências
+Geração do Resumo Executivo de Conformidade com tabela de métricas objetivas e Inventário Detalhado onde cada infração é mapeada com precisão (arquivo:linha, causa raiz e trecho ofensivo).
+
+### Etapa 03: Matriz de Sequência e Plano Atômico
+Correção sequencial sem regressões em 5 passos: (1) Linha Base e Testes de Caracterização, (2) Tipos e DTOs, (3) Extração de Hooks e Regras, (4) Refatoração de UI (< 100 linhas), (5) Limpeza Semântica STE.
+
+### Etapa 04: Governança e Padrão DEV Contínuo
+Uma vez concluída a modernização, os novos módulos e funcionalidades (DEV) passam a ser gerados diretamente sob as premissas preventivas da STE-DEV.
+
+---
+
+## Projetos em Destaque
+
+- **AQUI** (FinTech): Sistema focado no módulo de comissionamento com controle em tempo real de metas financeiras. Stack: React, TypeScript, PostgreSQL, Tailwind.
+- **Omni Saúde** (HealthTech): Gestão e processamento de laudos médicos laboratoriais com APIs de alta conformidade. Stack: Next.js 14, TypeScript, PostgreSQL, ASD-STE100.
+- **LWOS** (Enterprise): Sistema operacional para Wealth Management e triagem de patrimônio. Stack: Rust, WASM, Go, OTel.
+- **QWork** (Enterprise): Plataforma para avaliação psicossocial e riscos ocupacionais (LGPD). Stack: Node.js, Kafka, Clean Architecture.
+- **QWork LP** (Marketing): Landing page otimizada para SEO, funil de vendas e hub de artigos. Stack: Next.js, Tailwind, SEO.
+- **RKT** (SportTech): Aplicativo esportivo para atletas e controle de rankings de ligas. Stack: TypeScript, EventStore, Docker.
+- **mundoas** (Infra): Infraestrutura resiliente de microsserviços. Stack: Next.js, Redis, Tailwind.
+
+---
+
+## Perguntas Frequentes
+
+- **O que é STE-DEV?** Metodologia de Engenharia de Software Preventiva baseada em ASD-STE100. Codifica-se com premissas inegociáveis para nunca exigir refatoração posterior.
+- **Existe um guardião ativo de IA?** Não. A STE-DEV é um padrão de engenharia preventiva executado pelos engenheiros da Omni Sistemas com governança e invariantes determinísticas.
+- **O que é ASD-STE100?** Norma internacional aeroespacial de linguagem técnica controlada (~3.000 palavras aprovadas com significado único).
+- **Como funciona a auditoria?** 4 etapas: ingestão, diagnóstico com evidências, matriz atômica de 5 passos e governança preventiva.
+- **Quanto tempo dura?** Até 5 dias úteis com laudo completo e plano de remediação.
+- **Fazem modernização de legados?** Sim, via engenharia reversa com testes de caracterização e Strangler Pattern.
+- **Qual o stack tecnológico?** React, TypeScript, PostgreSQL, Node.js, Next.js, Rust, WASM, Kafka, Docker e tecnologias modernas.
+
+---
+
+## Páginas
+- https://omni-sistemas.com.br/
+- https://omni-sistemas.com.br/#visao-geral
+- https://omni-sistemas.com.br/#metodologia
+- https://omni-sistemas.com.br/#auditoria-processo
+- https://omni-sistemas.com.br/#auditoria
+- https://omni-sistemas.com.br/#conformidade
+- https://omni-sistemas.com.br/#asd-ste100
+- https://omni-sistemas.com.br/#projetos
+- https://omni-sistemas.com.br/#servicos
+- https://omni-sistemas.com.br/#faq
+- https://omni-sistemas.com.br/#contato

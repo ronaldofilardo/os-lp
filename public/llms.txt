@@ -1,0 +1,50 @@
+# Omni Sistemas — Engenharia Preventiva STE-DEV
+
+## Quem somos
+A Omni Sistemas é uma softhouse especializada no desenvolvimento de novos softwares (DEV) e na engenharia reversa para auditorias e modernização de sistemas de missão crítica em qualquer setor. Utilizamos nossa metodologia proprietária, a STE-DEV, criada e adotada para garantir rigor técnico no desenvolvimento e refatoração de todos os nossos códigos, eliminando a dívida técnica na origem.
+
+## Serviços Especializados
+
+1. **Desenvolvimento do Zero (DEV)** — Da concepção da arquitetura ao deploy com engenharia preventiva, módulos estritamente desacoplados (< 100 linhas), tipagem forte e esteira pronta para escala sustentada sem refações futuras.
+2. **Auditoria e Engenharia Reversa** — Varredura profunda, detecção de acoplamento e dívida técnica oculta baseada em ASD-STE100, auditoria de invariantes e entrega de laudo com matriz de remediação sequencial em até 5 dias úteis.
+3. **Modernização e Resgate de Legados** — Engenharia reversa cirúrgica de sistemas críticos com testes de caracterização prévios e Strangler Pattern para modernizar sem interromper a operação comercial nem introduzir regressões.
+
+## Metodologia STE-DEV — 4 Pilares Fundamentais
+
+1. **Filosofia ASD-STE100 Aplicada ao Código** — Tradução das regras do Inglês Técnico Simplificado para a engenharia de software. Garante unicidade semântica (um conceito = um nome), proibição absoluta de termos vagos (`handle`, `process`, `manage`, `utils`) e separação rígida entre código procedimental (hooks) e descritivo (UI/utils).
+2. **Arquitetura Limpa e SOLID Mandatórios** — Separação estrita de camadas (UI, Aplicação, Domínio, Infraestrutura). Uso mandatório de Design Patterns (Factory, Repository, Adapter, Facade) para assegurar baixo acoplamento, alta coesão e testabilidade isolada. Componentes dependem de abstrações, nunca de clientes diretos.
+3. **Desenvolvimento Preventivo (DEV)** — Regras inegociáveis de geração: limite de 100 linhas por arquivo, tipagem zero-any, obrigatoriedade de `try/catch` em operações assíncronas de I/O, separação canônica entre `DB-Row` e `DTO`, complexidade ciclomática ≤ 10 e design tokens sem magic numbers.
+4. **Engenharia Reversa para Auditorias** — Protocolo metódico de auditoria e inspeção de código existente e sistemas legados. Compreende Discovery e unificação de domínio, Testes de Caracterização prévios para blindar o comportamento contra regressões, Strangler Pattern e emissão de laudo executivo com inventário detalhado de violações.
+
+## Projetos em Destaque
+
+- **AQUI** (FinTech) — Sistema focado no módulo de comissionamento, com controle em tempo real de metas financeiras, produção e cálculos de equipes comerciais. Stack: React, TypeScript, PostgreSQL, Tailwind.
+- **Omni Saúde** (HealthTech) — Sistema de gestão e processamento de laudos médicos laboratoriais. Portal e APIs de alta conformidade com Central de Notificações. Stack: Next.js 14, TypeScript, PostgreSQL, ASD-STE100.
+- **LWOS** (Enterprise) — Sistema operacional para Wealth Management, captação e gestão de recursos para famílias de alto patrimônio. Stack: Rust, WASM, Go, OTel.
+- **QWork** (Enterprise) — Plataforma para avaliação psicossocial e riscos ocupacionais com conformidade LGPD. Stack: Node.js, Kafka, Clean Architecture.
+- **QWork LP** (Marketing) — Landing page otimizada para SEO, funil de conversão e hub de artigos. Stack: Next.js, Tailwind, SEO.
+- **RKT** (SportTech) — Aplicativo esportivo para atletas e controle de rankings de ligas esportivas. Stack: TypeScript, EventStore, Docker.
+- **mundoas** (Infra) — Ecossistema de infraestrutura e resiliência servindo como espinha dorsal de microsserviços. Stack: Next.js, Redis, Tailwind.
+
+## Perguntas Frequentes (FAQ)
+
+- **O que é a Metodologia STE-DEV?** Framework de Engenharia de Software Preventiva criado pela Omni Sistemas baseado em ASD-STE100. Opera em duas frentes: (1) DEV (Desenvolvimento Preventivo) com zero refatoração futura, e (2) Engenharia Reversa para Auditorias e modernização segura de legados.
+- **Existe um guardião ativo de IA na metodologia?** Não. A STE-DEV é um padrão de engenharia preventiva e governança técnica executado pelos engenheiros da Omni Sistemas com premissas determinísticas.
+- **O que é ASD-STE100?** Norma internacional de linguagem técnica simplificada criada pela indústria aeroespacial, eliminando ambiguidades e erros de interpretação em instruções críticas.
+- **Como funciona o processo de Engenharia Reversa e Auditoria?** Protocolo em 4 etapas: (1) Ingestão e varredura sistemática, (2) Diagnóstico com laudo de conformidade e inventário detalhado (arquivo:linha), (3) Matriz de Sequência Atômica em 5 passos sem regressão, (4) Padronização preventiva contínua.
+- **Quanto tempo dura uma auditoria de código?** Entrega em até 5 dias úteis com relatório completo de conformidade e plano de remediação detalhado.
+- **Como é feita a modernização de sistemas legados?** Via Engenharia Reversa com Strangler Pattern: discovery de domínio, testes de caracterização blindando o comportamento atual e extração progressiva de hooks e componentes modulares.
+- **Qual é o princípio fundamental da Engenharia Preventiva?** Se o arquivo exigir refatoração posterior, ele não deve ser gerado dessa forma. A refatoração no destino é a prova cabal de uma falha de geração na origem.
+
+## Páginas importantes
+- https://omni-sistemas.com.br/ — Página inicial
+- https://omni-sistemas.com.br/#visao-geral — Resumo Executivo (Key Takeaways)
+- https://omni-sistemas.com.br/#metodologia — Metodologia STE-DEV
+- https://omni-sistemas.com.br/#auditoria-processo — Processo de Auditoria e Engenharia Reversa
+- https://omni-sistemas.com.br/#auditoria — Console de Telemetria
+- https://omni-sistemas.com.br/#conformidade — Resumo Executivo de Conformidade
+- https://omni-sistemas.com.br/#asd-ste100 — Norma Aeroespacial ASD-STE100
+- https://omni-sistemas.com.br/#projetos — Projetos em Produção
+- https://omni-sistemas.com.br/#servicos — Serviços de Engenharia
+- https://omni-sistemas.com.br/#faq — Perguntas Frequentes
+- https://omni-sistemas.com.br/#contato — Iniciar Diagnóstico Técnico
