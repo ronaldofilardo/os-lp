@@ -1,12 +1,15 @@
+// Rota de recepção e persistência de Leads
+// Metodologia STE-DEV — Validação estrita Zod e persistência em banco relacional
 import { NextResponse } from 'next/server'
+import { insertLeadRecord } from '@/lib/leadRepository'
 import { contactFormSchema } from '@/utils/validators'
 
-interface LeadRecord {
-  readonly fullName: string
-  readonly email: string
-  readonly interestType: string
-  readonly message: string
-  readonly submittedAt: string
+function extractClientIp(request: Request): string | null {
+  const forwarded = request.headers.get('x-forwarded-for')
+  if (forwarded) {
+    return forwarded.split(',')[0]?.trim() ?? null
+  }
+  return request.headers.get('x-real-ip') ?? null
 }
 
 export async function POST(request: Request): Promise<NextResponse> {
@@ -14,7 +17,10 @@ export async function POST(request: Request): Promise<NextResponse> {
   try {
     body = await request.json()
   } catch {
-    return NextResponse.json({ error: 'Corpo da requisição inválido.' }, { status: 400 })
+    return NextResponse.json(
+      { error: 'Corpo da requisição inválido.' },
+      { status: 400 }
+    )
   }
 
   const parsed = contactFormSchema.safeParse(body)
@@ -26,17 +32,32 @@ export async function POST(request: Request): Promise<NextResponse> {
     )
   }
 
-  const lead: LeadRecord = {
-    fullName: parsed.data.fullName,
-    email: parsed.data.email,
-    interestType: parsed.data.interestType,
-    message: parsed.data.message,
-    submittedAt: new Date().toISOString(),
+  const clientIp = extractClientIp(request)
+  const userAgent = request.headers.get('user-agent')
+
+  try {
+    const saved = await insertLeadRecord(parsed.data, {
+      ipAddress: clientIp,
+      userAgent,
+      source: 'landing_page',
+    })
+
+    return NextResponse.json(
+      {
+        ok: true,
+        id: saved.id,
+        createdAt: saved.createdAt,
+      },
+      { status: 201 }
+    )
+  } catch (error) {
+    // Log estruturado no servidor sem vazar dados sensíveis para o cliente
+    const message = error instanceof Error ? error.message : 'Erro interno'
+    console.error('[lead:persist_error]', message)
+
+    return NextResponse.json(
+      { error: 'Não foi possível salvar a solicitação. Tente novamente mais tarde.' },
+      { status: 500 }
+    )
   }
-
-  // Ponto de integração: trocar por persistência real (banco, e-mail ou CRM).
-  // A interface LeadRecord é o contrato de saída validado.
-  console.info('[lead]', JSON.stringify(lead))
-
-  return NextResponse.json({ ok: true }, { status: 201 })
 }

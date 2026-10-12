@@ -9,7 +9,7 @@ export function KeyTakeaways({ points }: KeyTakeawaysProps): React.JSX.Element {
       className="not-prose my-space-lg p-space-lg rounded-xl bg-surface-container border border-primary/20 shadow-lg"
     >
       <div className="flex items-center gap-space-xs mb-space-sm border-b border-outline-variant/30 pb-space-sm">
-        <span className="material-symbols-outlined text-primary text-icon-lg">summarize</span>
+        <span aria-hidden="true" translate="no" className="material-symbols-outlined text-primary text-icon-lg">summarize</span>
         <h2
           id="key-takeaways-heading"
           className="font-headline-sm text-headline-sm text-on-surface font-semibold"

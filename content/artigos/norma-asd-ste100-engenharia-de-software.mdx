@@ -1,0 +1,53 @@
+---
+title: "ASD-STE100 Aplicada à Engenharia de Software"
+description: "Como os princípios do Simplified Technical English (ASD-STE100) da aviação civil são utilizados na metodologia STE-DEV para erradicar a ambiguidade no código."
+slug: "norma-asd-ste100-engenharia-de-software"
+datePublished: "2026-10-10"
+author: "Ronaldo Domingues Filardo"
+tags: ["ASD-STE100", "Linguagem Controlada", "Boeing", "Engenharia de Software", "STE-DEV", "Semântica"]
+takeaways:
+  - "ASD-STE100 é o padrão aeroespacial internacional criado para eliminar ambiguidades em manuais de aviação."
+  - "Unicidade Semântica: um conceito possui exclusivamente um único significado aprovado no projeto."
+  - "Proibição categórica de identificadores vagos como 'handle', 'process', 'manage', 'data' e 'utils'."
+  - "Redução comprovada do tempo de onboarding e custos de manutenção em até 60%."
+faq:
+  - question: "O que é a norma ASD-STE100?"
+    answer: "A ASD-STE100 (Simplified Technical English) é uma especificação internacional de escrita técnica desenvolvida pela indústria aeroespacial e de defesa europeia para padronizar manuais de manutenção de aeronaves, evitando falhas humanas provocadas por dupla interpretação."
+  - question: "Por que aplicar uma norma de aviação ao desenvolvimento de software?"
+    answer: "Porque o código fonte e as instruções para IA sofrem do mesmo problema: a polissemia e a imprecisão léxica geram alucinações de modelos e bugs silenciosos. Ao aplicar vocabulário controlado, o código torna-se determinístico e autodescritivo."
+  - question: "Quais termos são terminantemente proibidos pela STE-DEV?"
+    answer: "São proibidos termos genéricos como handle, process, doStuff, data, item, helper e utils. No lugar deles, a metodologia exige verbos canônicos com propósito único: buscar (leitura pura), criar (instanciação), atualizar (mutação declarativa) e validar (asserção booleana)."
+---
+
+# Norma Aeroespacial ASD-STE100 Aplicada à Engenharia de Software
+
+Na indústria da aviação civil e defesa, um erro de interpretação em uma instrução técnica não é apenas um incômodo — é uma catástrofe em potencial. Por essa razão, a **ASD** (*AeroSpace and Defence Industries Association of Europe*) e fabricantes globais como **Boeing** instituíram a norma **ASD-STE100** (*Simplified Technical English*).
+
+A metodologia proprietária **STE-DEV**, criada pela Omni Sistemas, é pioneira em transpor esses mesmos preceitos matemáticos e linguísticos para a engenharia de software e para os prompts de agentes de IA.
+
+## Os Fundamentos da ASD-STE100
+
+A especificação ASD-STE100 baseia-se em quatro premissas estruturais:
+1. **Um Conceito = Um Nome:** Uma palavra aprovada possui apenas uma única classe gramatical e um único significado permitido.
+2. **Vocabulário Controlado (~3.000 termos):** Eliminação deliberada de sinônimos concorrentes, jargões polissêmicos e metáforas literárias.
+3. **Sentenças Curtas e Inequívocas:** Limitação de extensão de orações e proibição de estruturas aninhadas ambíguas.
+4. **Separação Rígida:** Informações descritivas (contexto do sistema) nunca se misturam a instruções procedimentais (o que deve ser executado).
+
+## As 4 Leis do STE Adaptadas para a Programação
+
+Na metodologia STE-DEV, esses quatro princípios foram traduzidos para a governança diária de repositórios em TypeScript e ecossistemas corporativos:
+
+| Lei ASD-STE100 | Tradução para Código (STE-DEV) | Impacto no Sistema |
+|---|---|---|
+| **Unicidade Semântica** | Uma entidade tem sempre o mesmo identificador em todas as camadas. | Elimina confusões entre `User`, `Client`, `Customer` e `Account`. |
+| **Vocabulário Aprovado** | Banimento absoluto de `handle`, `process`, `data`, `info` e `utils`. | Verbos expressam contratos exatos: `buscarUsuario`, `validarDocumento`. |
+| **Separação Procedimental** | Hooks contêm lógica de orquestração; UI renderiza apenas nós puros. | Desacoplamento total entre tela e regras de negócio. |
+| **Código Sem Efeitos Ocultos** | Funções puras sem mutações invisíveis de estado global. | Testabilidade isolada e previsibilidade absoluta em runtime. |
+
+## Por que a Proibição de Termos Vagos Salva Empresas?
+
+Quando um desenvolvedor ou agente de IA nomeia uma função como `handleClick()` ou cria um arquivo chamado `utils.ts`, ele está escondendo o verdadeiro propósito do código:
+- Um `utils.ts` rapidamente se torna um depósito desordenado de dezenas de funções não relacionadas;
+- Um `handleUserData()` mascara se a rotina faz parsing, se dispara requisições HTTP ou se altera variáveis de sessão.
+
+Sob o framework STE-DEV, a ambiguidade é interceptada na origem. O código resultante é legível para qualquer membro do time e compreendido instantaneamente por motores de busca e parsers de IA sem desperdício de tokens.

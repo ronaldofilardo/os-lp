@@ -1,46 +1,53 @@
 import {
   Header,
   HeroSection,
-  KeyTakeawaysSection,
+  BenefitsStrip,
+  MicroCta,
   ProblemSection,
-  MethodologySection,
-  TimelineSection,
-  AuditProcessSection,
-  AuditTerminal,
-  CodeComparison,
-  ASDSTE100Section,
-  ProjectsSection,
+  DifferentialsSection,
+  ProcessSection,
   ServicesSection,
-  ComplianceSection,
+  ProjectsSection,
+  AboutSection,
+  RigorStrip,
   FAQSection,
   ContactSection,
   Footer,
 } from '@/common'
 import { JsonLd } from '@/common/JsonLd'
-import { buildWebPageSchema } from '@/lib/schemas'
+import { FAQ_COMMERCIAL_DB } from '@/data'
+import { buildWebPageSchema, buildFaqPageSchema } from '@/lib/schemas'
 
 export default function HomePage(): React.JSX.Element {
   return (
-    <div className="bg-background text-on-surface min-h-screen font-sans antialiased dark">
+    <div className="bg-[#f8fafc] text-slate-900 min-h-screen font-sans antialiased">
       <JsonLd data={buildWebPageSchema()} />
-      <Header />
+      <JsonLd data={buildFaqPageSchema(FAQ_COMMERCIAL_DB)} />
+      <div className="scroll-progress" aria-hidden="true" />
+      <Header theme="light" />
       <main>
         <HeroSection />
-        <KeyTakeawaysSection />
+        <BenefitsStrip />
         <ProblemSection />
-        <MethodologySection />
-        <TimelineSection />
-        <AuditProcessSection />
-        <AuditTerminal />
-        <CodeComparison />
-        <ASDSTE100Section />
-        <ProjectsSection />
+        <DifferentialsSection />
+        <MicroCta label="Quer conversar sobre o seu projeto?" theme="light" />
+        <ProcessSection />
         <ServicesSection />
-        <ComplianceSection />
-        <FAQSection />
+        <ProjectsSection />
+        <AboutSection />
+        <MicroCta label="Pronto para eliminar os gargalos da sua operação?" theme="light" />
+        <RigorStrip />
+        <FAQSection
+          items={FAQ_COMMERCIAL_DB}
+          eyebrow="// Dúvidas Frequentes"
+          title="Perguntas frequentes de clientes"
+          description="Respostas diretas sobre processo, integrações, prazos e suporte."
+          theme="light"
+        />
+        <MicroCta label="Ficou com alguma dúvida?" theme="light" />
         <ContactSection />
       </main>
-      <Footer />
+      <Footer theme="light" />
     </div>
   )
 }

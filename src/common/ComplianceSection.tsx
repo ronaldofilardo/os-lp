@@ -1,3 +1,4 @@
+import { SectionHeader } from './SectionHeader'
 interface MetricItem {
   readonly metric: string
   readonly current: string
@@ -18,36 +19,39 @@ const metrics: readonly MetricItem[] = [
 
 export function ComplianceSection(): JSX.Element {
   return (
-    <section className="w-full py-space-xl border-t border-outline-variant/30" id="conformidade">
+    <section className="w-full py-space-lg md:py-space-xl border-t border-outline-variant/30" id="conformidade">
       <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div className="flex flex-col gap-space-xs max-w-3xl mb-space-xl">
-          <span className="font-label-caps text-label-caps text-primary uppercase tracking-wider">// Laudo de Auditoria</span>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">
-            Resumo Executivo de Conformidade STE-DEV
-          </h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant">
-            Padrão rigoroso de entrega emitido ao final da auditoria. Cada indicador reflete os contratos inegociáveis do protocolo STE-DEV aplicado ao desenvolvimento (DEV) e à engenharia reversa de sistemas.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="// Laudo de Auditoria"
+          title="Como é medida a conformidade STE-DEV?"
+          description="Cada indicador reflete um contrato inegociável do protocolo STE-DEV."
+          tone="primary"
+          maxWidthClass="max-w-3xl"
+        />
 
         <div className="rounded-lg bg-surface-container-low border border-outline-variant/60 overflow-hidden shadow-xl">
-          <div className="px-space-md py-3 bg-surface-container-high/60 border-b border-outline-variant/40 flex items-center justify-between">
+          <div className="px-space-md py-3 bg-surface-container-high/60 border-b border-outline-variant/40 flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+              <span aria-hidden="true" translate="no" className="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
               <span className="font-headline-sm text-headline-sm text-on-surface">Matriz Oficial de Invariantes</span>
             </div>
             <span className="font-code-sm text-code-sm text-secondary bg-secondary/10 px-2 py-0.5 rounded border border-secondary/30">
-              Score Geral: 100% Conforme
+              Exemplo de Laudo STE-DEV
             </span>
           </div>
 
-          <div className="overflow-x-auto">
+          <div
+            className="overflow-x-auto"
+            role="region"
+            aria-label="Matriz de invariantes STE-DEV"
+            tabIndex={0}
+          >
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-outline-variant/30 bg-surface-container-lowest/50 font-label-caps text-label-caps text-on-surface-variant uppercase">
                   <th className="py-3 px-space-md">Métrica Avaliada</th>
-                  <th className="py-3 px-space-md">Situação Pós-Auditoria</th>
-                  <th className="py-3 px-space-md">Meta STE-DEV</th>
+                  <th className="hidden sm:table-cell py-3 px-space-md">Situação Pós-Auditoria</th>
+                  <th className="hidden sm:table-cell py-3 px-space-md">Meta STE-DEV</th>
                   <th className="py-3 px-space-md text-right">Status do Laudo</th>
                 </tr>
               </thead>
@@ -56,11 +60,12 @@ export function ComplianceSection(): JSX.Element {
                   <tr key={idx} className="hover:bg-surface-container-high/30 transition-colors">
                     <td className="py-3 px-space-md text-on-surface font-sans text-body-md font-medium">
                       {m.metric}
+                      <span className="sm:hidden block mt-1 font-code-sm text-[11px] text-on-surface-variant">{`${m.current} · meta ${m.target}`}</span>
                     </td>
-                    <td className="py-3 px-space-md text-on-surface-variant">
+                    <td className="hidden sm:table-cell py-3 px-space-md text-on-surface-variant">
                       {m.current}
                     </td>
-                    <td className="py-3 px-space-md text-primary font-semibold">
+                    <td className="hidden sm:table-cell py-3 px-space-md text-primary font-semibold">
                       {m.target}
                     </td>
                     <td className="py-3 px-space-md text-right">

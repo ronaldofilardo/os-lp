@@ -20,8 +20,8 @@ export function FaqBlock({ items }: FaqBlockProps): React.JSX.Element {
             className="group bg-surface-container-low border-b border-outline-variant/20 last:border-0 open:bg-surface-container"
           >
             <summary className="flex items-center justify-between gap-space-sm px-space-md py-space-sm cursor-pointer font-headline-sm text-headline-sm text-on-surface text-left">
-              <span>{item.question}</span>
-              <span className="material-symbols-outlined text-primary text-icon-lg transition-transform duration-200 group-open:rotate-180">
+              <h3 className="m-0 font-semibold">{item.question}</h3>
+              <span aria-hidden="true" translate="no" className="material-symbols-outlined text-primary text-icon-lg transition-transform duration-200 group-open:rotate-180">
                 expand_more
               </span>
             </summary>

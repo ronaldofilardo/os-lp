@@ -5,7 +5,7 @@ import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 
 export default [
-  { ignores: ['node_modules', '.next', '*.config.*', 'tailwind.config.ts'] },
+  { ignores: ['node_modules', '.next', '*.config.*', 'tailwind.config.ts', 'bkp-OSLP', 'mobile'] },
   {
     files: ['src/**/*.{ts,tsx}', 'app/**/*.{ts,tsx}'],
     languageOptions: {
@@ -32,5 +32,10 @@ export default [
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-undef': 'off',
     },
+  },
+  {
+    // R3F usa props do Three.js (position, intensity, args...) que não são DOM.
+    files: ['src/three/**/*.tsx'],
+    rules: { 'react/no-unknown-property': 'off' },
   },
 ]

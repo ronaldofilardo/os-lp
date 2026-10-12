@@ -15,7 +15,8 @@ export function projectRowToDTO(row: ProjectRow): ProjectDTO {
     statusVariant: statusCfg.variant,
     summary: `${row.objective} ${row.audience} ${row.techInfo}`,
     techTags: row.techStack,
-    thumbnail: row.imageUrl,
+    ...(row.logo !== undefined ? { logo: row.logo } : {}),
+    ...(row.url !== undefined ? { url: row.url } : {}),
   }
 }
 

@@ -30,7 +30,7 @@ const steps = [
 
 export function TimelineSection(): JSX.Element {
   return (
-    <section className="w-full py-space-xl bg-surface-container-lowest/70 border-t border-outline-variant/30" id="timeline">
+    <section className="w-full py-space-lg md:py-space-xl bg-surface-container-lowest/70 border-t border-outline-variant/30" id="timeline">
       <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
           <span className="font-label-caps text-label-caps text-secondary uppercase tracking-wider">// Fluxo de Implementação</span>
@@ -49,7 +49,7 @@ export function TimelineSection(): JSX.Element {
         <div className="mt-space-lg p-space-lg rounded-lg bg-surface-container border border-outline-variant/50">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm mb-space-sm">
             <div className="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface">
-              <span className="material-symbols-outlined text-secondary text-[18px]">alt_route</span>
+              <span aria-hidden="true" translate="no" className="material-symbols-outlined text-secondary text-[18px]">alt_route</span>
               <span className="font-semibold">Detalhamento dos 5 Passos do Plano de Ação Atômico (Etapa 03):</span>
             </div>
             <span className="font-label-caps text-label-caps text-on-surface-variant uppercase">Execução Sequencial • Sem Regressão</span>

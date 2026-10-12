@@ -1,10 +1,12 @@
-import type { ElementType, ReactNode } from 'react'
+import type { ReactNode } from 'react'
+
+type SectionTag = 'section' | 'div' | 'article' | 'aside' | 'header' | 'footer'
 
 interface SectionProps {
   readonly id?: string
   readonly className?: string
   readonly children: ReactNode
-  readonly as?: ElementType
+  readonly as?: SectionTag
   readonly ariaLabelledBy?: string
 }
 

@@ -11,7 +11,8 @@ export interface ProjectRow {
   readonly audience: string
   readonly techInfo: string
   readonly techStack: readonly string[]
-  readonly imageUrl: string
+  readonly logo?: string | undefined
+  readonly url?: string | undefined
 }
 
 export interface ProjectDTO {
@@ -23,7 +24,8 @@ export interface ProjectDTO {
   readonly statusVariant: 'production' | 'in-dev'
   readonly summary: string
   readonly techTags: readonly string[]
-  readonly thumbnail: string
+  readonly logo?: string | undefined
+  readonly url?: string | undefined
 }
 
 export interface ServiceRow {
@@ -62,8 +64,10 @@ export interface AuditResult {
 export interface ContactFormData {
   readonly fullName: string
   readonly email: string
-  readonly interestType: 'auditoria' | 'desenvolvimento' | 'resgate' | 'outro'
+  readonly whatsapp: string
+  readonly interestType: 'novo-sistema' | 'integracao-api' | 'modernizar' | 'conversar'
   readonly message: string
+  readonly lgpdConsent: boolean
 }
 
 export interface FAQItem {
@@ -87,6 +91,6 @@ export const STATUS_CONFIG: Record<ProjectStatus, { label: string; variant: Proj
 
 export const SERVICE_TIER_CONFIG: Record<ServiceTier, { label: string; isHighlighted: boolean }> = {
   recommended: { label: '★ RECOMENDADO', isHighlighted: true },
-  standard: { label: 'SQUAD REDUZIDO', isHighlighted: false },
-  'legacy-repair': { label: 'LEGACY REPAIR', isHighlighted: false },
+  standard: { label: 'MAIS PROCURADO', isHighlighted: false },
+  'legacy-repair': { label: 'SISTEMAS ANTIGOS', isHighlighted: false },
 } as const

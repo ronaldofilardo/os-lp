@@ -1,6 +1,15 @@
 import { useState } from 'react'
 import { validateContactForm, type ContactFormInput } from '@/utils/validators'
 
+const INITIAL_STATE: ContactFormInput = {
+  fullName: '',
+  email: '',
+  whatsapp: '',
+  interestType: 'conversar',
+  message: '',
+  lgpdConsent: false,
+}
+
 export interface ContactFormState {
   readonly isSubmitting: boolean
   readonly submitError: string | null
@@ -8,23 +17,18 @@ export interface ContactFormState {
 }
 
 export interface ContactFormActions {
-  readonly handleChange: (_field: keyof ContactFormInput, _value: string) => void
+  readonly handleChange: (_field: keyof ContactFormInput, _value: string | boolean) => void
   readonly handleSubmit: (_e: React.FormEvent<HTMLFormElement>) => Promise<void>
   readonly reset: () => void
 }
 
 export function useContactForm(): ContactFormState & ContactFormActions & { readonly formData: ContactFormInput } {
-  const [formData, setFormData] = useState<ContactFormInput>({
-    fullName: '',
-    email: '',
-    interestType: 'auditoria',
-    message: '',
-  })
+  const [formData, setFormData] = useState<ContactFormInput>(INITIAL_STATE)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
-  const handleChange = (_field: keyof ContactFormInput, _value: string): void => {
+  const handleChange = (_field: keyof ContactFormInput, _value: string | boolean): void => {
     setFormData((prev) => ({ ...prev, [_field]: _value }))
     if (submitError) setSubmitError(null)
   }
@@ -56,7 +60,7 @@ export function useContactForm(): ContactFormState & ContactFormActions & { read
       }
 
       setSubmitSuccess(true)
-      setFormData({ fullName: '', email: '', interestType: 'auditoria', message: '' })
+      setFormData({ ...INITIAL_STATE })
     } catch {
       setSubmitError('Falha ao enviar. Tente novamente.')
     } finally {
@@ -65,7 +69,7 @@ export function useContactForm(): ContactFormState & ContactFormActions & { read
   }
 
   const reset = (): void => {
-    setFormData({ fullName: '', email: '', interestType: 'auditoria', message: '' })
+    setFormData({ ...INITIAL_STATE })
     setSubmitError(null)
     setSubmitSuccess(false)
   }

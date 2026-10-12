@@ -1,44 +1,47 @@
+import { Reveal } from '@/motion/Reveal'
+import { SectionHeader } from './SectionHeader'
 import { ProblemCard } from './ProblemCard'
 
 const problems = [
   {
-    icon: 'timer_off',
-    title: 'Dívida técnica acumulada',
-    description: 'Bases inchadas e complexidade acidental que tornam cada nova feature 3x mais lenta.',
+    icon: "edit_off",
+    title: 'Rotina manual que consome horas',
+    description: 'Cobranças, emissão de boletos e confirmações feitas à mão, gerando erros e inadimplência.',
   },
   {
-    icon: 'shuffle',
-    title: 'Código inconsistente',
-    description: 'Múltiplos padrões no mesmo repositório, quebrando a manutenibilidade do time.',
+    icon: 'hub_off',
+    title: 'Sistemas desconectados',
+    description: 'Informações espalhadas em planilhas que não conversam com seus programas.',
   },
   {
-    icon: 'bug_report',
-    title: 'Bugs em produção',
-    description: 'Vazamento de estados nulos e falhas silenciosas em runtime por ausência de contratos.',
+    icon: 'history_toggle_off',
+    title: 'Sistema antigo travando a operação',
+    description: 'Software legado lento, que ninguém mais sabe consertar ou atualizar.',
   },
   {
-    icon: 'payments',
-    title: 'Custo de manutenção',
-    description: 'Refatorações constantes e horas gastas apagando incêndios em vez de tracionar produto.',
+    icon: 'inventory_2',
+    title: 'Soluções prontas que não encaixam',
+    description: 'Softwares de prateleira caros que não atendem às particularidades do seu nicho.',
   },
 ] as const
 
 export function ProblemSection(): JSX.Element {
   return (
-    <section className="w-full py-space-xl bg-surface-container-lowest/50 border-y border-outline-variant/30" id="problema">
+    <section className="w-full py-space-lg md:py-space-xl bg-[#f8fafc] border-y border-slate-200" id="problema">
       <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div className="flex flex-col gap-space-xs max-w-2xl mb-space-xl">
-          <span className="font-label-caps text-label-caps text-error uppercase tracking-wider">// Dívida Oculta em Escala</span>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">
-            Por que código de IA sem supervisão custa caro
-          </h2>
-          <p className="font-body-md text-body-md text-on-surface-variant">
-            O atalho imediato promovido por copilotos sem isolamento arquitetural resulta em alucinações silenciosas, acoplamento perigoso e estagnação precoce de squads inteiros.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
-          {problems.map((p, i) => (
-            <ProblemCard key={i} icon={p.icon} title={p.title} description={p.description} />
+        <SectionHeader
+          eyebrow="// Gargalos Operacionais"
+          title="Sua empresa enfrenta algum desses gargalos?"
+          description="Se qualquer uma dessas situações parece familiar, um sistema bem desenhado pode devolver horas da sua semana e reduzir erros custosos."
+          tone="error"
+          theme="light"
+          maxWidthClass="max-w-2xl"
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md lg:gap-space-lg">
+          {problems.map((problem, index) => (
+            <Reveal key={problem.title} delayMs={index * 90} className="h-full">
+              <ProblemCard icon={problem.icon} title={problem.title} description={problem.description} theme="light" />
+            </Reveal>
           ))}
         </div>
       </div>

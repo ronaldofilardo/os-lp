@@ -5,6 +5,7 @@ import { JsonLd } from '@/common/JsonLd'
 import {
   buildOrganizationSchema,
   buildProfessionalServiceSchema,
+  buildWebSiteSchema,
 } from '@/lib/schemas'
 import './globals.css'
 
@@ -27,6 +28,14 @@ export const metadata: Metadata = {
   keywords: [...SITE.keywords],
   authors: [{ name: SITE.name }],
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo-Omni-Sistema-peq.webp', type: 'image/webp' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   alternates: {
     canonical: '/',
   },
@@ -42,7 +51,7 @@ export const metadata: Metadata = {
         url: SITE.ogImage,
         width: 1200,
         height: 630,
-        alt: `${SITE.name} — Engenharia Preventiva STE-DEV`,
+        alt: `${SITE.name} — Sistemas Sob Medida & Automação Inteligente`,
       },
     ],
   },
@@ -57,8 +66,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  colorScheme: 'dark',
-  themeColor: '#0e1321',
+  colorScheme: 'light',
+  themeColor: '#f8fafc',
 }
 
 export default function RootLayout({
@@ -67,6 +76,13 @@ export default function RootLayout({
   return (
     <html lang={SITE.lang} className={`dark ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <noscript>
+          <style>{'.reveal{opacity:1;transform:none}'}</style>
+        </noscript>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/webp" href="/logo-Omni-Sistema-peq.webp" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -74,8 +90,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased">
+      <body className="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen subpixel-antialiased">
         <JsonLd data={buildOrganizationSchema()} />
+        <JsonLd data={buildWebSiteSchema()} />
         <JsonLd data={buildProfessionalServiceSchema()} />
         {children}
       </body>

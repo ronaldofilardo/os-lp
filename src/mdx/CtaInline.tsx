@@ -15,7 +15,7 @@ export function CtaInline({
         href={href}
         className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded bg-primary-container text-on-primary-container font-headline-sm text-body-md font-semibold hover:bg-primary transition-colors w-fit"
       >
-        <span className="material-symbols-outlined text-icon-lg">terminal</span>
+        <span aria-hidden="true" translate="no" className="material-symbols-outlined text-icon-lg">terminal</span>
         <span>{label}</span>
       </a>
       <span className="font-code-sm text-code-sm text-on-surface-variant">{trustAnchor}</span>

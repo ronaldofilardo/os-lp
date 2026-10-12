@@ -6,7 +6,7 @@ import type { ProjectRow, ServiceRow } from '@/types'
 describe('adapter', () => {
   describe('projectRowToDTO', () => {
     it('converte ProjectRow para ProjectDTO com campos corretos', () => {
-      const row = PROJECTS_DB[0] as ProjectRow
+      const row = PROJECTS_DB.find((p) => p.id === 'aqui') as ProjectRow
       const dto = projectRowToDTO(row)
 
       expect(dto.id).toBe(row.id)
@@ -16,7 +16,6 @@ describe('adapter', () => {
       expect(dto.statusLabel).toBe('PRODUÇÃO')
       expect(dto.statusVariant).toBe('production')
       expect(dto.techTags).toEqual(row.techStack)
-      expect(dto.thumbnail).toBe(row.imageUrl)
     })
 
     it('mapeia status in-dev corretamente', () => {
@@ -30,7 +29,7 @@ describe('adapter', () => {
 
   describe('serviceRowToDTO', () => {
     it('converte ServiceRow para ServiceDTO com tier highlighted', () => {
-      const row = SERVICES_DB.find((s) => s.id === 'auditoria') as ServiceRow
+      const row = SERVICES_DB.find((s) => s.id === 'dev-sob-medida') as ServiceRow
       const dto = serviceRowToDTO(row)
 
       expect(dto.id).toBe(row.id)
@@ -40,7 +39,7 @@ describe('adapter', () => {
     })
 
     it('marca standard tier como não highlighted', () => {
-      const row = SERVICES_DB.find((s) => s.id === 'dev-zero') as ServiceRow
+      const row = SERVICES_DB.find((s) => s.id === 'integracoes') as ServiceRow
       const dto = serviceRowToDTO(row)
 
       expect(dto.isHighlighted).toBe(false)

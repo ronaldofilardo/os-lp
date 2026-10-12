@@ -1,12 +1,16 @@
-import { vi } from 'vitest'
+import '@testing-library/jest-dom/vitest'
+import { cleanup } from '@testing-library/react'
+import { afterEach, beforeEach, vi } from 'vitest'
+import { installIntersectionObserver, installMatchMedia } from './mocks'
 
-vi.mock('react', async () => {
-  const actual = await vi.importActual('react')
-  return {
-    ...actual,
-    useState: vi.fn(),
-    useEffect: vi.fn(),
-    useMemo: vi.fn((fn) => fn()),
-    useCallback: vi.fn((fn) => fn),
-  }
+beforeEach(() => {
+  installMatchMedia()
+  installIntersectionObserver()
+})
+
+afterEach(() => {
+  cleanup()
+  vi.useRealTimers()
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals()
 })

@@ -1,53 +1,32 @@
 import type { MetadataRoute } from 'next'
 import { SITE } from '@/config/site'
 
+const AI_BOTS = [
+  'GPTBot',
+  'ChatGPT-User',
+  'OAISearchBot',
+  'Google-Extended',
+  'ClaudeBot',
+  'anthropic-ai',
+  'PerplexityBot',
+  'Bingbot',
+  'Amazonbot',
+  'Applebot',
+] as const
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
+        disallow: '/api/',
       },
-      {
-        userAgent: 'GPTBot',
+      ...AI_BOTS.map((userAgent) => ({
+        userAgent,
         allow: '/',
-      },
-      {
-        userAgent: 'ChatGPT-User',
-        allow: '/',
-      },
-      {
-        userAgent: 'OAISearchBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Google-Extended',
-        allow: '/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'anthropic-ai',
-        allow: '/',
-      },
-      {
-        userAgent: 'PerplexityBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Bingbot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Amazonbot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Applebot',
-        allow: '/',
-      },
+        disallow: '/api/',
+      })),
     ],
     sitemap: `${SITE.domain}/sitemap.xml`,
   }

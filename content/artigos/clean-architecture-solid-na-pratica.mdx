@@ -1,0 +1,72 @@
+---
+title: "Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV"
+description: "Como a metodologia STE-DEV impõe Clean Architecture, princípios SOLID, limite de 100 linhas e isolamento entre DB-Row e DTO para sistemas sustentáveis."
+slug: "clean-architecture-solid-na-pratica"
+datePublished: "2026-10-10"
+author: "Ronaldo Domingues Filardo"
+tags: ["Clean Architecture", "SOLID", "Design Patterns", "TypeScript", "DTO", "Engenharia Preventiva"]
+takeaways:
+  - "Separação estrita de 4 camadas: UI (apresentação), Aplicação (casos de uso), Domínio (entidades) e Infra (banco/APIs)."
+  - "Barreira intransponível entre DB-Row (persistência) e DTO (exposição), blindando dados sensíveis e LGPD."
+  - "Teto rigoroso de 100 linhas por arquivo para forçar responsabilidade única (SRP) e alta coesão."
+  - "Uso obrigatório de Design Patterns fundamentais: Factory, Repository, Adapter e Facade."
+faq:
+  - question: "Por que a separação entre DB-Row e DTO é obrigatória?"
+    answer: "A estrutura de persistência (DB-Row) reflete a modelagem física do banco de dados, frequentemente contendo identificadores internos, hashes e chaves sensíveis. O DTO (Data Transfer Object) é um contrato estrito voltado exclusivamente à tela ou à API externa. Misturá-los provoca vazamento de dados, violação de LGPD e acoplamento desastroso."
+  - question: "Qual a justificativa para o limite de 100 linhas por arquivo?"
+    answer: "Arquivos com mais de 100 linhas quase invariavelmente violam o Princípio da Responsabilidade Única (SRP). O teto forçado obriga o desenvolvedor ou agente de IA a extrair hooks, desacoplar renderização e mover utilitários para funções puras e isoladamente testáveis."
+  - question: "Quais Design Patterns são obrigatórios na metodologia STE-DEV?"
+    answer: "São obrigatórios: Factory (para instanciação padronizada de entidades), Repository (para abstração de acesso a dados), Adapter (para tradução entre contratos externos e internos) e Facade (para simplificar subsistemas complexos para a camada de apresentação)."
+---
+
+# Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV
+
+A maioria dos sistemas corporativos não colapsa por falta de funcionalidades, mas sim pelo acúmulo descontrolado de **acoplamento acidental**. Quando regras de negócio são embutidas dentro de componentes visuais React, ou quando entidades de banco de dados são expostas diretamente para a tela, cada alteração futura torna-se um campo minado de regressões.
+
+A metodologia **STE-DEV**, adotada pela Omni Sistemas, transforma a Arquitetura Limpa e os princípios SOLID em restrições mandatórias e automatizadas.
+
+## As 4 Camadas Arquiteturais Canônicas
+
+No modelo STE-DEV, o fluxo de dependências é unidirecional e aponta sempre para o centro (o Domínio de Negócio):
+
+1. **Camada de Apresentação (UI):** Componentes puros e declarativos com menos de 100 linhas. Não realizam chamadas HTTP, não manipulam SQL e não implementam validações de negócio complexas.
+2. **Camada de Aplicação:** Casos de uso e custom hooks que orquestram a lógica do fluxo, coordenando repositórios e serviços.
+3. **Camada de Domínio:** Entidades canônicas, interfaces e invariantes que independem de qualquer framework visual ou banco de dados.
+4. **Camada de Infraestrutura:** Adapters de banco de dados, clientes HTTP (Axios/Fetch), drivers de mensageria (Kafka/Redis) e serviços de telemetria.
+
+## A Barreira Sagrada: DB-Row vs. DTO
+
+Um dos erros mais comuns de times acelerados por IA é utilizar a tipagem do banco de dados (`SelectUserRow`) como prop de componente de tela (`UserCardProps`).
+
+Na STE-DEV, essa prática é uma **violação crítica**:
+
+```typescript
+// ❌ VIOLAÇÃO CRÍTICA (Vazamento de tipagem de banco para a tela)
+export function UserProfile({ user }: { user: UserDbRow }) {
+  return <div>{user.password_hash}</div>; // Risco de vazamento e quebra de contrato
+}
+
+// ✅ PADRÃO STE-DEV (Isolamento via Adapter e DTO estrito)
+export interface UserDTO {
+  readonly id: string;
+  readonly fullName: string;
+  readonly email: string;
+}
+
+export function UserProfile({ user }: { readonly user: UserDTO }) {
+  return <div>{user.fullName}</div>;
+}
+```
+
+Essa separação garante:
+- **Blindagem contra vazamento de dados sensíveis (LGPD);**
+- **Independência de persistência:** o banco pode migrar de PostgreSQL para MongoDB sem que uma única linha de UI seja alterada;
+- **Contratos fechados e previsíveis** para os testes unitários.
+
+## Aplicação Prática dos Princípios SOLID
+
+1. **Single Responsibility Principle (SRP):** Garantido pelo limite estrito de 100 linhas por arquivo. Um componente renderiza; um hook orquestra; um utilitário calcula.
+2. **Open/Closed Principle (OCP):** Módulos são extensíveis através de contratos e interfaces, sem alteração cirúrgica no núcleo funcional.
+3. **Liskov Substitution Principle (LSP):** Adapters que implementam a mesma interface podem ser substituídos sem impacto nos consumidores.
+4. **Interface Segregation Principle (ISP):** Interfaces pequenas, focadas e específicas em vez de objetos monolíticos inflados.
+5. **Dependency Inversion Principle (DIP):** Camadas de alto nível dependem de abstrações (interfaces de Repositório), nunca de implementações concretas de infraestrutura.

@@ -1,1 +1,5 @@
 export { useContactForm, type ContactFormState, type ContactFormActions } from './useContactForm'
+export { useInView } from './useInView'
+export { useMediaQuery } from './useMediaQuery'
+export { useReducedMotion } from './useReducedMotion'
+export { useAutoStep, nextStep } from './useAutoStep'

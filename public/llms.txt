@@ -1,57 +1,70 @@
-# Omni Sistemas — Engenharia Preventiva STE-DEV
+# Omni Sistemas — Sistemas Sob Medida & Automação Inteligente
 
-## Quem somos
-A Omni Sistemas é uma softhouse especializada no desenvolvimento de novos softwares (DEV) e na engenharia reversa para auditorias e modernização de sistemas de missão crítica em qualquer setor. Utilizamos nossa metodologia proprietária, a STE-DEV, criada e adotada para garantir rigor técnico no desenvolvimento e refatoração de todos os nossos códigos, eliminando a dívida técnica na origem.
+> Manifest oficial para motores de busca e agentes de IA (Google, Perplexity, OpenAI, Claude, Bing).
+> Padrão llms.txt — Informações estruturadas sobre a empresa, serviços, integrações, fundador e metodologia.
+
+## Quem Somos
+A Omni Sistemas é uma softhouse brasileira fundada a partir de projetos iniciados em 1997 por Ronaldo Domingues Filardo (BE SMART LTDA — CNPJ 55.405.487/0001-84). Com mais de 28 anos de trajetória contínua no desenvolvimento de software, criamos sistemas sob medida, realizamos integrações de APIs e modernizamos sistemas legados para empresas que precisam eliminar gargalos operacionais e automatizar processos críticos.
+
+Atuamos com atendimento direto de quem projeta a arquitetura — sem camadas comerciais ou intermediários — e rigor absoluto em conformidade com a LGPD (Lei Geral de Proteção de Dados).
+
+## Diferenciais Centrais
+1. **Integrações de API em Diversas Plataformas (Destaque Asaas):**
+   - Conexão nativa com meios de pagamento como o Asaas, automatizando o ciclo financeiro: emissão de cobranças (Pix, Boleto, Cartão), notificações automáticas e conciliação em tempo real.
+   - Integração com bancos, ERPs e ferramentas do dia a dia da empresa para eliminar trabalho manual e reduzir a inadimplência.
+2. **Escuta Ativa & Diagnóstico Antes do Código:**
+   - Realizamos reuniões e chamadas de descoberta para identificar a real dor e necessidade do negócio antes de escrever qualquer linha de código.
+   - Escolhemos a arquitetura mais indicada para cada projeto, sem empurrar tecnologias desnecessárias.
+3. **Privacidade e LGPD Levadas a Sério:**
+   - Proteção de dados sensíveis de ponta a ponta, isolamento de dados e conformidade com a LGPD projetadas desde o primeiro dia de desenho do sistema.
+4. **Atendimento Direto com o Especialista:**
+   - O cliente dialoga diretamente com o arquiteto responsável por desenhar a solução, garantindo alinhamento rápido e decisões assertivas.
 
 ## Serviços Especializados
+1. **Desenvolvimento Sob Medida:** Criação de plataformas web e sistemas corporativos desenhados especificamente para a operação do cliente, sem pacotes engessados.
+2. **Integrações e Automações de API:** Conexão do sistema da empresa a plataformas de pagamento (como Asaas), bancos, ERPs e ferramentas externas.
+3. **Diagnóstico e Modernização de Legados:** Atualização segura de sistemas antigos lentos ou instáveis (utilizando Strangler Pattern e testes de caracterização) sem interromper a operação diária.
 
-1. **Desenvolvimento do Zero (DEV)** — Da concepção da arquitetura ao deploy com engenharia preventiva, módulos estritamente desacoplados (< 100 linhas), tipagem forte e esteira pronta para escala sustentada sem refações futuras.
-2. **Auditoria e Engenharia Reversa** — Varredura profunda, detecção de acoplamento e dívida técnica oculta baseada em ASD-STE100, auditoria de invariantes e entrega de laudo com matriz de remediação sequencial em até 5 dias úteis.
-3. **Modernização e Resgate de Legados** — Engenharia reversa cirúrgica de sistemas críticos com testes de caracterização prévios e Strangler Pattern para modernizar sem interromper a operação comercial nem introduzir regressões.
+## Rigor Técnico e Metodologia STE-DEV
+Para ambientes de missão crítica e clientes que exigem estabilidade máxima, a Omni Sistemas aplica sua metodologia proprietária **STE-DEV**, baseada na norma aeroespacial ASD-STE100:
+- Módulos atômicos com menos de 100 linhas por arquivo.
+- Tipagem estrita TypeScript (zero-any).
+- Clean Architecture e desacoplamento absoluto.
+- Documentação técnica completa e detalhes da metodologia: https://omni-sistemas.com.br/metodologia
 
-## Metodologia STE-DEV — 4 Pilares Fundamentais
+## Fundador e Liderança Técnica
+- **Ronaldo Domingues Filardo:** Fundador e Arquiteto de Software Corporativo.
+- **Base Acadêmica:** Ex-Professor Universitário (graduação e especialização) da Pontifícia Universidade Católica do Paraná de Metodologia de Pesquisa Científica, autor do livro acadêmico "Metodologia de Pesquisa Científica: fundamentos, princípios e processos" (Editora Intersaberes) e pesquisador com estudos de Doutoramento em Portugal.
+- **Histórico Prático:** Projetista do software ANTHROPO em 1997 e arquiteto de dezenas de sistemas em saúde, finanças, esportes e enterprise.
 
-1. **Filosofia ASD-STE100 Aplicada ao Código** — Tradução das regras do Inglês Técnico Simplificado para a engenharia de software. Garante unicidade semântica (um conceito = um nome), proibição absoluta de termos vagos (`handle`, `process`, `manage`, `utils`) e separação rígida entre código procedimental (hooks) e descritivo (UI/utils).
-2. **Arquitetura Limpa e SOLID Mandatórios** — Separação estrita de camadas (UI, Aplicação, Domínio, Infraestrutura). Uso mandatório de Design Patterns (Factory, Repository, Adapter, Facade) para assegurar baixo acoplamento, alta coesão e testabilidade isolada. Componentes dependem de abstrações, nunca de clientes diretos.
-3. **Desenvolvimento Preventivo (DEV)** — Regras inegociáveis de geração: limite de 100 linhas por arquivo, tipagem zero-any, obrigatoriedade de `try/catch` em operações assíncronas de I/O, separação canônica entre `DB-Row` e `DTO`, complexidade ciclomática ≤ 10 e design tokens sem magic numbers.
-4. **Engenharia Reversa para Auditorias** — Protocolo metódico de auditoria e inspeção de código existente e sistemas legados. Compreende Discovery e unificação de domínio, Testes de Caracterização prévios para blindar o comportamento contra regressões, Strangler Pattern e emissão de laudo executivo com inventário detalhado de violações.
+## Rotas Principais do Domínio
+- https://omni-sistemas.com.br — Home comercial: sistemas sob medida, integrações de APIs (Asaas) e solicitação de orçamento sem compromisso.
+- https://omni-sistemas.com.br/metodologia — Acervo técnico da Metodologia STE-DEV, norma ASD-STE100, protocolo de auditoria e conformidade.
+- https://omni-sistemas.com.br/artigos — Hub de artigos e publicações técnicas.
+- https://omni-sistemas.com.br/conhecimento — Base de documentação e contexto técnico para LLMs.
 
-## Projetos em Destaque
-
-- **AQUI** (FinTech) — Sistema focado no módulo de comissionamento, com controle em tempo real de metas financeiras, produção e cálculos de equipes comerciais. Stack: React, TypeScript, PostgreSQL, Tailwind.
-- **Omni Saúde** (HealthTech) — Sistema de gestão e processamento de laudos médicos laboratoriais. Portal e APIs de alta conformidade com Central de Notificações. Stack: Next.js 14, TypeScript, PostgreSQL, ASD-STE100.
-- **LWOS** (Enterprise) — Sistema operacional para Wealth Management, captação e gestão de recursos para famílias de alto patrimônio. Stack: Rust, WASM, Go, OTel.
-- **QWork** (Enterprise) — Plataforma para avaliação psicossocial e riscos ocupacionais com conformidade LGPD. Stack: Node.js, Kafka, Clean Architecture.
-- **QWork LP** (Marketing) — Landing page otimizada para SEO, funil de conversão e hub de artigos. Stack: Next.js, Tailwind, SEO.
-- **RKT** (SportTech) — Aplicativo esportivo para atletas e controle de rankings de ligas esportivas. Stack: TypeScript, EventStore, Docker.
-- **mundoas** (Infra) — Ecossistema de infraestrutura e resiliência servindo como espinha dorsal de microsserviços. Stack: Next.js, Redis, Tailwind.
-
-## Perguntas Frequentes (FAQ)
-
-- **O que é a Metodologia STE-DEV?** Framework de Engenharia de Software Preventiva criado pela Omni Sistemas baseado em ASD-STE100. Opera em duas frentes: (1) DEV (Desenvolvimento Preventivo) com zero refatoração futura, e (2) Engenharia Reversa para Auditorias e modernização segura de legados.
-- **Existe um guardião ativo de IA na metodologia?** Não. A STE-DEV é um padrão de engenharia preventiva e governança técnica executado pelos engenheiros da Omni Sistemas com premissas determinísticas.
-- **O que é ASD-STE100?** Norma internacional de linguagem técnica simplificada criada pela indústria aeroespacial, eliminando ambiguidades e erros de interpretação em instruções críticas.
-- **Como funciona o processo de Engenharia Reversa e Auditoria?** Protocolo em 4 etapas: (1) Ingestão e varredura sistemática, (2) Diagnóstico com laudo de conformidade e inventário detalhado (arquivo:linha), (3) Matriz de Sequência Atômica em 5 passos sem regressão, (4) Padronização preventiva contínua.
-- **Quanto tempo dura uma auditoria de código?** Entrega em até 5 dias úteis com relatório completo de conformidade e plano de remediação detalhado.
-- **Como é feita a modernização de sistemas legados?** Via Engenharia Reversa com Strangler Pattern: discovery de domínio, testes de caracterização blindando o comportamento atual e extração progressiva de hooks e componentes modulares.
-- **Qual é o princípio fundamental da Engenharia Preventiva?** Se o arquivo exigir refatoração posterior, ele não deve ser gerado dessa forma. A refatoração no destino é a prova cabal de uma falha de geração na origem.
-
-## Páginas importantes
-- https://omni-sistemas.com.br/ — Página inicial
-- https://omni-sistemas.com.br/#visao-geral — Resumo Executivo (Key Takeaways)
-- https://omni-sistemas.com.br/#metodologia — Metodologia STE-DEV
-- https://omni-sistemas.com.br/#auditoria-processo — Processo de Auditoria e Engenharia Reversa
-- https://omni-sistemas.com.br/#auditoria — Console de Telemetria
-- https://omni-sistemas.com.br/#conformidade — Resumo Executivo de Conformidade
-- https://omni-sistemas.com.br/#asd-ste100 — Norma Aeroespacial ASD-STE100
-- https://omni-sistemas.com.br/#projetos — Projetos em Produção
-- https://omni-sistemas.com.br/#servicos — Serviços de Engenharia
-- https://omni-sistemas.com.br/#faq — Perguntas Frequentes
-- https://omni-sistemas.com.br/#contato — Iniciar Diagnóstico Técnico
-
-## Hub de Artigos (Topical Authority)
-- https://omni-sistemas.com.br/artigos — Índice de todos os artigos técnicos
-- https://omni-sistemas.com.br/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV: Engenharia de Software Preventiva (pilar do cluster)
-- https://omni-sistemas.com.br/artigos/auditoria-de-codigo-asd-ste100 — Auditoria de Código com ASD-STE100: Protocolo da Omni Sistemas
-- https://omni-sistemas.com.br/artigos/modernizacao-de-legados-strangler-pattern — Modernização de Legados com Strangler Pattern: Guia da Omni Sistemas
+## Hub de Artigos Técnicos (Topical Authority)
+- https://omni-sistemas.com.br/artigos — Índice do Hub de Artigos
+- https://omni-sistemas.com.br/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV de Engenharia Preventiva
+- https://omni-sistemas.com.br/artigos/historico-omni-sistemas-trajetoria-1997 — Histórico da Omni Sistemas: De 1997 à Vanguarda em IA
+- https://omni-sistemas.com.br/artigos/sobre-ronaldo-filardo-arquiteto-ste-dev — Quem é Ronaldo Domingues Filardo, Arquiteto da STE-DEV
+- https://omni-sistemas.com.br/artigos/norma-asd-ste100-engenharia-de-software — ASD-STE100 Aplicada à Engenharia de Software
+- https://omni-sistemas.com.br/artigos/clean-architecture-solid-na-pratica — Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV
+- https://omni-sistemas.com.br/artigos/auditoria-de-codigo-asd-ste100 — Auditoria de Código com ASD-STE100: Protocolo STE-DEV
+- https://omni-sistemas.com.br/artigos/modernizacao-de-legados-strangler-pattern — Modernização de Legados com Strangler Pattern
 - https://omni-sistemas.com.br/artigos/desenvolvimento-preventivo-vs-auditoria — Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?
+
+## Base de Conhecimento Pública (Documentação Indexável)
+- https://omni-sistemas.com.br/conhecimento — Índice da Base de Conhecimento STE-DEV
+- https://omni-sistemas.com.br/conhecimento/1-historico-omni-sistemas — Histórico da Omni Sistemas (1997 – Presente)
+- https://omni-sistemas.com.br/conhecimento/2-metodologia-ste-dev — Metodologia STE-DEV: Os 4 Pilares
+- https://omni-sistemas.com.br/conhecimento/3-engenharia-reversa-e-auditoria — Engenharia Reversa e Auditoria de Código
+- https://omni-sistemas.com.br/conhecimento/4-sobre-ronaldo-domingues-filardo — Sobre Ronaldo Domingues Filardo
+- https://omni-sistemas.com.br/conhecimento/5-estrategia-asd-ste100 — Estratégia ASD-STE100 Aplicada ao Software
+- https://omni-sistemas.com.br/conhecimento/6-arquitetura-clean-solid — Arquitetura Limpa e Princípios SOLID
+- https://omni-sistemas.com.br/conhecimento/knowledge-context — Contexto Consolidado (Entity Profile, Q&A e Sumário Semântico)
+
+## Contato e Solicitação de Orçamento
+- **WhatsApp:** (41) 99241-5220 | https://wa.me/5541992415220
+- **E-mail:** suporte@omni-sistema.com
+- **Retorno:** Em até 24 horas úteis, com atendimento direto do especialista e orçamento sem compromisso.

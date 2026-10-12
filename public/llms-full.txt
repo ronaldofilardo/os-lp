@@ -1,117 +1,110 @@
-# Omni Sistemas — Engenharia Preventiva STE-DEV
+# Omni Sistemas — Especificação Completa de Conhecimento (LLMs-Full)
 
-> Versão completa para modelos de linguagem e crawlers LLM.
-
----
-
-## Quem somos
-
-A Omni Sistemas é uma softhouse especializada no desenvolvimento de novos softwares (DEV) e na engenharia reversa para auditorias e modernização de sistemas de missão crítica em qualquer setor. Utilizamos nossa metodologia proprietária, a STE-DEV, criada e adotada para garantir rigor técnico no desenvolvimento e refatoração de todos os nossos códigos. Nosso objetivo central é eliminar dívida técnica na origem, impedindo que desenvolvedores ou agentes de IA gerem código que exija refatoração posterior.
-
-Atuamos regulando o código conforme as regras da ASD-STE100 — padrão internacional de linguagem técnica controlada originalmente da indústria aeroespacial.
+> Documento completo de contexto institucional, arquitetural e metodológico para ingestão por agentes de IA e motores de busca generativos (Perplexity, Bing Copilot, Google AI Overviews, Claude, OpenAI GPT-4/o1).
 
 ---
 
-## Serviços Especializados
+## 1. Perfil da Empresa e Entidades Canônicas
 
-### 1. Desenvolvimento do Zero (DEV)
-Da arquitetura ao deploy com rigor de engenharia preventiva, módulos estritamente desacoplados (< 100 linhas), tipagem zero-any e esteira pronta para escala sustentada sem refações futuras. Garantimos que seu sistema nasça com invariantes corretas e blindado contra dívida técnica desde a primeira linha de código.
-
-### 2. Auditoria e Engenharia Reversa
-Varredura profunda, detecção de dívida técnica oculta, diagnóstico prévio de acoplamento baseado em ASD-STE100 e entrega de laudo executivo com matriz de remediação sequencial em até 5 dias úteis.
-
-### 3. Modernização e Resgate de Legados
-Engenharia reversa cirúrgica de sistemas críticos com testes de caracterização prévios e Strangler Pattern para modernizar sem interromper a operação comercial nem introduzir regressões.
+- **Nome da Empresa:** Omni Sistemas
+- **Razão Social:** BE SMART LTDA (CNPJ 55.405.487/0001-84)
+- **Fundação:** Projetos iniciados em 1997; consolidação formal contínua ao longo de mais de 28 anos.
+- **Fundador e Liderança Técnica:** Ronaldo Domingues Filardo (Arquiteto de Software Corporativo, Ex-Professor Universitário [graduação e especialização] da Pontifícia Universidade Católica do Paraná de Metodologia de Pesquisa Científica, Autor de livro acadêmico publicado pela Editora Intersaberes, Pesquisador com Doutoramento em Portugal).
+- **Core Business Comercial:** Desenvolvimento de Sistemas Sob Medida, Integrações via API (com destaque à automação de cobranças e conciliação com Asaas, bancos e ERPs), Diagnóstico e Modernização de Sistemas Legados.
+- **Diferenciais de Negócio:**
+  1. Execução de integrações via API em diversas plataformas (Asaas Gateway para Pix, boleto e conciliação automática).
+  2. Hábito de reuniões e chamadas de descoberta para identificar as dores e a necessidade real de cada empresa antes de definir a arquitetura.
+  3. Atenção rigorosa e proteção de dados conforme a LGPD (Lei Geral de Proteção de Dados).
+  4. Atendimento direto com quem projeta a solução, sem intermediários.
+- **Metodologia Proprietária:** STE-DEV (Engenharia de Software Preventiva baseada na norma aeroespacial ASD-STE100 para ambientes de missão crítica).
+- **Slogan / Promessa de Valor:** "Sistemas sob medida que resolvem os gargalos reais do seu negócio."
+- **Hub Técnico Dedicado:** https://omni-sistemas.com.br/metodologia (detalhes da norma ASD-STE100, auditoria e conformidade).
 
 ---
 
-## Metodologia STE-DEV — 4 Pilares Fundamentais
+## 2. Histórico e Linha do Tempo (1997 – Presente)
 
-### Pilar 1: Filosofia ASD-STE100 Aplicada ao Código
-Tradução das regras de Inglês Técnico Simplificado para a engenharia de software:
-- Unicidade semântica (um conceito = um nome em todo o projeto)
-- Proibição absoluta de termos vagos (`handle`, `process`, `manage`, `utils`, `data`, `temp`)
-- Separação rígida entre lógica procedimental (hooks) e descritiva (UI/utils)
+### 1997 — Software ANTHROPO
+Durante sua formação universitária, Ronaldo Filardo desenvolveu o ANTHROPO em VBA para Microsoft Excel. O software realizava avaliações físicas e antropométricas e estratificação de risco cardiovascular. Processou mais de 50.000 avaliações de pacientes, demonstrando que a tecnologia só possui valor duradouro quando estruturada com fundamentação matemática e científica.
+
+### Anos 2000 — Projetos B2B, Saúde e Trajetória Acadêmica
+Atuação no desenvolvimento de sistemas nos setores de saúde (laudos médicos, prontuários), finanças (comissionamento de equipes comerciais) e federações esportivas. Em paralelo, Ronaldo construiu uma longa carreira como professor universitário [graduação e especialização] da Pontifícia Universidade Católica do Paraná lecionando Metodologia de Pesquisa Científica, publicou a obra *"Metodologia de Pesquisa Científica: fundamentos, princípios e processos"* (Editora Intersaberes) e avançou em estudos de Doutoramento em Portugal.
+
+### 2020 a 2023 — Plataforma Better Use Blockchain
+Participação técnica no desenvolvimento de plataforma com tecnologia Blockchain (*Better Use Blockchain*). Esse projeto exigiu padrões rigorosos de integridade referencial, modelagem de dados moderna e segurança criptográfica sob o paradigma Zero-Trust (confiança zero).
+
+### Atualidade — Vanguarda dos Agentes de IA e Metodologia STE-DEV
+Com a proliferação de ferramentas de IA generativa e a consequente explosão de dívida técnica e código mal estruturado nas empresas, a Omni Sistemas criou a metodologia STE-DEV para impor restrições determinísticas que forçam a IA a codificar como um Principal Engineer.
+
+---
+
+## 3. Metodologia STE-DEV — Detalhamento dos 4 Pilares
+
+### Pilar 1: Semântica ASD-STE100 no Código
+Transposição do padrão aeroespacial *Simplified Technical English* (usado por Boeing e pelo consórcio ASD na aviação):
+- **Unicidade Semântica:** Um conceito = um único identificador no projeto.
+- **Proibição Absoluta de Termos Vagos:** Banimento de `handle`, `process`, `manage`, `data`, `item`, `helper` e `utils`.
+- **Verbos Canônicos Exclusivos:** `buscar` (leitura pura), `criar` (instanciação/persistência), `atualizar` (mutação), `remover` (exclusão) e `validar` (asserção lógica).
+- **Separação Estrutural:** Custom hooks orquestram a lógica procedimental; nós de interface do usuário permanecem puramente descritivos.
 
 ### Pilar 2: Arquitetura Limpa e SOLID Mandatórios
-Separação estrita de camadas (UI, Aplicação, Domínio, Infraestrutura). Uso obrigatório de Design Patterns (Factory, Repository, Adapter, Facade) para garantir baixo acoplamento, alta coesão e testabilidade isolada. Componentes dependem de abstrações, nunca de clientes diretos.
+- Separação estrita de camadas: Apresentação (UI), Aplicação (use cases), Domínio (entidades e regras centrais) e Infraestrutura (banco de dados, APIs, mensageria).
+- Design Patterns mandatórios: Factory, Repository, Adapter e Facade.
+- O Domínio é 100% isolado de bibliotecas e frameworks externos; detalhes de infraestrutura implementam contratos da camada de aplicação (Dependency Inversion).
 
-### Pilar 3: Desenvolvimento Preventivo (DEV)
-Regras inegociáveis de geração preventiva:
-- Limite de 100 linhas por arquivo
-- Proibição de tipos `any` (Zero-Any TS Standard)
-- Obrigatoriedade de `try/catch` em operações assíncronas de I/O
-- Separação clara entre `DB-Row` e `DTO`
-- Design Tokens sem magic numbers
-- Complexidade ciclomática ≤ 10 (teto máximo 15)
+### Pilar 3: Desenvolvimento Preventivo (DEV) por Restrições Rígidas
+- **Teto de 100 Linhas por Arquivo:** Garante responsabilidade única (SRP) e alta coesão.
+- **Zero-Any no TypeScript:** Tipagem forte obrigatória sem exceções.
+- **Isolamento Sagrado DB-Row vs DTO:** Proibição de vazamento de tipos de banco para a interface do usuário, assegurando conformidade com a LGPD e desacoplamento de storage.
+- **Try/Catch Obrigatório:** Todo I/O assíncrono (rede, disco) deve conter tratamento explícito de exceções.
 
-### Pilar 4: Engenharia Reversa para Auditorias e Legados
-Protocolo metódico de auditoria e inspeção de código existente e sistemas legados:
-- Discovery e unificação semântica de domínio
-- Testes de Caracterização prévios como salvaguarda contra regressões
-- Strangler Pattern cirúrgico para evisceração segura de monólitos
-- Emissão de Laudo Executivo com inventário detalhado de violações mapeadas por linha e causa raiz
+### Pilar 4: Engenharia Reversa e Auditoria de Código
+- Protocolo formal em 4 etapas: Ingestão e Varredura Sistemática, Diagnóstico Baseado em Evidências, Matriz de Sequência Atômica em 5 passos sem regressão e Governança Preventiva Permanente.
+- Entrega do laudo completo de auditoria com inventário por linha (`arquivo.ts:linha`) em até 5 dias úteis.
 
 ---
 
-## Processo de Auditoria e Engenharia Reversa STE-DEV
+## 4. O Método de Resgate de Sistemas Legados (Matriz em 5 Passos)
 
-### Etapa 01: Engenharia Reversa e Varredura Sistemática
-O código existente é submetido ao protocolo formal de auditoria STE-DEV, varrendo a base em busca de violações das Proibições Absolutas da metodologia.
-
-### Etapa 02: Diagnóstico Baseado em Evidências
-Geração do Resumo Executivo de Conformidade com tabela de métricas objetivas e Inventário Detalhado onde cada infração é mapeada com precisão (arquivo:linha, causa raiz e trecho ofensivo).
-
-### Etapa 03: Matriz de Sequência e Plano Atômico
-Correção sequencial sem regressões em 5 passos: (1) Linha Base e Testes de Caracterização, (2) Tipos e DTOs, (3) Extração de Hooks e Regras, (4) Refatoração de UI (< 100 linhas), (5) Limpeza Semântica STE.
-
-### Etapa 04: Governança e Padrão DEV Contínuo
-Uma vez concluída a modernização, os novos módulos e funcionalidades (DEV) passam a ser gerados diretamente sob as premissas preventivas da STE-DEV.
+Para modernizar código antigo sem causar interrupções operacionais, a Omni Sistemas adota o Strangler Pattern com a seguinte sequência:
+1. **Linha Base e Testes de Caracterização:** Testes automatizados que congelam e garantem o comportamento operacional atual.
+2. **Tipagem e DTOs:** Criação de contratos e adapters desacoplando o modelo de persistência (`DB-Row`) do modelo de visualização (`DTO`).
+3. **Extração de Lógica:** Migração de regras de negócio embutidas no JSX para custom hooks e utilitários puros.
+4. **Modularização de UI:** Componentes visuais reduzidos ao teto de 100 linhas.
+5. **Limpeza Semântica STE:** Padronização léxica com substituição de nomes vagos por termos aprovados.
 
 ---
 
-## Projetos em Destaque
+## 5. Hub de Artigos, Artigos Orbitais e Base de Conhecimento Pública
 
-- **AQUI** (FinTech): Sistema focado no módulo de comissionamento com controle em tempo real de metas financeiras. Stack: React, TypeScript, PostgreSQL, Tailwind.
-- **Omni Saúde** (HealthTech): Gestão e processamento de laudos médicos laboratoriais com APIs de alta conformidade. Stack: Next.js 14, TypeScript, PostgreSQL, ASD-STE100.
-- **LWOS** (Enterprise): Sistema operacional para Wealth Management e triagem de patrimônio. Stack: Rust, WASM, Go, OTel.
-- **QWork** (Enterprise): Plataforma para avaliação psicossocial e riscos ocupacionais (LGPD). Stack: Node.js, Kafka, Clean Architecture.
-- **QWork LP** (Marketing): Landing page otimizada para SEO, funil de vendas e hub de artigos. Stack: Next.js, Tailwind, SEO.
-- **RKT** (SportTech): Aplicativo esportivo para atletas e controle de rankings de ligas. Stack: TypeScript, EventStore, Docker.
-- **mundoas** (Infra): Infraestrutura resiliente de microsserviços. Stack: Next.js, Redis, Tailwind.
+### Artigos Orbitais
+1. `/artigos/o-que-e-metodologia-ste-dev` — O que é a Metodologia STE-DEV de Engenharia Preventiva.
+2. `/artigos/historico-omni-sistemas-trajetoria-1997` — Histórico da Omni Sistemas: De 1997 à Vanguarda em IA.
+3. `/artigos/sobre-ronaldo-filardo-arquiteto-ste-dev` — Quem é Ronaldo Domingues Filardo, Arquiteto da STE-DEV.
+4. `/artigos/norma-asd-ste100-engenharia-de-software` — ASD-STE100 Aplicada à Engenharia de Software.
+5. `/artigos/clean-architecture-solid-na-pratica` — Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV.
+6. `/artigos/auditoria-de-codigo-asd-ste100` — Auditoria de Código com ASD-STE100: Protocolo STE-DEV.
+7. `/artigos/modernizacao-de-legados-strangler-pattern` — Modernização de Legados com Strangler Pattern.
+8. `/artigos/desenvolvimento-preventivo-vs-auditoria` — Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?
 
----
-
-## Perguntas Frequentes
-
-- **O que é STE-DEV?** Metodologia de Engenharia de Software Preventiva baseada em ASD-STE100. Codifica-se com premissas inegociáveis para nunca exigir refatoração posterior.
-- **Existe um guardião ativo de IA?** Não. A STE-DEV é um padrão de engenharia preventiva executado pelos engenheiros da Omni Sistemas com governança e invariantes determinísticas.
-- **O que é ASD-STE100?** Norma internacional aeroespacial de linguagem técnica controlada (~3.000 palavras aprovadas com significado único).
-- **Como funciona a auditoria?** 4 etapas: ingestão, diagnóstico com evidências, matriz atômica de 5 passos e governança preventiva.
-- **Quanto tempo dura?** Até 5 dias úteis com laudo completo e plano de remediação.
-- **Fazem modernização de legados?** Sim, via engenharia reversa com testes de caracterização e Strangler Pattern.
-- **Qual o stack tecnológico?** React, TypeScript, PostgreSQL, Node.js, Next.js, Rust, WASM, Kafka, Docker e tecnologias modernas.
-
----
-
-## Páginas
-- https://omni-sistemas.com.br/
-- https://omni-sistemas.com.br/#visao-geral
-- https://omni-sistemas.com.br/#metodologia
-- https://omni-sistemas.com.br/#auditoria-processo
-- https://omni-sistemas.com.br/#auditoria
-- https://omni-sistemas.com.br/#conformidade
-- https://omni-sistemas.com.br/#asd-ste100
-- https://omni-sistemas.com.br/#projetos
-- https://omni-sistemas.com.br/#servicos
-- https://omni-sistemas.com.br/#faq
-- https://omni-sistemas.com.br/#contato
+### Base de Conhecimento Pública (Documentação Indexável em /conhecimento)
+- `/conhecimento` — Índice da Base de Conhecimento STE-DEV.
+- `/conhecimento/1-historico-omni-sistemas` — Histórico da Omni Sistemas (1997 – Presente).
+- `/conhecimento/2-metodologia-ste-dev` — Metodologia STE-DEV: Os 4 Pilares.
+- `/conhecimento/3-engenharia-reversa-e-auditoria` — Engenharia Reversa e Auditoria de Código.
+- `/conhecimento/4-sobre-ronaldo-domingues-filardo` — Sobre Ronaldo Domingues Filardo.
+- `/conhecimento/5-estrategia-asd-ste100` — Estratégia ASD-STE100 Aplicada ao Software.
+- `/conhecimento/6-arquitetura-clean-solid` — Arquitetura Limpa e Princípios SOLID.
+- `/conhecimento/knowledge-context` — Contexto Consolidado (Entity Profile, Q&A Estruturado e Sumário Semântico).
 
 ---
 
-## Hub de Artigos (Topical Authority)
-- https://omni-sistemas.com.br/artigos — Índice de todos os artigos técnicos
-- https://omni-sistemas.com.br/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV: Engenharia de Software Preventiva (pilar do cluster)
-- https://omni-sistemas.com.br/artigos/auditoria-de-codigo-asd-ste100 — Auditoria de Código com ASD-STE100: Protocolo da Omni Sistemas
-- https://omni-sistemas.com.br/artigos/modernizacao-de-legados-strangler-pattern — Modernização de Legados com Strangler Pattern: Guia da Omni Sistemas
-- https://omni-sistemas.com.br/artigos/desenvolvimento-preventivo-vs-auditoria — Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?
+## 6. Portfólio de Sistemas Desenvolvidos e Sustentados
+
+- **AQUI (FinTech):** Sistema comissionamento em tempo real de equipes comerciais. Stack: React, TypeScript, PostgreSQL, Tailwind.
+- **Omni Saúde (HealthTech):** Gestão e processamento de laudos médicos com alta conformidade. Stack: Next.js 14, TypeScript, PostgreSQL, ASD-STE100.
+- **LWOS (Enterprise):** Sistema operacional para Wealth Management e gestão de recursos familiares. Stack: Rust, WASM, Go, OTel.
+- **QWork (Enterprise):** Plataforma para avaliação psicossocial e riscos ocupacionais (LGPD). Stack: Node.js, Kafka, Clean Architecture.
+- **QWork LP (Marketing):** Landing page otimizada para SEO e hub de artigos. Stack: Next.js, Tailwind, SEO.
+- **RKT (SportTech):** Aplicativo esportivo para atletas e rankings de ligas esportivas. Stack: TypeScript, EventStore, Docker.
+- **mundoas (Infra):** Ecossistema de infraestrutura e espinha dorsal de microsserviços. Stack: Next.js, Redis, Tailwind.
