@@ -23,7 +23,7 @@ export function FinalCta({
   secondaryCta,
 }: FinalCtaProps): React.JSX.Element {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 shadow-2xl">
+    <section className="py-16 md:py-24 bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-800 shadow-2xl">
       <div className="max-w-4xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin text-center">
         <Reveal className="flex flex-col items-center gap-space-md">
           <h2 className="text-display-lg-mobile md:text-display-lg text-white">{title}</h2>

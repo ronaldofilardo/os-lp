@@ -40,7 +40,7 @@ describe('FinalCta', () => {
       <FinalCta title="Título" primaryCta={{ label: 'Criar conta', href: '/login' }} />
     )
     expect(container.querySelectorAll('h2')).toHaveLength(1)
-    expect(container.querySelector('.from-emerald-600')).toBeInTheDocument()
+    expect(container.querySelector('.from-emerald-700')).toBeInTheDocument()
     expect(screen.queryByRole('link', { name: /Secundário/ })).not.toBeInTheDocument()
   })
 })
