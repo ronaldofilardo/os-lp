@@ -2,6 +2,7 @@
 // Metodologia STE-DEV — Validação estrita Zod e persistência em banco relacional
 import { NextResponse } from 'next/server'
 import { insertLeadRecord } from '@/lib/leadRepository'
+import { sendLeadNotification } from '@/lib/leadNotifier'
 import { contactFormSchema } from '@/utils/validators'
 
 function extractClientIp(request: Request): string | null {
@@ -41,6 +42,9 @@ export async function POST(request: Request): Promise<NextResponse> {
       userAgent,
       source: 'landing_page',
     })
+
+    // Dispara notificação por e-mail de forma resiliente
+    await sendLeadNotification(saved)
 
     return NextResponse.json(
       {
