@@ -31,8 +31,8 @@ export function StepsRow({
           ) : null}
         </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {steps.map((step) => (
-            <Reveal key={step.number} className="h-full">
+          {steps.map((step, idx) => (
+            <Reveal key={step.number} delayMs={idx * 150} className="h-full">
               <TimelineStep
                 number={step.number}
                 label={step.label}

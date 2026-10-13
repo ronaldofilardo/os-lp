@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Children } from 'react'
 import { Reveal } from '@/motion/Reveal'
 
 interface CardGridSectionProps {
@@ -38,7 +39,13 @@ export function CardGridSection({
             ) : null}
           </Reveal>
         ) : null}
-        <div className={GRID[columns]}>{children}</div>
+        <div className={`os-stagger ${GRID[columns]}`}>
+          {Children.map(children, (child, idx) => (
+            <Reveal key={idx} delayMs={idx * 120} className="h-full">
+              {child}
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   )
