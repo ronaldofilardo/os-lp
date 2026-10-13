@@ -18,7 +18,7 @@
   4. Atendimento direto com quem projeta a solução, sem intermediários.
 - **Metodologia Proprietária:** STE-DEV (Engenharia de Software Preventiva baseada na norma aeroespacial ASD-STE100 para ambientes de missão crítica).
 - **Slogan / Promessa de Valor:** "Sistemas sob medida que resolvem os gargalos reais do seu negócio."
-- **Hub Técnico Dedicado:** https://omni-sistemas.com.br/metodologia (detalhes da norma ASD-STE100, auditoria e conformidade).
+- **Hub Técnico Dedicado:** https://omni-sistemas.com/metodologia (detalhes da norma ASD-STE100, auditoria e conformidade).
 
 ---
 
@@ -102,7 +102,8 @@ Para modernizar código antigo sem causar interrupções operacionais, a Omni Si
 ## 6. Portfólio de Sistemas Desenvolvidos e Sustentados
 
 - **AQUI (FinTech):** Sistema comissionamento em tempo real de equipes comerciais. Stack: React, TypeScript, PostgreSQL, Tailwind.
-- **Omni Saúde (HealthTech):** Gestão e processamento de laudos médicos com alta conformidade. Stack: Next.js 14, TypeScript, PostgreSQL, ASD-STE100.
+- **Omni Saúde App (HealthTech):** Gestão e processamento de laudos médicos com alta conformidade. Stack: Next.js 14, TypeScript, PostgreSQL, ASD-STE100. Acesso: https://saude.omni-sistemas.com.
+- **Omni Saúde LP (Marketing):** Landing page institucional e comercial de conversão para a plataforma Omni Saúde. Stack: Next.js 14, Tailwind, TypeScript, SEO.
 - **LWOS (Enterprise):** Sistema operacional para Wealth Management e gestão de recursos familiares. Stack: Rust, WASM, Go, OTel.
 - **QWork (Enterprise):** Plataforma para avaliação psicossocial e riscos ocupacionais (LGPD). Stack: Node.js, Kafka, Clean Architecture.
 - **QWork LP (Marketing):** Landing page otimizada para SEO e hub de artigos. Stack: Next.js, Tailwind, SEO.

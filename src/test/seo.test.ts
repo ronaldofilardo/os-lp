@@ -410,7 +410,7 @@ describe('Fase 3 — hero performance', () => {
 describe('Fase 3 — llms manifests', () => {
   it('llms.txt links every public knowledge document with current titles', () => {
     const llms = readPublicFile('llms.txt').toString('utf8')
-    expect(llms).toContain('https://omni-sistemas.com.br/conhecimento')
+    expect(llms).toContain('https://omni-sistemas.com/conhecimento')
     expect(llms).toContain('O que é a Metodologia STE-DEV de Engenharia Preventiva')
     for (const doc of getAllKnowledgeDocs()) {
       expect(llms, `llms.txt must link ${doc.slug}`).toContain(`/conhecimento/${doc.slug}`)

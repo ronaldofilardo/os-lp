@@ -213,7 +213,7 @@ $g.DrawString($subline, $fontSub, $brushPrim, 96, 448)
 # Rodape: dominio + terminal prompt
 $fontFoot = New-Object System.Drawing.Font('Cascadia Mono', 20, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
 $brushFoot = New-Object System.Drawing.SolidBrush($onSurfaceVariant)
-$g.DrawString('omni-sistemas.com.br', $fontFoot, $brushFoot, 96, 520)
+$g.DrawString('omni-sistemas.com', $fontFoot, $brushFoot, 96, 520)
 
 $fontTerm = New-Object System.Drawing.Font('Cascadia Mono', 44, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
 $brushSec = New-Object System.Drawing.SolidBrush($secondary)

@@ -11,7 +11,7 @@ Este documento consolida o perfil da entidade Omni Sistemas, o conjunto canônic
 - **Metodologia proprietária:** STE-DEV — Engenharia de Software Preventiva baseada na norma aeroespacial ASD-STE100
 - **Serviços:** Desenvolvimento do Zero (DEV), Auditoria e Engenharia Reversa, Modernização e Resgate de Legados
 - **Área de atuação:** Brasil (nacional)
-- **Site canônico:** https://omni-sistemas.com.br
+- **Site canônico:** https://omni-sistemas.com
 
 ## Q&A Estruturado (Perguntas e Respostas Canônicas)
 ### O que é a metodologia STE-DEV?

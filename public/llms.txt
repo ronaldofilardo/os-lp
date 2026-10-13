@@ -30,7 +30,7 @@ Para ambientes de missão crítica e clientes que exigem estabilidade máxima, a
 - Módulos atômicos com menos de 100 linhas por arquivo.
 - Tipagem estrita TypeScript (zero-any).
 - Clean Architecture e desacoplamento absoluto.
-- Documentação técnica completa e detalhes da metodologia: https://omni-sistemas.com.br/metodologia
+- Documentação técnica completa e detalhes da metodologia: https://omni-sistemas.com/metodologia
 
 ## Fundador e Liderança Técnica
 - **Ronaldo Domingues Filardo:** Fundador e Arquiteto de Software Corporativo.
@@ -38,31 +38,31 @@ Para ambientes de missão crítica e clientes que exigem estabilidade máxima, a
 - **Histórico Prático:** Projetista do software ANTHROPO em 1997 e arquiteto de dezenas de sistemas em saúde, finanças, esportes e enterprise.
 
 ## Rotas Principais do Domínio
-- https://omni-sistemas.com.br — Home comercial: sistemas sob medida, integrações de APIs (Asaas) e solicitação de orçamento sem compromisso.
-- https://omni-sistemas.com.br/metodologia — Acervo técnico da Metodologia STE-DEV, norma ASD-STE100, protocolo de auditoria e conformidade.
-- https://omni-sistemas.com.br/artigos — Hub de artigos e publicações técnicas.
-- https://omni-sistemas.com.br/conhecimento — Base de documentação e contexto técnico para LLMs.
+- https://omni-sistemas.com — Home comercial: sistemas sob medida, integrações de APIs (Asaas) e solicitação de orçamento sem compromisso.
+- https://omni-sistemas.com/metodologia — Acervo técnico da Metodologia STE-DEV, norma ASD-STE100, protocolo de auditoria e conformidade.
+- https://omni-sistemas.com/artigos — Hub de artigos e publicações técnicas.
+- https://omni-sistemas.com/conhecimento — Base de documentação e contexto técnico para LLMs.
 
 ## Hub de Artigos Técnicos (Topical Authority)
-- https://omni-sistemas.com.br/artigos — Índice do Hub de Artigos
-- https://omni-sistemas.com.br/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV de Engenharia Preventiva
-- https://omni-sistemas.com.br/artigos/historico-omni-sistemas-trajetoria-1997 — Histórico da Omni Sistemas: De 1997 à Vanguarda em IA
-- https://omni-sistemas.com.br/artigos/sobre-ronaldo-filardo-arquiteto-ste-dev — Quem é Ronaldo Domingues Filardo, Arquiteto da STE-DEV
-- https://omni-sistemas.com.br/artigos/norma-asd-ste100-engenharia-de-software — ASD-STE100 Aplicada à Engenharia de Software
-- https://omni-sistemas.com.br/artigos/clean-architecture-solid-na-pratica — Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV
-- https://omni-sistemas.com.br/artigos/auditoria-de-codigo-asd-ste100 — Auditoria de Código com ASD-STE100: Protocolo STE-DEV
-- https://omni-sistemas.com.br/artigos/modernizacao-de-legados-strangler-pattern — Modernização de Legados com Strangler Pattern
-- https://omni-sistemas.com.br/artigos/desenvolvimento-preventivo-vs-auditoria — Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?
+- https://omni-sistemas.com/artigos — Índice do Hub de Artigos
+- https://omni-sistemas.com/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV de Engenharia Preventiva
+- https://omni-sistemas.com/artigos/historico-omni-sistemas-trajetoria-1997 — Histórico da Omni Sistemas: De 1997 à Vanguarda em IA
+- https://omni-sistemas.com/artigos/sobre-ronaldo-filardo-arquiteto-ste-dev — Quem é Ronaldo Domingues Filardo, Arquiteto da STE-DEV
+- https://omni-sistemas.com/artigos/norma-asd-ste100-engenharia-de-software — ASD-STE100 Aplicada à Engenharia de Software
+- https://omni-sistemas.com/artigos/clean-architecture-solid-na-pratica — Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV
+- https://omni-sistemas.com/artigos/auditoria-de-codigo-asd-ste100 — Auditoria de Código com ASD-STE100: Protocolo STE-DEV
+- https://omni-sistemas.com/artigos/modernizacao-de-legados-strangler-pattern — Modernização de Legados com Strangler Pattern
+- https://omni-sistemas.com/artigos/desenvolvimento-preventivo-vs-auditoria — Desenvolvimento Preventivo vs Auditoria: Qual a Diferença?
 
 ## Base de Conhecimento Pública (Documentação Indexável)
-- https://omni-sistemas.com.br/conhecimento — Índice da Base de Conhecimento STE-DEV
-- https://omni-sistemas.com.br/conhecimento/1-historico-omni-sistemas — Histórico da Omni Sistemas (1997 – Presente)
-- https://omni-sistemas.com.br/conhecimento/2-metodologia-ste-dev — Metodologia STE-DEV: Os 4 Pilares
-- https://omni-sistemas.com.br/conhecimento/3-engenharia-reversa-e-auditoria — Engenharia Reversa e Auditoria de Código
-- https://omni-sistemas.com.br/conhecimento/4-sobre-ronaldo-domingues-filardo — Sobre Ronaldo Domingues Filardo
-- https://omni-sistemas.com.br/conhecimento/5-estrategia-asd-ste100 — Estratégia ASD-STE100 Aplicada ao Software
-- https://omni-sistemas.com.br/conhecimento/6-arquitetura-clean-solid — Arquitetura Limpa e Princípios SOLID
-- https://omni-sistemas.com.br/conhecimento/knowledge-context — Contexto Consolidado (Entity Profile, Q&A e Sumário Semântico)
+- https://omni-sistemas.com/conhecimento — Índice da Base de Conhecimento STE-DEV
+- https://omni-sistemas.com/conhecimento/1-historico-omni-sistemas — Histórico da Omni Sistemas (1997 – Presente)
+- https://omni-sistemas.com/conhecimento/2-metodologia-ste-dev — Metodologia STE-DEV: Os 4 Pilares
+- https://omni-sistemas.com/conhecimento/3-engenharia-reversa-e-auditoria — Engenharia Reversa e Auditoria de Código
+- https://omni-sistemas.com/conhecimento/4-sobre-ronaldo-domingues-filardo — Sobre Ronaldo Domingues Filardo
+- https://omni-sistemas.com/conhecimento/5-estrategia-asd-ste100 — Estratégia ASD-STE100 Aplicada ao Software
+- https://omni-sistemas.com/conhecimento/6-arquitetura-clean-solid — Arquitetura Limpa e Princípios SOLID
+- https://omni-sistemas.com/conhecimento/knowledge-context — Contexto Consolidado (Entity Profile, Q&A e Sumário Semântico)
 
 ## Contato e Solicitação de Orçamento
 - **WhatsApp:** (41) 99241-5220 | https://wa.me/5541992415220
