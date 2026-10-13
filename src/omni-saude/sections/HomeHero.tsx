@@ -1,3 +1,4 @@
+import { AppPreview } from '@/omni-saude/components/AppPreview'
 import { PageHero } from '@/omni-saude/components/PageHero'
 import { HOME_HERO } from '@/omni-saude/data/home'
 
@@ -28,14 +29,7 @@ export function HomeHero(): React.JSX.Element {
     >
       <div className="relative mx-auto max-w-md">
         <HeroBadge />
-        <img
-          src={HOME_HERO.image.src}
-          alt={HOME_HERO.image.alt}
-          width={HOME_HERO.image.width}
-          height={HOME_HERO.image.height}
-          decoding="async"
-          className="w-full h-auto rounded-3xl border border-slate-200 shadow-xl"
-        />
+        <AppPreview />
         <p className="text-body-sm text-slate-500 text-center mt-space-sm">{HOME_HERO.socialProof}</p>
       </div>
     </PageHero>

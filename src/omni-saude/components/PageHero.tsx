@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Reveal } from '@/motion/Reveal'
+import { HeroBackground } from './HeroBackground'
 
 export interface HeroCta {
   readonly label: string
@@ -47,12 +48,13 @@ export function PageHero({
 }: PageHeroProps): React.JSX.Element {
   const shell = 'mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin'
   return (
-    <section className="py-12 md:py-16">
+    <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-b from-sky-50 via-white to-[#f8fafc]">
+      <HeroBackground />
       <div
         className={
           children
-            ? `max-w-container ${shell} grid lg:grid-cols-2 gap-10 lg:gap-16 items-center`
-            : `max-w-4xl ${shell}`
+            ? `relative max-w-container ${shell} grid lg:grid-cols-2 gap-10 lg:gap-16 items-center`
+            : `relative max-w-4xl ${shell}`
         }
       >
         <Reveal className="flex flex-col gap-space-md">

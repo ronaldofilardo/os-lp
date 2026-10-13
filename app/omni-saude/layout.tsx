@@ -18,6 +18,7 @@ export default function OmniSaudeLayout({
 }: Readonly<{ children: React.ReactNode }>): React.JSX.Element {
   return (
     <div className="bg-[#f8fafc] text-slate-900 min-h-screen font-sans antialiased">
+      <div className="scroll-progress" aria-hidden="true" />
       <Header links={NAV_LINKS_OMNISAUDE} cta={OMNISAUDE_CTA} theme="light" />
       <main className="pt-16">{children}</main>
       <Footer anchors={OMNISAUDE_FOOTER_ANCHORS} theme="light" legalLinks={OMNISAUDE_LEGAL_LINKS} />

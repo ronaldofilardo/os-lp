@@ -47,7 +47,7 @@ export function AudienceSplit({
             ) : null}
           </Reveal>
         ) : null}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="os-stagger grid md:grid-cols-2 gap-6 lg:gap-8">
           {cards.map((card) => (
             <Reveal key={card.title} className="h-full">
               <article className="skeuo-card h-full rounded-2xl p-6 md:p-8 flex flex-col gap-space-sm">

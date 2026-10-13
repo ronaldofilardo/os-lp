@@ -12,11 +12,9 @@ describe('HomeHero', () => {
     expect(container.querySelectorAll('h1')).toHaveLength(1)
   })
 
-  it('renders the hero image with dimensions and the badge', () => {
+  it('renders the app preview and the badge', () => {
     render(<HomeHero />)
-    const img = screen.getByRole('img', { name: /Aplicativo OmniSaúde/ })
-    expect(img).toHaveAttribute('width', '1024')
-    expect(img).toHaveAttribute('height', '1024')
+    expect(screen.getByRole('img', { name: /Prévia do aplicativo OmniSaúde/ })).toBeInTheDocument()
     expect(screen.getByText('Privacidade Total')).toBeInTheDocument()
     expect(screen.getByText('Você escolhe quem acessa')).toBeInTheDocument()
   })
