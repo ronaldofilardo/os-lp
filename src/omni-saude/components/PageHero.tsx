@@ -45,9 +45,16 @@ export function PageHero({
   afterCta,
   children,
 }: PageHeroProps): React.JSX.Element {
+  const shell = 'mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin'
   return (
     <section className="py-12 md:py-16">
-      <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div
+        className={
+          children
+            ? `max-w-container ${shell} grid lg:grid-cols-2 gap-10 lg:gap-16 items-center`
+            : `max-w-4xl ${shell}`
+        }
+      >
         <Reveal className="flex flex-col gap-space-md">
           {eyebrow ? (
             <span className="font-label-caps text-label-caps uppercase tracking-wider text-emerald-700">
