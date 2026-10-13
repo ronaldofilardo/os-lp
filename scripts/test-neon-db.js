@@ -2,7 +2,9 @@ import pg from 'pg'
 
 const { Pool } = pg
 
-const connectionString = 'postgresql://neondb_owner:npg_ga2qLP1tEkrM@ep-round-smoke-b6gk4zvd-pooler.c-2.sa-east-1.aws.neon.tech/neondb?sslmode=require'
+const connectionString =
+  process.env.DATABASE_URL ||
+  'postgresql://postgres:postgres@localhost:5432/os-lp_db'
 
 async function main() {
   console.log('Connecting to Neon database...')

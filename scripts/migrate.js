@@ -17,7 +17,10 @@ function resolveDatabaseUrl() {
     return process.env.DATABASE_URL_DEV || 'postgresql://postgres:postgres@localhost:5432/os-lp_db'
   }
   if (target === 'prod') {
-    return process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_ga2qLP1tEkrM@ep-round-smoke-b6gk4zvd-pooler.c-2.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
+    if (!process.env.DATABASE_URL) {
+      throw new Error('DATABASE_URL é obrigatória para migração de produção.')
+    }
+    return process.env.DATABASE_URL
   }
   return process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/os-lp_db'
 }
