@@ -43,4 +43,30 @@ describe('ProjectCard', () => {
     render(<ProjectCard project={noLogoProject} />)
     expect(screen.getByText('Sistema Sob Medida')).toBeInTheDocument()
   })
+
+  it('renders internal project urls as same-tab links', () => {
+    const lp = getAllProjectsDTO().find((p) => p.url === '/omni-saude')
+    if (!lp) throw new Error('missing internal project fixture')
+    render(<ProjectCard project={lp} />)
+    const links = screen.getAllByRole('link')
+    expect(links.length).toBeGreaterThan(0)
+    for (const link of links) {
+      expect(link).toHaveAttribute('href', '/omni-saude')
+      expect(link).not.toHaveAttribute('target', '_blank')
+    }
+    expect(screen.getByText('Ver landing page')).toBeInTheDocument()
+  })
+
+  it('keeps external project urls opening in a new tab', () => {
+    const external = getAllProjectsDTO().find((p) => p.url !== undefined && !p.url.startsWith('/'))
+    if (!external) throw new Error('missing external project fixture')
+    render(<ProjectCard project={external} />)
+    const links = screen.getAllByRole('link')
+    expect(links.length).toBeGreaterThan(0)
+    for (const link of links) {
+      expect(link).toHaveAttribute('target', '_blank')
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+    }
+    expect(screen.getByText('Acessar plataforma')).toBeInTheDocument()
+  })
 })

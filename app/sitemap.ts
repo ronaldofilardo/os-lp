@@ -13,6 +13,19 @@ function modifiedAt(relativePath: string): Date {
   }
 }
 
+const OMNISAUDE_ROUTES: readonly {
+  readonly path: string
+  readonly file: string
+  readonly priority: number
+}[] = [
+  { path: '/omni-saude', file: 'app/omni-saude/page.tsx', priority: 0.9 },
+  { path: '/omni-saude/para-voce', file: 'app/omni-saude/para-voce/page.tsx', priority: 0.7 },
+  { path: '/omni-saude/para-labs', file: 'app/omni-saude/para-labs/page.tsx', priority: 0.7 },
+  { path: '/omni-saude/medicos', file: 'app/omni-saude/medicos/page.tsx', priority: 0.7 },
+  { path: '/omni-saude/seguranca', file: 'app/omni-saude/seguranca/page.tsx', priority: 0.6 },
+  { path: '/omni-saude/contato', file: 'app/omni-saude/contato/page.tsx', priority: 0.5 },
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles().map((article) => ({
     url: `${SITE.domain}/artigos/${article.slug}`,
@@ -53,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    ...OMNISAUDE_ROUTES.map((route) => ({
+      url: `${SITE.domain}${route.path}`,
+      lastModified: modifiedAt(route.file),
+      changeFrequency: 'monthly' as const,
+      priority: route.priority,
+    })),
     ...articles,
     ...knowledge,
   ]

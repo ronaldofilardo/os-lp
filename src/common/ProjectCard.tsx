@@ -1,6 +1,7 @@
 import type { ProjectDTO } from '@/types'
 import { TiltCard } from '@/motion/TiltCard'
 import { firstSentence } from './firstSentence'
+import { isInternalHref, ProjectLink } from './ProjectLink'
 import { sectorColorMapLight, statusDotMapLight } from './projectStyles'
 
 interface ProjectCardProps {
@@ -9,6 +10,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
   const sectorColors = sectorColorMapLight[project.sectorColor]
+  const isInternal = project.url !== undefined && isInternalHref(project.url)
 
   return (
     <TiltCard className="h-full rounded-2xl">
@@ -18,19 +20,17 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
           {project.logo ? (
             <div className="relative z-10 w-full h-full flex items-center justify-center p-2">
               {project.url ? (
-                <a
+                <ProjectLink
                   href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="flex items-center justify-center w-full h-full"
-                  aria-label={`Acessar ${project.displayName}`}
+                  ariaLabel={`Acessar ${project.displayName}`}
                 >
                   <img
                     src={project.logo}
                     alt={`Logo ${project.displayName}`}
                     className="max-h-20 max-w-[80%] object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm rounded"
                   />
-                </a>
+                </ProjectLink>
               ) : (
                 <img
                   src={project.logo}
@@ -55,10 +55,8 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
         <div className="p-space-lg flex flex-col gap-space-sm">
           <div className="flex items-center justify-between gap-2">
             {project.url ? (
-              <a
+              <ProjectLink
                 href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-lg font-semibold text-slate-900 hover:text-sky-600 transition-colors inline-flex items-center gap-1.5 group/link"
               >
                 <span>{project.displayName}</span>
@@ -67,9 +65,9 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
                   translate="no"
                   className="material-symbols-outlined text-[16px] text-slate-400 group-hover/link:text-sky-600 transition-colors"
                 >
-                  open_in_new
+                  {isInternal ? 'arrow_forward' : 'open_in_new'}
                 </span>
-              </a>
+              </ProjectLink>
             ) : (
               <span className="text-lg font-semibold text-slate-900">{project.displayName}</span>
             )}
@@ -79,17 +77,15 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
           </div>
           <p className="text-sm text-slate-600 leading-relaxed">{firstSentence(project.summary)}</p>
           {project.url && (
-            <a
+            <ProjectLink
               href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-sm font-medium text-sky-700 hover:underline mt-1 w-fit"
             >
-              <span>Acessar plataforma</span>
+              <span>{isInternal ? 'Ver landing page' : 'Acessar plataforma'}</span>
               <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[14px]">
-                arrow_outward
+                {isInternal ? 'arrow_forward' : 'arrow_outward'}
               </span>
-            </a>
+            </ProjectLink>
           )}
         </div>
       </div>

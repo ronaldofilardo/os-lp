@@ -3,7 +3,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
 import { SITE } from '@/config/site'
-import { FAQ_TECHNICAL_DB, FAQ_COMMERCIAL_DB } from '@/data'
+import { FAQ_TECHNICAL_DB, FAQ_COMMERCIAL_DB, PROJECTS_DB } from '@/data'
+import { omniPageSeo } from '@/omni-saude/lib/seo'
 import {
   buildOrganizationSchema,
   buildProfessionalServiceSchema,
@@ -423,3 +424,54 @@ describe('Fase 3 — llms manifests', () => {
     expect(full).toContain('Base de Conhecimento Pública')
   })
 })
+
+describe('Fase 5 — Omni Saúde (/omni-saude)', () => {
+  it('sitemap lists the six public routes and keeps /cadastro out', () => {
+    const urls = sitemap().map((entry) => entry.url)
+    const routes = [
+      '/omni-saude',
+      '/omni-saude/para-voce',
+      '/omni-saude/para-labs',
+      '/omni-saude/medicos',
+      '/omni-saude/seguranca',
+      '/omni-saude/contato',
+    ]
+    for (const route of routes) {
+      expect(urls, `sitemap must list ${route}`).toContain(`${SITE.domain}${route}`)
+    }
+    expect(urls.some((url) => url.includes('/omni-saude/cadastro'))).toBe(false)
+  })
+
+  it('every Omni Saúde page declares a canonical path', () => {
+    const pages = [
+      'page.tsx',
+      'para-voce/page.tsx',
+      'para-labs/page.tsx',
+      'medicos/page.tsx',
+      'seguranca/page.tsx',
+      'contato/page.tsx',
+    ]
+    for (const page of pages) {
+      const source = fs.readFileSync(path.join(ROOT, 'app/omni-saude', page), 'utf8')
+      expect(source, `${page} must build metadata via omniPageSeo`).toContain('omniPageSeo')
+    }
+    const cadastro = fs.readFileSync(path.join(ROOT, 'app/omni-saude/cadastro/page.tsx'), 'utf8')
+    expect(cadastro).toContain('canonical')
+    const seo = omniPageSeo({ title: 'T', description: 'D', path: '/omni-saude/seguranca' })
+    expect(seo.metadata.alternates?.canonical).toBe('/omni-saude/seguranca')
+  })
+
+  it('the cadastro shell opts out of indexing', () => {
+    const source = fs.readFileSync(path.join(ROOT, 'app/omni-saude/cadastro/page.tsx'), 'utf8')
+    expect(source).toContain('index: false')
+    expect(source).toContain('follow: false')
+  })
+
+  it('the LP project card links internally while the app card links to the product', () => {
+    const lp = PROJECTS_DB.find((row) => row.id === 'omni-saude-lp')
+    const app = PROJECTS_DB.find((row) => row.id === 'omni-saude-app')
+    expect(lp?.url).toBe('/omni-saude')
+    expect(app?.url).toBe('https://saude.omni-sistemas.com')
+  })
+})
+
