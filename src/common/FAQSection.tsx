@@ -34,7 +34,7 @@ export function FAQSection({
           className={
             light
               ? 'space-y-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200'
-              : 'space-y-px bg-outline-variant/20 rounded-2xl overflow-hidden border border-outline-variant/30'
+              : 'space-y-px bg-slate-800/60 rounded-2xl overflow-hidden border border-slate-800'
           }
         >
           {items.map((item, i) => (
@@ -43,11 +43,17 @@ export function FAQSection({
               className={
                 light
                   ? 'group bg-white border-b border-slate-200 last:border-0 open:bg-slate-50'
-                  : 'group bg-surface-container-low border-b border-outline-variant/20 last:border-0 open:bg-surface-container'
+                  : 'group bg-slate-900/70 hover:bg-slate-900/90 transition-colors border-b border-slate-800 last:border-0 open:bg-slate-900'
               }
             >
-              <summary className="flex items-center justify-between gap-space-sm px-space-md py-space-sm cursor-pointer font-headline-sm text-headline-sm text-left text-slate-900">
-                <h3 className="m-0 font-semibold">{item.question}</h3>
+              <summary
+                className={`flex items-center justify-between gap-space-sm px-space-md py-space-sm cursor-pointer font-headline-sm text-headline-sm text-left transition-colors select-none ${
+                  light
+                    ? 'text-slate-900 hover:text-slate-700'
+                    : 'text-white hover:text-primary'
+                }`}
+              >
+                <h3 className="m-0 font-semibold tracking-tight">{item.question}</h3>
                 <span
                   aria-hidden="true"
                   translate="no"
@@ -59,7 +65,7 @@ export function FAQSection({
                 </span>
               </summary>
               <div className="px-space-md pb-space-sm">
-                <p className={`font-body-md text-body-md ${light ? 'text-slate-600' : 'text-on-surface-variant'}`}>
+                <p className={`font-body-md text-body-md leading-relaxed ${light ? 'text-slate-600' : 'text-slate-300'}`}>
                   {item.answer}
                 </p>
               </div>
