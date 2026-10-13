@@ -15,6 +15,8 @@ const targets = [
   'logo-lwos.png',
   'LOGO-ACESSO.png',
   'logo.png',
+  'omni-saude/hero_app_mockup.jpg',
+  'omni-saude/doctor_patient_care.jpg',
 ]
 
 async function convertAll() {
@@ -31,7 +33,7 @@ async function convertAll() {
     const ext = path.extname(file)
     const baseName = path.basename(file, ext)
     const outName = `${baseName}.webp`
-    const outPath = path.join(publicDir, outName)
+    const outPath = path.join(path.dirname(srcPath), outName)
 
     const origStats = fs.statSync(srcPath)
     await sharp(srcPath)

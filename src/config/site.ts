@@ -1,20 +1,26 @@
 export const SITE = {
   name: 'Omni Sistemas',
   tagline: 'Sistemas Sob Medida & Automação Inteligente',
-  domain: 'https://omni-sistemas.com.br',
-  baseUrl: 'https://omni-sistemas.com.br',
+  domain: 'https://omni-sistemas.com',
+  baseUrl: 'https://omni-sistemas.com',
   description:
     'Sistemas sob medida, integração com Asaas e modernização de legados para empresas que precisam automatizar processos críticos. Orçamento sem compromisso.',
   shortDescription:
     'Softhouse que cria sistemas sob medida, automatiza cobranças e integra plataformas — com atendimento direto de quem projeta e conformidade com a LGPD.',
-  ogImage: 'https://omni-sistemas.com.br/og-image.png',
-  logo: 'https://omni-sistemas.com.br/logo.png',
+  ogImage: 'https://omni-sistemas.com/og-image.png',
+  logo: 'https://omni-sistemas.com/logo.png',
   lang: 'pt-BR',
   email: 'suporte@omni-sistema.com',
   whatsapp: {
     display: '(41) 99241-5220',
     international: '+5541992415220',
     url: 'https://wa.me/5541992415220',
+  } as const,
+  apps: {
+    omniSaude: {
+      url: 'https://saude.omni-sistemas.com',
+      login: '/login',
+    } as const,
   } as const,
   foundingDate: '1997',
   founder: {
