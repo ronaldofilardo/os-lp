@@ -28,7 +28,7 @@ export default [
       'react/jsx-no-target-blank': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-no-comment-textnodes': 'off',
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-undef': 'off',
     },

@@ -6,7 +6,6 @@ import { resolveDatabaseConfig } from './dbConfig'
 const { Pool } = pg
 
 declare global {
-  // eslint-disable-next-line no-var
   var __omniPgPoolInstance: pg.Pool | undefined
 }
 

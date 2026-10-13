@@ -70,7 +70,7 @@ describe('leadRepository', () => {
     })
 
     expect(mockQuery).toHaveBeenCalledTimes(1)
-    const [queryText, values] = mockQuery.mock.calls[0]
+    const [queryText, values] = mockQuery.mock.calls[0] ?? []
     expect(queryText).toContain('INSERT INTO leads')
     expect(values).toEqual([
       'Lucas Mendes',
