@@ -50,6 +50,19 @@ export function DemoSection(): React.JSX.Element {
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault()
     window.open(buildWhatsAppUrl(values), '_blank', 'noopener,noreferrer')
+    void fetch('/api/omni-saude/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fullName: values['name'] || '',
+        email: values['email'] || '',
+        phone: values['phone'] || '',
+        company: values['company'] || '',
+        role: values['role'] || undefined,
+        volume: values['volume'] || undefined,
+        message: values['message'] || undefined,
+      }),
+    }).catch(() => {})
   }
 
   return (

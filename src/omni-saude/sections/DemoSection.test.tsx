@@ -17,17 +17,28 @@ describe('DemoSection', () => {
     expect(container.querySelector('section')).toHaveAttribute('id', 'solicitar-demo')
   })
 
-  it('opens WhatsApp with the filled answers on submit', () => {
+  it('opens WhatsApp and dispatches lead to API on submit', () => {
     const open = vi.fn()
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true })
     Object.defineProperty(window, 'open', { value: open, writable: true, configurable: true })
+    vi.stubGlobal('fetch', fetchMock)
+
     render(<DemoSection />)
     fireEvent.change(screen.getByLabelText('Nome Completo'), { target: { value: 'João' } })
     fireEvent.change(screen.getByLabelText('E-mail Corporativo'), { target: { value: 'joao@lab.com.br' } })
     fireEvent.click(screen.getByRole('button', { name: /Solicitar Demonstração/ }))
+
     expect(open).toHaveBeenCalledTimes(1)
     const [url] = open.mock.calls[0] as [string]
     expect(url.startsWith(`${SITE.whatsapp.url}?text=`)).toBe(true)
     expect(decodeURIComponent(url)).toContain('João')
     expect(decodeURIComponent(url)).toContain('joao@lab.com.br')
+
+    expect(fetchMock).toHaveBeenCalledWith(
+      '/api/omni-saude/leads',
+      expect.objectContaining({
+        method: 'POST',
+      })
+    )
   })
 })

@@ -24,11 +24,12 @@
 | **D9** | **Exclusão de formulários pesados:** `AuthModal`, `EmailJS` e coleta de CPF/CNPJ/data de nascimento não entram. |
 | **D10** | **Casca de cadastro:** `/cadastro` vira apenas casca visual com `noindex` e fora do sitemap. Formulário de demo de labs vira seção inline, sem envio. |
 | **D11** | **Constante centralizada:** Links do app em constante única (`SITE.apps.omniSaude`), com `/login` como valor provisório. |
+| **D12** | **Persistência de Leads segregada:** Na etapa de ativação de formulários, utilizar o banco Neon PostgreSQL do LP, mas com uma tabela dedicada (`omni_saude_leads`) para distinguir e isolar os leads de laboratórios do Omni Saúde em relação aos leads da Omni Sistemas. |
 
 ### Pendentes (Não Bloqueiam Esta Etapa)
 - **Domínio canônico do LP:** Corrigido para `omni-sistemas.com`.
 - **E-mail oficial de contato:** Alinhamento futuro entre `suporte@omni-sistema.com` e `contato@omnisaude.com.br`.
-- **Destino final de cadastro e formulários:** Futura integração via `/api/leads` ou diretamente pelo app.
+- **Implementação do envio de leads:** Criação da migration `002_create_omni_saude_leads_table.sql` e handler dedicada na etapa de formulários.
 
 ---
 
