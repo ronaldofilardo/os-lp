@@ -13,11 +13,15 @@ export function mapDbRowToOmniSaudeLeadRecord(row: OmniSaudeLeadDbRow): OmniSaud
     id: row.id,
     fullName: row.full_name,
     email: row.email,
-    phone: row.phone,
-    company: row.company,
+    phone: row.whatsapp,
+    whatsapp: row.whatsapp,
+    company: row.institution_name,
+    institutionName: row.institution_name,
     role: row.role ?? undefined,
-    volume: row.volume ?? undefined,
+    volume: row.monthly_volume ?? undefined,
+    monthlyVolume: row.monthly_volume ?? undefined,
     message: row.message ?? undefined,
+    lgpdConsent: row.lgpd_consent,
     status: row.status,
     source: row.source,
     ipAddress: row.ip_address,
@@ -32,32 +36,37 @@ export async function insertOmniSaudeLeadRecord(
   meta: OmniSaudeLeadMeta = {}
 ): Promise<OmniSaudeLeadRecord> {
   const pool = getDatabasePool()
+  const resolvedPhone = (input.whatsapp || input.phone || '').trim()
+  const resolvedCompany = (input.institutionName || input.company || '').trim()
+  const resolvedVolume = (input.monthlyVolume || input.volume || '').trim() || null
 
   const query = `
     INSERT INTO omni_saude_leads (
       full_name,
+      institution_name,
       email,
-      phone,
-      company,
+      whatsapp,
       role,
-      volume,
+      monthly_volume,
       message,
+      lgpd_consent,
       status,
       source,
       ip_address,
       user_agent
-    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
     RETURNING *;
   `
 
   const values = [
     input.fullName.trim(),
+    resolvedCompany,
     input.email.trim().toLowerCase(),
-    input.phone.trim(),
-    input.company.trim(),
+    resolvedPhone,
     input.role?.trim() || null,
-    input.volume?.trim() || null,
+    resolvedVolume,
     input.message?.trim() || null,
+    input.lgpdConsent ?? true,
     'novo',
     meta.source || 'omni_saude_para_labs',
     meta.ipAddress || null,

@@ -4,11 +4,15 @@
 export interface OmniSaudeLeadInput {
   readonly fullName: string
   readonly email: string
-  readonly phone: string
-  readonly company: string
+  readonly phone?: string | undefined
+  readonly whatsapp?: string | undefined
+  readonly company?: string | undefined
+  readonly institutionName?: string | undefined
   readonly role?: string | undefined
   readonly volume?: string | undefined
+  readonly monthlyVolume?: string | undefined
   readonly message?: string | undefined
+  readonly lgpdConsent?: boolean | undefined
 }
 
 export interface OmniSaudeLeadMeta {
@@ -17,8 +21,19 @@ export interface OmniSaudeLeadMeta {
   readonly source?: string | undefined
 }
 
-export interface OmniSaudeLeadRecord extends OmniSaudeLeadInput {
+export interface OmniSaudeLeadRecord {
   readonly id: string
+  readonly fullName: string
+  readonly email: string
+  readonly phone: string
+  readonly whatsapp: string
+  readonly company: string
+  readonly institutionName: string
+  readonly role?: string | undefined
+  readonly volume?: string | undefined
+  readonly monthlyVolume?: string | undefined
+  readonly message?: string | undefined
+  readonly lgpdConsent: boolean
   readonly status: string
   readonly source: string
   readonly ipAddress: string | null
@@ -30,12 +45,14 @@ export interface OmniSaudeLeadRecord extends OmniSaudeLeadInput {
 export interface OmniSaudeLeadDbRow {
   id: string
   full_name: string
+  institution_name: string
   email: string
-  phone: string
-  company: string
+  whatsapp: string
   role: string | null
-  volume: string | null
+  monthly_volume: string | null
   message: string | null
+  lgpd_consent: boolean
+  lgpd_consent_at: Date
   status: string
   source: string
   ip_address: string | null

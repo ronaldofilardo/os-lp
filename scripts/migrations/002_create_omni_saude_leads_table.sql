@@ -4,12 +4,14 @@
 CREATE TABLE IF NOT EXISTS omni_saude_leads (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   full_name VARCHAR(150) NOT NULL,
+  institution_name VARCHAR(150) NOT NULL,
   email VARCHAR(255) NOT NULL,
-  phone VARCHAR(30) NOT NULL,
-  company VARCHAR(150) NOT NULL,
+  whatsapp VARCHAR(30) NOT NULL,
   role VARCHAR(80),
-  volume VARCHAR(50),
+  monthly_volume VARCHAR(50),
   message TEXT,
+  lgpd_consent BOOLEAN NOT NULL DEFAULT true,
+  lgpd_consent_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   status VARCHAR(30) NOT NULL DEFAULT 'novo',
   source VARCHAR(50) NOT NULL DEFAULT 'omni_saude_para_labs',
   ip_address VARCHAR(45),
@@ -25,4 +27,5 @@ CREATE INDEX IF NOT EXISTS idx_omni_saude_leads_status ON omni_saude_leads(statu
 
 -- Comentários para conformidade
 COMMENT ON TABLE omni_saude_leads IS 'Leads e solicitações de demonstração do ecossistema Omni Saúde';
-COMMENT ON COLUMN omni_saude_leads.company IS 'Nome da instituição, laboratório ou clínica solicitante';
+COMMENT ON COLUMN omni_saude_leads.institution_name IS 'Nome da instituição, laboratório ou clínica solicitante';
+COMMENT ON COLUMN omni_saude_leads.whatsapp IS 'WhatsApp ou telefone para contato direto';

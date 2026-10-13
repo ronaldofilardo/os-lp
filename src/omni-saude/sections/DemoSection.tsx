@@ -57,12 +57,23 @@ export function DemoSection(): React.JSX.Element {
         fullName: values['name'] || '',
         email: values['email'] || '',
         phone: values['phone'] || '',
+        whatsapp: values['phone'] || '',
         company: values['company'] || '',
+        institutionName: values['company'] || '',
         role: values['role'] || undefined,
         volume: values['volume'] || undefined,
+        monthlyVolume: values['volume'] || undefined,
         message: values['message'] || undefined,
       }),
-    }).catch(() => {})
+    })
+      .then((res) => {
+        if (!res.ok) {
+          console.error('[omni-saude:demo_lead_status]', res.status)
+        }
+      })
+      .catch((err) => {
+        console.error('[omni-saude:demo_lead_error]', err)
+      })
   }
 
   return (

@@ -12,12 +12,14 @@ describe('omniSaudeLeadRepository', () => {
   const sampleDbRow: OmniSaudeLeadDbRow = {
     id: 'f47ac10b-58cc-4372-a567-0e02b2c3d479',
     full_name: 'Dra. Patrícia Lima',
+    institution_name: 'Laboratório Vida & Saúde',
     email: 'patricia@labvida.com.br',
-    phone: '(41) 98888-7777',
-    company: 'Laboratório Vida & Saúde',
+    whatsapp: '(41) 98888-7777',
     role: 'Diretora Médica',
-    volume: '3.000 a 5.000',
+    monthly_volume: '3.000 a 5.000',
     message: 'Precisamos automatizar a entrega de laudos via WhatsApp e celular.',
+    lgpd_consent: true,
+    lgpd_consent_at: sampleDate,
     status: 'novo',
     source: 'omni_saude_para_labs',
     ip_address: '10.0.0.1',
@@ -36,10 +38,14 @@ describe('omniSaudeLeadRepository', () => {
     expect(record.fullName).toBe('Dra. Patrícia Lima')
     expect(record.email).toBe('patricia@labvida.com.br')
     expect(record.phone).toBe('(41) 98888-7777')
+    expect(record.whatsapp).toBe('(41) 98888-7777')
     expect(record.company).toBe('Laboratório Vida & Saúde')
+    expect(record.institutionName).toBe('Laboratório Vida & Saúde')
     expect(record.role).toBe('Diretora Médica')
     expect(record.volume).toBe('3.000 a 5.000')
+    expect(record.monthlyVolume).toBe('3.000 a 5.000')
     expect(record.message).toBe(sampleDbRow.message)
+    expect(record.lgpdConsent).toBe(true)
     expect(record.status).toBe('novo')
     expect(record.source).toBe('omni_saude_para_labs')
     expect(record.ipAddress).toBe('10.0.0.1')
@@ -73,9 +79,12 @@ describe('omniSaudeLeadRepository', () => {
     expect(mockQuery).toHaveBeenCalledTimes(1)
     const [sql, params] = mockQuery.mock.calls[0] as [string, unknown[]]
     expect(sql).toContain('INSERT INTO omni_saude_leads')
+    expect(sql).toContain('institution_name')
+    expect(sql).toContain('whatsapp')
     expect(params[0]).toBe('Dra. Patrícia Lima')
-    expect(params[1]).toBe('patricia@labvida.com.br')
-    expect(params[3]).toBe('Laboratório Vida & Saúde')
+    expect(params[1]).toBe('Laboratório Vida & Saúde')
+    expect(params[2]).toBe('patricia@labvida.com.br')
+    expect(params[3]).toBe('(41) 98888-7777')
     expect(saved.id).toBe(sampleDbRow.id)
   })
 })
