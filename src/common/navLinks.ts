@@ -22,3 +22,12 @@ export const NAV_LINKS_METODOLOGIA: readonly NavLink[] = [
   { href: '/artigos', label: 'Artigos' },
   { href: '/#contato', label: 'Contato' },
 ] as const
+
+export const NAV_LINKS_OMNISAUDE: readonly NavLink[] = [
+  { href: '/omni-saude', label: 'Omni Saúde' },
+  { href: '/omni-saude/para-voce', label: 'Para Você' },
+  { href: '/omni-saude/para-labs', label: 'Laboratórios e Clínicas' },
+  { href: '/omni-saude/medicos', label: 'Médicos' },
+  { href: '/omni-saude/seguranca', label: 'Segurança' },
+  { href: '/omni-saude/contato', label: 'Contato' },
+] as const

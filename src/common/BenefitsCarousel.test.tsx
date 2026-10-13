@@ -61,6 +61,15 @@ describe('BenefitsCarousel', () => {
     expect(screen.getByRole('group', { name: /Quatro motivos/ })).toHaveAttribute('aria-roledescription', 'carrossel')
   })
 
+  it('uses a custom aria-label when provided', () => {
+    render(<BenefitsCarousel benefits={BENEFITS} ariaLabel="Benefícios do Omni Saúde" />)
+    expect(screen.getByRole('group', { name: 'Benefícios do Omni Saúde' })).toHaveAttribute(
+      'aria-roledescription',
+      'carrossel'
+    )
+    expect(screen.queryByRole('group', { name: /Quatro motivos/ })).not.toBeInTheDocument()
+  })
+
   it('scrolls to a slide when its dot is clicked', () => {
     render(<BenefitsCarousel benefits={BENEFITS} />)
     fireEvent.click(screen.getByRole('button', { name: 'Ir para o motivo 3' }))

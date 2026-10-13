@@ -19,9 +19,14 @@ const LINKS_INSTITUTIONAL: readonly NavLink[] = [
 interface FooterProps {
   readonly anchors?: readonly NavLink[]
   readonly theme?: HeaderTheme
+  readonly legalLinks?: readonly NavLink[]
 }
 
-export function Footer({ anchors = HOME_ANCHORS, theme = 'dark' }: FooterProps): JSX.Element {
+export function Footer({
+  anchors = HOME_ANCHORS,
+  theme = 'dark',
+  legalLinks,
+}: FooterProps): JSX.Element {
   const light = theme === 'light'
 
   const wrap = light
@@ -89,6 +94,17 @@ export function Footer({ anchors = HOME_ANCHORS, theme = 'dark' }: FooterProps):
             <div className={`flex flex-col gap-space-xs ${light ? 'text-sm' : 'font-code-md text-code-md'}`}>
               {LINKS_INSTITUTIONAL.map((link) => (
                 <a key={link.href} className={`${muted} ${linkHover} transition-colors`} href={link.href}>{link.label}</a>
+              ))}
+              {legalLinks?.map((link) => (
+                <a
+                  key={link.href}
+                  className={`${muted} ${linkHover} transition-colors`}
+                  href={link.href}
+                  target={link.href.endsWith('.pdf') ? '_blank' : undefined}
+                  rel={link.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
+                >
+                  {link.label}
+                </a>
               ))}
             </div>
             <div

@@ -7,14 +7,20 @@ import { SLIDE_THEMES, SlideVisual, type Benefit } from './benefitSlides'
 
 export type { Benefit }
 
-export function BenefitsCarousel({ benefits }: { readonly benefits: readonly Benefit[] }): JSX.Element {
+export function BenefitsCarousel({
+  benefits,
+  ariaLabel = 'Quatro motivos para confiar na Omni Sistemas',
+}: {
+  readonly benefits: readonly Benefit[]
+  readonly ariaLabel?: string
+}): JSX.Element {
   const trackRef = useRef<HTMLUListElement>(null)
   const [viewRef, isInView] = useInView<HTMLDivElement>()
   const [isPlaying, setIsPlaying] = useState(true)
   const { active, cycle, goTo } = useScrollCarousel(trackRef, isInView && isPlaying)
 
   return (
-    <div ref={viewRef} role="group" aria-roledescription="carrossel" aria-label="Quatro motivos para confiar na Omni Sistemas">
+    <div ref={viewRef} role="group" aria-roledescription="carrossel" aria-label={ariaLabel}>
       <ul
         ref={trackRef}
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth list-none m-0 py-4 px-[8%] md:px-[10%] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
