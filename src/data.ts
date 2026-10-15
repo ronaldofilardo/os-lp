@@ -70,6 +70,7 @@ export const PROJECTS_DB: readonly ProjectRow[] = [
     techInfo: 'Landing page rápida, otimizada para SEO e preparada para funil de vendas.',
     techStack: ['Next.js', 'Tailwind', 'SEO'],
     logo: '/logo-QWork.webp',
+    video: '/logo-QWORK.mp4',
     url: 'https://qwork.app.br',
   },
   {

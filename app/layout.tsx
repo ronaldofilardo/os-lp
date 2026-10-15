@@ -30,10 +30,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo-Omni-Sistema-peq.png', type: 'image/png' },
       { url: '/logo-Omni-Sistema-peq.webp', type: 'image/webp' },
+      { url: '/favicon.ico', sizes: 'any' },
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/logo-Omni-Sistema-peq.png',
     apple: '/apple-touch-icon.png',
   },
   alternates: {
@@ -79,9 +80,10 @@ export default function RootLayout({
         <noscript>
           <style>{'.reveal{opacity:1;transform:none}'}</style>
         </noscript>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/logo-Omni-Sistema-peq.png" />
         <link rel="icon" type="image/webp" href="/logo-Omni-Sistema-peq.webp" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/logo-Omni-Sistema-peq.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

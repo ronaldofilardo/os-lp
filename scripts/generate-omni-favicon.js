@@ -56,6 +56,20 @@ async function makeFavicon() {
     .png()
     .toFile(path.join(publicDir, 'apple-touch-icon.png'))
   console.log('apple-touch-icon.png successfully generated!')
+
+  // Also logo-Omni-Sistema-peq.png for direct PNG favicon support
+  await sharp(inputLogo)
+    .png()
+    .toFile(path.join(publicDir, 'logo-Omni-Sistema-peq.png'))
+  console.log('logo-Omni-Sistema-peq.png successfully generated!')
+
+  // Also app/icon.png for Next.js metadata route
+  const appDir = path.resolve('app')
+  await sharp(inputLogo)
+    .resize(48, 48, { fit: 'cover' })
+    .png()
+    .toFile(path.join(appDir, 'icon.png'))
+  console.log('app/icon.png successfully generated!')
 }
 
 makeFavicon().catch(console.error)

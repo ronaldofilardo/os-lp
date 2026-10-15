@@ -16,6 +16,7 @@ export function projectRowToDTO(row: ProjectRow): ProjectDTO {
     summary: `${row.objective} ${row.audience} ${row.techInfo}`,
     techTags: row.techStack,
     ...(row.logo !== undefined ? { logo: row.logo } : {}),
+    ...(row.video !== undefined ? { video: row.video } : {}),
     ...(row.url !== undefined ? { url: row.url } : {}),
   }
 }

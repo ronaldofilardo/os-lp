@@ -17,7 +17,41 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
       <div className="skeuo-card h-full rounded-2xl overflow-hidden flex flex-col hover:border-sky-300 transition-all duration-200">
         <div className="h-32 md:h-40 bg-[#f8fafc] flex items-center justify-center p-4 border-b border-slate-100 relative text-center overflow-hidden group">
           <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-sky-100 via-transparent to-emerald-100" />
-          {project.logo ? (
+          {project.video ? (
+            <div className="relative z-10 w-full h-full flex items-center justify-center p-2">
+              {project.url ? (
+                <ProjectLink
+                  href={project.url}
+                  className="flex items-center justify-center w-full h-full"
+                  ariaLabel={`Acessar ${project.displayName}`}
+                >
+                  <video
+                    src={project.video}
+                    poster={project.logo}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    aria-label={`Demonstração ${project.displayName}`}
+                    className="max-h-24 md:max-h-28 max-w-[85%] object-contain rounded transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
+                  />
+                </ProjectLink>
+              ) : (
+                <video
+                  src={project.video}
+                  poster={project.logo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  aria-label={`Demonstração ${project.displayName}`}
+                  className="max-h-24 md:max-h-28 max-w-[85%] object-contain rounded transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
+                />
+              )}
+            </div>
+          ) : project.logo ? (
             <div className="relative z-10 w-full h-full flex items-center justify-center p-2">
               {project.url ? (
                 <ProjectLink

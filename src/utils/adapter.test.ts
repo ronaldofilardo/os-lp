@@ -25,6 +25,13 @@ describe('adapter', () => {
       expect(dto.statusLabel).toBe('EM DEV')
       expect(dto.statusVariant).toBe('in-dev')
     })
+
+    it('mapeia video quando definido', () => {
+      const row = PROJECTS_DB.find((p) => p.id === 'qwork-lp') as ProjectRow
+      const dto = projectRowToDTO(row)
+
+      expect(dto.video).toBe('/logo-QWORK.mp4')
+    })
   })
 
   describe('serviceRowToDTO', () => {

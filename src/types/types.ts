@@ -12,6 +12,7 @@ export interface ProjectRow {
   readonly techInfo: string
   readonly techStack: readonly string[]
   readonly logo?: string | undefined
+  readonly video?: string | undefined
   readonly url?: string | undefined
 }
 
@@ -25,6 +26,7 @@ export interface ProjectDTO {
   readonly summary: string
   readonly techTags: readonly string[]
   readonly logo?: string | undefined
+  readonly video?: string | undefined
   readonly url?: string | undefined
 }
 
