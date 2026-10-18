@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import {
   Header,
   HeroSection,
@@ -9,14 +10,25 @@ import {
   ServicesSection,
   ProjectsSection,
   AboutSection,
+  CoverageSection,
   RigorStrip,
   FAQSection,
   ContactSection,
+  MobileStickyCta,
   Footer,
 } from '@/common'
 import { JsonLd } from '@/common/JsonLd'
 import { FAQ_COMMERCIAL_DB } from '@/data'
 import { buildWebPageSchema, buildFaqPageSchema } from '@/lib/schemas'
+import { SITE } from '@/config/site'
+
+export const metadata: Metadata = {
+  title: `${SITE.name} — ${SITE.tagline}`,
+  description: SITE.description,
+  alternates: {
+    canonical: '/',
+  },
+}
 
 export default function HomePage(): React.JSX.Element {
   return (
@@ -37,6 +49,7 @@ export default function HomePage(): React.JSX.Element {
         <AboutSection />
         <MicroCta label="Pronto para eliminar os gargalos da sua operação?" theme="light" />
         <RigorStrip />
+        <CoverageSection />
         <FAQSection
           items={FAQ_COMMERCIAL_DB}
           eyebrow="// Dúvidas Frequentes"
@@ -48,6 +61,7 @@ export default function HomePage(): React.JSX.Element {
         <ContactSection />
       </main>
       <Footer theme="light" />
+      <MobileStickyCta />
     </div>
   )
 }

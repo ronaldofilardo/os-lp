@@ -22,7 +22,7 @@ export interface ContactFormActions {
   readonly reset: () => void
 }
 
-export function useContactForm(): ContactFormState & ContactFormActions & { readonly formData: ContactFormInput } {
+export function useContactForm(options?: { redirectTo?: string }): ContactFormState & ContactFormActions & { readonly formData: ContactFormInput } {
   const [formData, setFormData] = useState<ContactFormInput>(INITIAL_STATE)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
@@ -61,6 +61,9 @@ export function useContactForm(): ContactFormState & ContactFormActions & { read
 
       setSubmitSuccess(true)
       setFormData({ ...INITIAL_STATE })
+      if (options?.redirectTo && typeof window !== 'undefined') {
+        window.location.href = options.redirectTo
+      }
     } catch {
       setSubmitError('Falha ao enviar. Tente novamente.')
     } finally {

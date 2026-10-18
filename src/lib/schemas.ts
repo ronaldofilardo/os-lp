@@ -119,6 +119,16 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
               'Atualização de sistemas antigos sem interromper a operação diária, com migração segura e acompanhamento contínuo.',
           },
         },
+        {
+          '@type': 'Offer',
+          areaServed: 'BR',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Consultoria e Imersão In Loco',
+            description:
+              'Atendimento consultivo presencial na sede da empresa do cliente em todo o Brasil para diagnóstico de arquitetura e alinhamento executivo.',
+          },
+        },
       ],
     },
   }

@@ -3,7 +3,9 @@
 import { useContactForm } from '@/hooks'
 
 export function ContactForm(): React.JSX.Element {
-  const { formData, isSubmitting, submitError, submitSuccess, handleChange, handleSubmit } = useContactForm()
+  const { formData, isSubmitting, submitError, submitSuccess, handleChange, handleSubmit } = useContactForm({
+    redirectTo: '/obrigado',
+  })
 
   const interestOptions = [
     { value: 'novo-sistema', label: 'Criar um sistema novo' },

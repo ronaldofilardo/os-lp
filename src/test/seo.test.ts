@@ -475,3 +475,32 @@ describe('Fase 5 — Omni Saúde (/omni-saude)', () => {
   })
 })
 
+describe('Demandas CRO, Mobile e Atendimento Híbrido', () => {
+  it('app/not-found.tsx exists and sets noindex metadata', () => {
+    const notFoundPath = path.join(ROOT, 'app/not-found.tsx')
+    expect(fs.existsSync(notFoundPath)).toBe(true)
+    const content = fs.readFileSync(notFoundPath, 'utf8')
+    expect(content).toContain('index: false')
+  })
+
+  it('app/obrigado/page.tsx exists and opts out of indexing', () => {
+    const obrigadoPath = path.join(ROOT, 'app/obrigado/page.tsx')
+    expect(fs.existsSync(obrigadoPath)).toBe(true)
+    const content = fs.readFileSync(obrigadoPath, 'utf8')
+    expect(content).toContain('index: false')
+    expect(content).toContain('follow: false')
+  })
+
+  it('MobileStickyCta and CoverageSection are exported and integrated', () => {
+    const pageContent = fs.readFileSync(path.join(ROOT, 'app/page.tsx'), 'utf8')
+    expect(pageContent).toContain('<CoverageSection />')
+    expect(pageContent).toContain('<MobileStickyCta />')
+  })
+
+  it('buildProfessionalServiceSchema includes In Loco service offer', () => {
+    const schema = parseSchema(buildProfessionalServiceSchema())
+    const catalog = schema.hasOfferCatalog as { itemListElement: Array<{ itemOffered: { name: string } }> }
+    expect(catalog.itemListElement.some((o) => o.itemOffered.name.includes('In Loco'))).toBe(true)
+  })
+})
+
