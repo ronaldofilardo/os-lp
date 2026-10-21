@@ -47,6 +47,7 @@ export const PROJECTS_DB: readonly ProjectRow[] = [
     techInfo: 'Captação, gestão de recursos e triagem interna em uma plataforma única.',
     techStack: ['Rust', 'WASM', 'Go', 'OTel'],
     logo: '/logo-lwos.webp',
+    video: '/lwos-logo-anima.mp4',
   },
   {
     id: 'qwork',
@@ -58,6 +59,7 @@ export const PROJECTS_DB: readonly ProjectRow[] = [
     techInfo: 'Plataforma que processa avaliações e emite laudos com privacidade garantida.',
     techStack: ['Node.js', 'Kafka', 'Clean Arch', 'Zero-Any'],
     logo: '/logo-QWork.webp',
+    video: '/qwork-croche-logo.mp4',
     url: 'https://sistema.qwork.app.br',
   },
   {

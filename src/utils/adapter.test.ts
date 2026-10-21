@@ -31,6 +31,14 @@ describe('adapter', () => {
       const dto = projectRowToDTO(row)
 
       expect(dto.video).toBe('/logo-QWORK.mp4')
+
+      const qworkRow = PROJECTS_DB.find((p) => p.id === 'qwork') as ProjectRow
+      const qworkDto = projectRowToDTO(qworkRow)
+      expect(qworkDto.video).toBe('/qwork-croche-logo.mp4')
+
+      const lwosRow = PROJECTS_DB.find((p) => p.id === 'lwos') as ProjectRow
+      const lwosDto = projectRowToDTO(lwosRow)
+      expect(lwosDto.video).toBe('/lwos-logo-anima.mp4')
     })
   })
 
