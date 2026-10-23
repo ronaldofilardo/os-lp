@@ -26,7 +26,12 @@ export const SITE = {
   founder: {
     name: 'Ronaldo Domingues Filardo',
     jobTitle: 'Fundador & Arquiteto de Software Corporativo',
-    description: 'Ex-Professor Universitário [graduação e especialização] da Pontifícia Universidade Católica do Paraná de Metodologia de Pesquisa, autor do livro acadêmico de Metodologia Científica e criador da metodologia STE-DEV.',
+    description:
+      'Ex-Professor Universitário [graduação e especialização] da Pontifícia Universidade Católica do Paraná de Metodologia de Pesquisa, autor do livro acadêmico de Metodologia Científica e criador da metodologia STE-DEV.',
+    alumniOf: {
+      name: 'Pontifícia Universidade Católica do Paraná',
+      type: 'CollegeOrUniversity',
+    },
   },
   keywords: [
     'sistema sob medida',
@@ -43,7 +48,10 @@ export const SITE = {
     'auditoria de código',
     'softhouse 1997',
   ],
-  sameAs: [] as readonly string[],
+  sameAs: [
+    'http://lattes.cnpq.br/1847440727366032',
+    'https://livrariaintersaberes.com.br/produto/metodologia-de-pesquisa-cientifica-fundamentos-principios-e-processos/',
+  ] as readonly string[],
   knowsAbout: [
     'Desenvolvimento de Sistemas Sob Medida',
     'Integrações via API e Automação de Cobranças',

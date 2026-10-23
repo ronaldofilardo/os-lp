@@ -22,6 +22,19 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Link',
+            value: '<https://omni-sistemas.com/llms.txt>; rel="describedby"',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig

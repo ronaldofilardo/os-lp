@@ -78,8 +78,13 @@ describe('SITE config', () => {
     expect(SITE.whatsapp.international).toBe('+5541992415220')
   })
 
-  it('keeps sameAs empty until social channels are published', () => {
-    expect(SITE.sameAs).toHaveLength(0)
+  it('exposes authoritative entity sameAs links and founder academic credentials', () => {
+    expect(SITE.sameAs.length).toBeGreaterThan(0)
+    expect(SITE.sameAs).toContain('http://lattes.cnpq.br/1847440727366032')
+    expect(SITE.sameAs).toContain(
+      'https://livrariaintersaberes.com.br/produto/metodologia-de-pesquisa-cientifica-fundamentos-principios-e-processos/'
+    )
+    expect(SITE.founder.alumniOf.name).toBe('Pontifícia Universidade Católica do Paraná')
   })
 })
 
@@ -334,6 +339,11 @@ describe('Fase 3 — schema graph with canonical @ids', () => {
     const author = article.author as Record<string, unknown>
     expect(author['@type']).toBe('Person')
     expect(author.name).toBe(SITE.founder.name)
+    expect(author.alumniOf).toEqual({
+      '@type': 'CollegeOrUniversity',
+      name: 'Pontifícia Universidade Católica do Paraná',
+    })
+    expect(author.sameAs).toEqual([...SITE.sameAs])
     const worksFor = author.worksFor as Record<string, unknown>
     expect(worksFor['@id']).toBe(SCHEMA_IDS.organization)
   })

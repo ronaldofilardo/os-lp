@@ -23,4 +23,16 @@ describe('next.config dev origins', () => {
   it('passes the list to Next', () => {
     expect(nextConfig.allowedDevOrigins).toEqual([...DEV_ORIGINS])
   })
+
+  it('exposes the Link rel="describedby" header for llms.txt', async () => {
+    expect(nextConfig.headers).toBeDefined()
+    const headersList = await nextConfig.headers!()
+    const rootHeaderConfig = headersList.find((entry) => entry.source === '/:path*')
+    expect(rootHeaderConfig).toBeDefined()
+    expect(rootHeaderConfig?.headers).toContainEqual({
+      key: 'Link',
+      value: '<https://omni-sistemas.com/llms.txt>; rel="describedby"',
+    })
+  })
 })
+

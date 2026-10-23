@@ -41,6 +41,11 @@ export function buildOrganizationSchema(): Record<string, unknown> {
       name: SITE.founder.name,
       jobTitle: SITE.founder.jobTitle,
       description: SITE.founder.description,
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: SITE.founder.alumniOf.name,
+      },
+      sameAs: [...SITE.sameAs],
     },
     knowsAbout: [...SITE.knowsAbout],
     address: {
@@ -205,6 +210,11 @@ export function buildArticleSchema(input: {
       name: SITE.founder.name,
       jobTitle: SITE.founder.jobTitle,
       url: SITE.domain,
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: SITE.founder.alumniOf.name,
+      },
+      sameAs: [...SITE.sameAs],
       worksFor: organizationRef(),
     },
     publisher: publisherRef(),
