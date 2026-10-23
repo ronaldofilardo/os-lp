@@ -10,9 +10,9 @@ export function ServicesSection(): React.JSX.Element {
     <section className="w-full py-space-lg md:py-space-xl bg-[#f8fafc] border-t border-slate-200" id="servicos">
       <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <SectionHeader
-          eyebrow="// Soluções e Serviços"
-          title="Como podemos ajudar sua empresa"
-          description="Três caminhos para resolver gargalos operacionais: criar um sistema novo, integrar plataformas ou modernizar o que já existe."
+          eyebrow="// Ofertas Comerciais de Alto Valor"
+          title="Como aceleramos e escalamos a sua operação"
+          description="Três rotas de engenharia para eliminar gargalos: construir uma plataforma operacional dedicada, automatizar rotinas de APIs e finanças ou modernizar legados com risco zero."
           theme="light"
           maxWidthClass="max-w-2xl"
         />
@@ -27,11 +27,11 @@ export function ServicesSection(): React.JSX.Element {
             href="#contato"
             className="skeuo-button-primary inline-flex items-center gap-space-xs px-space-lg py-3 rounded-xl text-white text-sm font-semibold w-fit"
           >
-            <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[18px]">description</span>
-            <span>Falar sobre o meu projeto</span>
+            <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[18px]">assignment</span>
+            <span>Solicitar Diagnóstico de Viabilidade</span>
           </a>
           <span className="text-sm text-slate-500">
-            Retorno em até 24h úteis • Atendimento direto com quem projeta, sem intermediários
+            Triagem técnica preliminar sem custo • Atendimento direto com Arquiteto Sênior
           </span>
         </div>
       </div>

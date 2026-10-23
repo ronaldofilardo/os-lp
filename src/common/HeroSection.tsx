@@ -18,19 +18,19 @@ export function HeroSection(): JSX.Element {
             <Rise>
               <div className="skeuo-chip inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full w-fit">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 skeuo-led-green animate-pulse" aria-hidden="true" />
-                <span className="text-xs font-semibold text-emerald-900 uppercase tracking-wide">Sistemas Sob Medida &amp; Automação Inteligente</span>
+                <span className="text-xs font-semibold text-emerald-900 uppercase tracking-wide">Arquitetura de Software &amp; Modernização Corporativa</span>
               </div>
             </Rise>
             <Rise delayMs={100}>
               <h1 className="text-4xl md:text-5xl lg:text-[56px] lg:leading-[62px] font-bold tracking-tight text-[#0A192F]">
-                Sistemas Sob Medida que resolvem os gargalos reais do seu negócio.
+                Sistemas Sob Medida: substitua processos manuais e softwares lentos por plataformas que escalam a sua operação.
               </h1>
             </Rise>
             <Rise delayMs={200}>
               <p className="text-lg font-normal text-[#1A1A1A] max-w-xl leading-relaxed">
-                Desenvolvemos plataformas personalizadas, automatizamos e integramos seu sistema
-                com APIs [como o gateway de pagamento <strong className="text-black font-semibold">Asaas</strong>]. Tudo
-                desenhado sob medida, com atenção rigorosa à LGPD e atendimento direto com quem projeta.
+                Desenhamos e construímos softwares web dedicados, automatizamos integrações bancárias e ERPs,
+                e modernizamos sistemas legados. Engenharia sênior sob medida, com conformidade estrita à LGPD e
+                acompanhamento direto com um arquiteto de software com mais de 28 anos de mercado.
               </p>
             </Rise>
             <Rise delayMs={300}>
@@ -39,8 +39,8 @@ export function HeroSection(): JSX.Element {
                   className="skeuo-button-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-white font-semibold"
                   href="#contato"
                 >
-                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[20px]">description</span>
-                  <span>Solicitar Orçamento sem Compromisso</span>
+                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[20px]">assignment</span>
+                  <span>Agendar Diagnóstico de Viabilidade (Sem Custo)</span>
                 </a>
                 <a
                   className="skeuo-button-ghost inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[#0A192F] font-semibold"
@@ -54,16 +54,16 @@ export function HeroSection(): JSX.Element {
             <Rise delayMs={400}>
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-3 text-sm font-medium text-[#1A1A1A]">
                 <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-emerald-600">schedule</span>
-                  Retorno em até 24h úteis
+                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-emerald-600">verified</span>
+                  28+ anos de engenharia corporativa
                 </span>
                 <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-sky-700">handshake</span>
-                  Atendimento direto, sem intermediários
+                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-sky-700">person_check</span>
+                  Arquitetura Dedicada: Sem repasse para terceiros
                 </span>
                 <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-sky-700">verified_user</span>
-                  LGPD desde o primeiro dia
+                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-sky-700">security</span>
+                  Conformidade Nativa: LGPD e sigilo contratual
                 </span>
               </div>
             </Rise>
@@ -75,7 +75,7 @@ export function HeroSection(): JSX.Element {
                 className="inline-flex items-center gap-2 w-fit text-sm font-semibold text-emerald-800 hover:text-emerald-950 transition-colors"
               >
                 <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[18px]">chat</span>
-                <span>Ou fale agora no WhatsApp: {SITE.whatsapp.display}</span>
+                <span>Falar com nosso Arquiteto no WhatsApp: {SITE.whatsapp.display}</span>
               </a>
             </Rise>
           </div>

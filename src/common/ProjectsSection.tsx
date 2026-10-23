@@ -16,7 +16,7 @@ export function ProjectsSection(): React.JSX.Element {
         <SectionHeader
           eyebrow="// Cases e Portfólio"
           title="Resultados reais para empresas como a sua"
-          description="Sistemas em produção que resolveram problemas concretos de gestão, cobrança e operação."
+          description="Sistemas críticos em produção com impacto mensurável: automação de rotinas manuais, segurança jurídica e aceleração de receita."
           theme="light"
         />
         <div

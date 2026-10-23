@@ -28,7 +28,7 @@
 
 ### Pendentes (Não Bloqueiam Esta Etapa)
 - **Domínio canônico do LP:** Corrigido para `omni-sistemas.com`.
-- **E-mail oficial de contato:** Alinhamento futuro entre `suporte@omni-sistema.com` e `contato@omnisaude.com.br`.
+- **E-mail oficial de contato:** Alinhamento futuro entre `suporte@omni-sistemas.com` e `contato@omnisaude.com.br`.
 - **Implementação do envio de leads:** Criação da migration `002_create_omni_saude_leads_table.sql` e handler dedicada na etapa de formulários.
 
 ---

@@ -9,7 +9,7 @@ vi.mock('@/three/lazy', () => ({
 describe('HeroSection', () => {
   it('keeps the H1 that states the offer, without repeating the brand name', () => {
     render(<HeroSection />)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Sistemas Sob Medida que resolvem os gargalos reais do seu negócio.')
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Sistemas Sob Medida: substitua processos manuais e softwares lentos por plataformas que escalam a sua operação.')
     expect(screen.getByRole('heading', { level: 1 })).not.toHaveTextContent(/Omni Sistemas/)
   })
 
@@ -20,7 +20,7 @@ describe('HeroSection', () => {
 
   it('keeps both calls to action', () => {
     render(<HeroSection />)
-    expect(screen.getByRole('link', { name: /Solicitar Orçamento/ })).toHaveAttribute('href', '#contato')
+    expect(screen.getByRole('link', { name: /Diagnóstico de Viabilidade/ })).toHaveAttribute('href', '#contato')
     expect(screen.getByRole('link', { name: /Entenda Como Trabalhamos/ })).toHaveAttribute('href', '#como-trabalhamos')
   })
 })

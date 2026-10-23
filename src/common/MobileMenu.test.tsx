@@ -28,7 +28,7 @@ describe('MobileMenu', () => {
     for (const link of NAV_LINKS) {
       expect(screen.getByRole('link', { name: link.label, hidden: true })).toHaveAttribute('href', link.href)
     }
-    expect(screen.getByRole('link', { name: /Orçamento/, hidden: true })).toHaveAttribute('href', '#contato')
+    expect(screen.getByRole('link', { name: /Diagnóstico|Orçamento/, hidden: true })).toHaveAttribute('href', '#contato')
   })
 
   it('closes after tapping a link', () => {

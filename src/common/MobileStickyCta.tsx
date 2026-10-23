@@ -40,9 +40,9 @@ export function MobileStickyCta(): React.JSX.Element | null {
           className="skeuo-button-primary flex-1 inline-flex items-center justify-center gap-1.5 h-11 px-4 rounded-xl text-white font-semibold text-xs tracking-wide shadow-sm"
         >
           <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[18px]">
-            description
+            assignment
           </span>
-          <span>Solicitar Orçamento</span>
+          <span>Agendar Diagnóstico</span>
         </a>
         <a
           href={SITE.whatsapp.url}

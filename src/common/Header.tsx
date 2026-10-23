@@ -17,9 +17,9 @@ interface HeaderProps {
 }
 
 const COMMERCIAL_CTA: HeaderCta = {
-  label: 'Solicitar Orçamento',
+  label: 'Agendar Diagnóstico',
   href: '#contato',
-  icon: 'description',
+  icon: 'assignment',
 }
 
 function isLight(theme: HeaderTheme): boolean {

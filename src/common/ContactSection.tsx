@@ -3,10 +3,10 @@ import { SectionHeader } from './SectionHeader'
 import { SITE } from '@/config/site'
 
 const trustPoints = [
-  { icon: 'person', text: 'Atendimento direto com quem projeta o sistema — sem camadas comerciais.' },
-  { icon: 'schedule', text: 'Retorno em até 24 horas úteis com proposta clara de escopo e prazos.' },
-  { icon: 'gavel', text: 'Orçamento sem compromisso e sigilo garantido sobre sua operação.' },
-  { icon: 'shield_lock', text: 'Conformidade com a LGPD e proteção de dados desde o primeiro dia.' },
+  { icon: 'person_check', text: 'Atendimento direto com Arquiteto Sênior (28+ anos) — sem vendedores ou repasses a júniores.' },
+  { icon: 'schedule', text: 'Retorno consultivo em até 24 horas úteis com triagem técnica e viabilidade operacional.' },
+  { icon: 'gavel', text: 'Diagnóstico preliminar sem custo e sigilo contratual rigoroso sobre a sua operação.' },
+  { icon: 'shield_lock', text: 'Conformidade nativa com a LGPD e mentalidade de segurança Zero-Trust desde o primeiro dia.' },
 ] as const
 
 export function ContactSection(): React.JSX.Element {
@@ -14,9 +14,9 @@ export function ContactSection(): React.JSX.Element {
     <section className="w-full py-space-lg md:py-space-xl bg-[#f8fafc] border-t border-slate-200" id="contato">
       <div className="max-w-container mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
         <SectionHeader
-          eyebrow="// Contato"
-          title="Vamos tomar um café e conversar sobre o seu projeto?"
-          description="Conte sobre o seu desafio. Retornamos em até 24 horas úteis com os próximos passos — sem compromisso."
+          eyebrow="// Diagnóstico Técnico de Viabilidade"
+          title="Agende uma sessão técnica sobre os gargalos da sua operação"
+          description="Conte sobre os gargalos do seu negócio. Retornamos em até 24 horas úteis com parecer técnico preliminar e próximos passos — direto com nosso Arquiteto."
           theme="light"
           tone="secondary"
           maxWidthClass="max-w-2xl"
@@ -40,7 +40,7 @@ export function ContactSection(): React.JSX.Element {
           </a>
         </div>
         <p className="text-sm text-slate-500 mb-space-md">
-          Atendimento direto com quem projeta • E-mail oficial:{' '}
+          Atendimento direto com quem projeta • Engenharia boutique sênior • E-mail oficial:{' '}
           <a href={`mailto:${SITE.email}`} className="text-sky-700 hover:underline font-medium">
             {SITE.email}
           </a>
@@ -51,7 +51,7 @@ export function ContactSection(): React.JSX.Element {
           </div>
           <aside aria-labelledby="why-trust-heading" className="skeuo-card p-space-lg rounded-2xl">
             <h3 id="why-trust-heading" className="text-xl font-semibold text-slate-900 mb-space-md">
-              Garantias ao lado do formulário
+              Garantias do Diagnóstico Omni
             </h3>
             <ul className="flex flex-col gap-space-sm list-none m-0 p-0">
               {trustPoints.map((point) => (

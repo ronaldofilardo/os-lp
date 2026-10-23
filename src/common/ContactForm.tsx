@@ -8,19 +8,19 @@ export function ContactForm(): React.JSX.Element {
   })
 
   const interestOptions = [
-    { value: 'novo-sistema', label: 'Criar um sistema novo' },
-    { value: 'integracao-api', label: 'Integração de APIs (ex.: Asaas)' },
-    { value: 'modernizar', label: 'Modernizar sistema existente' },
-    { value: 'conversar', label: 'Quero conversar para entender melhor' },
+    { value: 'novo-sistema', label: 'Plataforma Operacional Sob Medida' },
+    { value: 'integracao-api', label: 'Automação de APIs, Gateways e Finanças' },
+    { value: 'modernizar', label: 'Modernização Segura de Legados (Strangler)' },
+    { value: 'conversar', label: 'Diagnóstico Direto com o Arquiteto Sênior' },
   ] as const
 
   if (submitSuccess) {
     return (
       <div className="p-space-lg rounded-2xl bg-emerald-50 border border-emerald-200 text-center">
         <span aria-hidden="true" translate="no" className="material-symbols-outlined text-emerald-600 text-[32px] mb-2 block">check_circle</span>
-        <h3 className="text-lg font-semibold text-emerald-800">Mensagem enviada</h3>
+        <h3 className="text-lg font-semibold text-emerald-800">Solicitação de Diagnóstico Recebida</h3>
         <p className="text-sm text-slate-600 mt-1">
-          Retorno em até 24 horas úteis. Enquanto isso, você também pode nos chamar no WhatsApp.
+          Análise preliminar pelo Arquiteto Ronaldo Filardo. Redirecionando para confirmação...
         </p>
       </div>
     )
@@ -47,7 +47,7 @@ export function ContactForm(): React.JSX.Element {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
         <div className="flex flex-col gap-1">
-          <label htmlFor="contact-email" className={labelClass}>E-mail</label>
+          <label htmlFor="contact-email" className={labelClass}>E-mail Corporativo</label>
           <input
             id="contact-email"
             name="email"
@@ -60,7 +60,7 @@ export function ContactForm(): React.JSX.Element {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label htmlFor="contact-whatsapp" className={labelClass}>WhatsApp / Telefone</label>
+          <label htmlFor="contact-whatsapp" className={labelClass}>WhatsApp / Telefone Direto</label>
           <input
             id="contact-whatsapp"
             name="whatsapp"
@@ -74,11 +74,11 @@ export function ContactForm(): React.JSX.Element {
         </div>
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="contact-interest" className={labelClass}>Interesse</label>
+        <label htmlFor="contact-interest" className={labelClass}>Tipo de Demanda Principal</label>
         <select
           id="contact-interest"
           name="interestType"
-          aria-label="Interesse"
+          aria-label="Tipo de Demanda Principal"
           value={formData.interestType}
           onChange={(e) => handleChange('interestType', e.target.value)}
           className={inputClass}
@@ -89,7 +89,7 @@ export function ContactForm(): React.JSX.Element {
         </select>
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="contact-message" className={labelClass}>Mensagem / Descrição da necessidade</label>
+        <label htmlFor="contact-message" className={labelClass}>Qual o principal gargalo operacional da sua empresa hoje?</label>
         <textarea
           id="contact-message"
           name="message"
@@ -97,7 +97,7 @@ export function ContactForm(): React.JSX.Element {
           onChange={(e) => handleChange('message', e.target.value)}
           rows={5}
           className={`${inputClass} h-auto py-3 resize-none`}
-          placeholder="Conte um pouco sobre o seu negócio e o que gostaria de resolver..."
+          placeholder="Descreva brevemente sua operação, sistemas atuais ou processos manuais que estão travando o crescimento do negócio..."
           required
         />
       </div>
@@ -113,7 +113,7 @@ export function ContactForm(): React.JSX.Element {
         />
         <span className="text-xs text-slate-600 leading-relaxed">
           Autorizo o contato da Omni Sistemas e o tratamento dos meus dados conforme a LGPD, apenas para
-          responder sobre esta solicitação.
+          responder sobre este diagnóstico técnico.
         </span>
       </label>
       {submitError && (
@@ -124,12 +124,12 @@ export function ContactForm(): React.JSX.Element {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="skeuo-button-primary w-full h-11 px-space-md py-2.5 rounded-xl text-white text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+        className="skeuo-button-primary w-full h-11 px-space-md py-2.5 rounded-xl text-white text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
-        {isSubmitting ? 'Enviando...' : 'Enviar Solicitação'}
+        {isSubmitting ? 'Enviando Dados...' : 'Solicitar Diagnóstico Técnico de Viabilidade →'}
       </button>
       <span className="text-xs text-slate-500 text-center block pt-1">
-        ✓ Retorno em até 24h úteis • Sem compromisso • Sigilo garantido
+        ✓ Triagem técnica por Arquiteto Sênior • Sem compromisso • Sigilo garantido
       </span>
     </form>
   )

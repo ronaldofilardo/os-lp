@@ -50,7 +50,8 @@ export function buildOrganizationSchema(): Record<string, unknown> {
     knowsAbout: [...SITE.knowsAbout],
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'São Paulo',
+      addressLocality: 'Curitiba',
+      addressRegion: 'PR',
       addressCountry: 'BR',
     },
     sameAs: [...SITE.sameAs],
@@ -86,22 +87,22 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': PROFESSIONAL_SERVICE_ID,
-    name: `${SITE.name} — Serviços de Engenharia Preventiva`,
+    name: `${SITE.name} — Arquitetura de Software & Modernização Corporativa`,
     url: SITE.domain,
     areaServed: 'BR',
     provider: organizationRef(),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Serviços da Omni Sistemas',
+      name: 'Ofertas da Omni Sistemas',
       itemListElement: [
         {
           '@type': 'Offer',
           areaServed: 'BR',
           itemOffered: {
             '@type': 'Service',
-            name: 'Desenvolvimento Sob Medida',
+            name: 'Plataforma Operacional Dedicada',
             description:
-              'Sistemas web e plataformas criadas especificamente para o modelo de negócio do cliente, com integrações e conformidade LGPD desde o início.',
+              'Sistemas web proprietários sob medida para empresas que atingiram o teto de ferramentas de prateleira, com regras de negócio 100% personalizadas e conformidade LGPD nativa.',
           },
         },
         {
@@ -109,9 +110,9 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
           areaServed: 'BR',
           itemOffered: {
             '@type': 'Service',
-            name: 'Integrações e Automações de API',
+            name: 'Motor de Automação & Eficiência Financeira',
             description:
-              'Conexão com o Asaas, gateways, bancos, ERPs e ferramentas externas para automatizar cobranças, notificações e conciliação.',
+              'Integração profunda de APIs, gateways (Asaas, bancos), ERPs e rotinas financeiras, eliminando horas manuais e retrabalho.',
           },
         },
         {
@@ -119,9 +120,19 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
           areaServed: 'BR',
           itemOffered: {
             '@type': 'Service',
-            name: 'Diagnóstico e Modernização de Legados',
+            name: 'Migração Segura de Legados (Strangler Pattern)',
             description:
-              'Atualização de sistemas antigos sem interromper a operação diária, com migração segura e acompanhamento contínuo.',
+              'Modernização contínua e modular de sistemas antigos com zero interrupção na operação e no faturamento da empresa.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          areaServed: 'BR',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Diagnóstico Técnico-Operacional de Viabilidade',
+            description:
+              'Sessão consultiva com Arquiteto Sênior para mapeamento de gargalos de software, viabilidade de integrações e desenho de arquitetura de alta escala.',
           },
         },
         {

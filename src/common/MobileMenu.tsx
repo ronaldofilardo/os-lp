@@ -5,9 +5,9 @@ import { NAV_LINKS, type NavLink } from './navLinks'
 import type { HeaderCta, HeaderTheme } from './Header'
 
 const COMMERCIAL_CTA: HeaderCta = {
-  label: 'Solicitar Orçamento',
+  label: 'Agendar Diagnóstico',
   href: '#contato',
-  icon: 'description',
+  icon: 'assignment',
 }
 
 interface MobileMenuProps {
