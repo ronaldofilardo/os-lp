@@ -11,7 +11,7 @@
 - **Pós-Graduação / Doutoramento:** Pesquisas de Doutoramento em Portugal voltadas a processos formais de estruturação e validação de conhecimento.
 
 ## Trajetória Técnica
-- **1997:** Criação do software *ANTHROPO* em VBA/Excel (avaliação de riscos e composição corporal com mais de 50.000 pacientes atendidos).
+- **1996:** Criação do software *ANTHROPO* em VBA/Excel (avaliação de riscos e composição corporal com mais de 50.000 pacientes atendidos).
 - **2000 – 2020:** Arquiteto de sistemas críticos de saúde (laudos médicos, prontuários, LGPD), gestão comercial de comissionamento e automação de rankings esportivos.
 - **2021 – 2023:** Engenharia e arquitetura na plataforma *Better Use Blockchain*, com foco em segurança criptográfica, modelagem de dados moderna e confiança zero (Zero-Trust).
 - **2024 – Presente:** Concepção da STE-DEV e consolidação da Omni Sistemas como autoridade em desenvolvimento preventivo e auditoria de legados.

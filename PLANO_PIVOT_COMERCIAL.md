@@ -112,7 +112,7 @@ Reutilizar a mecânica do componente de timeline existente com textos acessívei
 
 ### 4.9 Faixa de Rigor Técnico ("Por Que a Omni Sistemas?")
 Um bloco elegante e sucinto que faz a ponte com a reputação e solidez da empresa:
-* Experiência comprovada desde **1997**.
+* Experiência comprovada desde **1996** (30 anos de mercado).
 * Método de engenharia inspirado no rigor aeroespacial, garantindo softwares estáveis que não quebram ao crescer.
 * Botão: **"Conheça os detalhes da nossa metodologia técnica →"** (link para `/metodologia`).
 

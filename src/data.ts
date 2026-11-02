@@ -144,7 +144,7 @@ export const FAQ_TECHNICAL_DB: readonly FAQItem[] = [
   },
   {
     question: 'Quem é Ronaldo Domingues Filardo e qual a origem da Omni Sistemas?',
-    answer: 'Ronaldo Domingues Filardo é o fundador da Omni Sistemas e criador da STE-DEV. Iniciou a trajetória em 1997 com o software ANTHROPO em VBA, acumulando mais de 30 anos de arquiteturas em saúde, finanças, esportes e blockchain, unindo rigor acadêmico à tecnologia de ponta.',
+    answer: 'Ronaldo Domingues Filardo é o fundador da Omni Sistemas e criador da STE-DEV. Iniciou a trajetória em 1996 com o software ANTHROPO em VBA, acumulando 30 anos de arquiteturas em saúde, finanças, esportes e blockchain, unindo rigor acadêmico à tecnologia de ponta.',
   },
   {
     question: 'Qual a relação entre a base acadêmica do fundador e a eficácia da STE-DEV?',

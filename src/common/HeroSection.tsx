@@ -30,7 +30,7 @@ export function HeroSection(): JSX.Element {
               <p className="text-lg font-normal text-[#1A1A1A] max-w-xl leading-relaxed">
                 Desenhamos e construímos softwares web dedicados, automatizamos integrações bancárias e ERPs,
                 e modernizamos sistemas legados. Engenharia sênior sob medida, com conformidade estrita à LGPD e
-                acompanhamento direto com um arquiteto de software com mais de 28 anos de mercado.
+                acompanhamento direto com um arquiteto de software com 30 anos de mercado.
               </p>
             </Rise>
             <Rise delayMs={300}>
@@ -55,7 +55,7 @@ export function HeroSection(): JSX.Element {
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-3 text-sm font-medium text-[#1A1A1A]">
                 <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
                   <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-emerald-600">verified</span>
-                  28+ anos de engenharia corporativa
+                  30 anos de engenharia corporativa
                 </span>
                 <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
                   <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px] text-sky-700">person_check</span>

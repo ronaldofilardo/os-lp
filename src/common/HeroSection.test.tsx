@@ -23,4 +23,10 @@ describe('HeroSection', () => {
     expect(screen.getByRole('link', { name: /Diagnóstico de Viabilidade/ })).toHaveAttribute('href', '#contato')
     expect(screen.getByRole('link', { name: /Entenda Como Trabalhamos/ })).toHaveAttribute('href', '#como-trabalhamos')
   })
+
+  it('displays the standardized 30 years trust badge and paragraph copy', () => {
+    render(<HeroSection />)
+    expect(screen.getByText('30 anos de engenharia corporativa')).toBeInTheDocument()
+    expect(screen.getByText(/com 30 anos de mercado/)).toBeInTheDocument()
+  })
 })

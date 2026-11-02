@@ -12,7 +12,7 @@ export function RigorStrip(): JSX.Element {
               title="Rigor técnico que sustenta resultados de negócio"
               description={
                 <>
-                  Experiência comprovada desde <strong className="text-white">1997</strong>. Método de
+                  Experiência comprovada desde <strong className="text-white">1996</strong>. Método de
                   engenharia inspirado no rigor aeroespacial, garantindo softwares estáveis que não
                   quebram ao crescer — e que sua equipe consegue operar com tranquilidade.
                 </>
@@ -23,7 +23,7 @@ export function RigorStrip(): JSX.Element {
             />
             <div className="flex flex-col sm:flex-row lg:flex-col gap-space-sm shrink-0">
               <div className="flex items-center gap-4 px-space-md py-space-sm rounded-xl bg-slate-800 border border-slate-700">
-                <span className="text-3xl font-bold text-sky-400 tabular-nums">28+</span>
+                <span className="text-3xl font-bold text-sky-400 tabular-nums">30</span>
                 <span className="text-sm text-slate-300">anos construindo<br />software no Brasil</span>
               </div>
               <a

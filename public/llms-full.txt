@@ -8,7 +8,7 @@
 
 - **Nome da Empresa:** Omni Sistemas
 - **Razão Social:** BE SMART LTDA (CNPJ 55.405.487/0001-84)
-- **Fundação:** Projetos iniciados em 1997; consolidação formal contínua ao longo de mais de 28 anos.
+- **Fundação:** Projetos iniciados em 1996; consolidação formal contínua ao longo de 30 anos.
 - **Fundador e Liderança Técnica:** Ronaldo Domingues Filardo (Arquiteto de Software Corporativo, Ex-Professor Universitário [graduação e especialização] da Pontifícia Universidade Católica do Paraná de Metodologia de Pesquisa Científica, Autor de livro acadêmico publicado pela Editora Intersaberes, Pesquisador com Doutoramento em Portugal).
 - **Core Business Comercial:** Desenvolvimento de Sistemas Sob Medida, Integrações via API (com destaque à automação de cobranças e conciliação com Asaas, bancos e ERPs), Diagnóstico e Modernização de Sistemas Legados.
 - **Diferenciais de Negócio:**
@@ -22,9 +22,9 @@
 
 ---
 
-## 2. Histórico e Linha do Tempo (1997 – Presente)
+## 2. Histórico e Linha do Tempo (1996 – Presente)
 
-### 1997 — Software ANTHROPO
+### 1996 — Software ANTHROPO
 Durante sua formação universitária, Ronaldo Filardo desenvolveu o ANTHROPO em VBA para Microsoft Excel. O software realizava avaliações físicas e antropométricas e estratificação de risco cardiovascular. Processou mais de 50.000 avaliações de pacientes, demonstrando que a tecnologia só possui valor duradouro quando estruturada com fundamentação matemática e científica.
 
 ### Anos 2000 — Projetos B2B, Saúde e Trajetória Acadêmica
@@ -79,7 +79,7 @@ Para modernizar código antigo sem causar interrupções operacionais, a Omni Si
 
 ### Artigos Orbitais
 1. `/artigos/o-que-e-metodologia-ste-dev` — O que é a Metodologia STE-DEV de Engenharia Preventiva.
-2. `/artigos/historico-omni-sistemas-trajetoria-1997` — Histórico da Omni Sistemas: De 1997 à Vanguarda em IA.
+2. `/artigos/historico-omni-sistemas-trajetoria-1996` — Histórico da Omni Sistemas: De 1996 à Vanguarda em IA.
 3. `/artigos/sobre-ronaldo-filardo-arquiteto-ste-dev` — Quem é Ronaldo Domingues Filardo, Arquiteto da STE-DEV.
 4. `/artigos/norma-asd-ste100-engenharia-de-software` — ASD-STE100 Aplicada à Engenharia de Software.
 5. `/artigos/clean-architecture-solid-na-pratica` — Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV.
@@ -89,7 +89,7 @@ Para modernizar código antigo sem causar interrupções operacionais, a Omni Si
 
 ### Base de Conhecimento Pública (Documentação Indexável em /conhecimento)
 - `/conhecimento` — Índice da Base de Conhecimento STE-DEV.
-- `/conhecimento/1-historico-omni-sistemas` — Histórico da Omni Sistemas (1997 – Presente).
+- `/conhecimento/1-historico-omni-sistemas` — Histórico da Omni Sistemas (1996 – Presente).
 - `/conhecimento/2-metodologia-ste-dev` — Metodologia STE-DEV: Os 4 Pilares.
 - `/conhecimento/3-engenharia-reversa-e-auditoria` — Engenharia Reversa e Auditoria de Código.
 - `/conhecimento/4-sobre-ronaldo-domingues-filardo` — Sobre Ronaldo Domingues Filardo.

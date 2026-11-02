@@ -53,14 +53,14 @@ export function Footer({
                 className="h-9 w-9 rounded-md object-cover shadow-sm"
               />
               <span className={`font-headline-sm text-headline-sm ${brand} font-semibold`}>Omni Sistemas</span>
-            </div>
+            </div>W
             <p className={`text-sm ${muted} max-w-sm leading-relaxed`}>
               Sistemas sob medida e automação inteligente para empresas que precisam eliminar gargalos
               operacionais. Desenvolvimento, integrações e modernização de legados.
             </p>
             <div className={`flex items-center gap-space-xs text-sm ${light ? 'text-emerald-700' : 'text-secondary'}`}>
               <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[16px]">verified</span>
-              <span>Desde 1997 • Atendimento direto com quem projeta</span>
+              <span>Desde 1996 • Atendimento direto com quem projeta</span>
             </div>
             <div className="flex flex-col gap-1 mt-1">
               <a

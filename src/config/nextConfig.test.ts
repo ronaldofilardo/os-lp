@@ -34,5 +34,15 @@ describe('next.config dev origins', () => {
       value: '<https://omni-sistemas.com/llms.txt>; rel="describedby"',
     })
   })
+
+  it('redirects the legacy 1997 article slug to the standardized 1996 article', async () => {
+    expect(nextConfig.redirects).toBeDefined()
+    const redirectsList = await nextConfig.redirects!()
+    expect(redirectsList).toContainEqual({
+      source: '/artigos/historico-omni-sistemas-trajetoria-1997',
+      destination: '/artigos/historico-omni-sistemas-trajetoria-1996',
+      permanent: true,
+    })
+  })
 })
 

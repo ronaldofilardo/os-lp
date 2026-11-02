@@ -43,4 +43,9 @@ describe('Footer', () => {
       '/omni-saude/seguranca'
     )
   })
+
+  it('displays the standardized founding year badge Desde 1996', () => {
+    render(<Footer theme="light" />)
+    expect(screen.getByText(/Desde 1996/)).toBeInTheDocument()
+  })
 })

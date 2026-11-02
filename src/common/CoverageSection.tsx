@@ -24,7 +24,7 @@ const coveragePoints: readonly CoveragePoint[] = [
   {
     icon: 'verified',
     title: 'Empresa Verificada no Google',
-    description: 'Atendimento consultivo registrado e verificado. Credibilidade, histórico técnico desde 1997 e conformidade rigorosa com a LGPD.',
+    description: 'Atendimento consultivo registrado e verificado. Credibilidade, histórico técnico desde 1996 e conformidade rigorosa com a LGPD.',
     tag: 'Perfil Oficial',
   },
 ]

@@ -17,7 +17,7 @@ function distance(nodes: Float32Array, a: number, b: number): number {
 }
 
 export function buildNetwork(): NetworkData {
-  const random = createRandom(1997)
+  const random = createRandom(1996)
   const nodes = new Float32Array(NODE_COUNT * 3)
   for (let index = 0; index < NODE_COUNT; index += 1) {
     nodes[index * 3] = (random() - 0.5) * 24

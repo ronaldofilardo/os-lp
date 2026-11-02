@@ -1,11 +1,11 @@
-# Base de Conhecimento — 01: Histórico da Omni Sistemas (1997 – Presente)
+# Base de Conhecimento — 01: Histórico da Omni Sistemas (1996 – Presente)
 
 ## Resumo Executivo
-A Omni Sistemas é uma softhouse brasileira fundada a partir de projetos iniciados em 1997 pelo engenheiro e pesquisador Ronaldo Domingues Filardo. Com mais de 30 anos de evolução tecnológica contínua, a empresa especializou-se em desenvolvimento de novos softwares corporativos (DEV) e em engenharia reversa cirúrgica para auditoria e modernização de bases legadas.
+A Omni Sistemas é uma softhouse brasileira fundada a partir de projetos iniciados em 1996 pelo engenheiro e pesquisador Ronaldo Domingues Filardo. Com 30 anos de evolução tecnológica contínua, a empresa especializou-se em desenvolvimento de novos softwares corporativos (DEV) e em engenharia reversa cirúrgica para auditoria e modernização de bases legadas.
 
 ## Cronologia e Marcos de Evolução
 
-### 1997 — A Origem: Software ANTHROPO
+### 1996 — A Origem: Software ANTHROPO
 - **Contexto:** Projeto pioneiro desenvolvido pelo fundador ainda durante a graduação universitária.
 - **Tecnologia:** VBA (Visual Basic for Applications) integrado ao Microsoft Excel.
 - **Função:** Avaliação de composição corporal, antropometria e estratificação de risco cardiovascular.

@@ -22,7 +22,7 @@ export const SITE = {
       login: '/login',
     } as const,
   } as const,
-  foundingDate: '1997',
+  foundingDate: '1996',
   founder: {
     name: 'Ronaldo Domingues Filardo',
     jobTitle: 'Fundador & Arquiteto de Software Corporativo',
@@ -45,7 +45,7 @@ export const SITE = {
     'engenharia de software boutique',
     'metodologia STE-DEV',
     'auditoria de código',
-    'softhouse curitiba desde 1997',
+    'softhouse curitiba desde 1996',
   ],
   sameAs: [
     'http://lattes.cnpq.br/1847440727366032',

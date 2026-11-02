@@ -22,6 +22,15 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/artigos/historico-omni-sistemas-trajetoria-1997',
+        destination: '/artigos/historico-omni-sistemas-trajetoria-1996',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

@@ -2,7 +2,7 @@
 
 **URL avaliada:** https://www.omni-sistemas.com/
 
-**Perfil da Empresa:** Engenharia de Software B2B sob medida / Arquitetura Dedicada de Alto Nível, atuando desde 1997 com base em Curitiba/PR e atendimento nacional.
+**Perfil da Empresa:** Engenharia de Software B2B sob medida / Arquitetura Dedicada de Alto Nível, atuando desde 1996 com base em Curitiba/PR e atendimento nacional.
 
 **Objetivo da Consultoria:** Transformar o site em uma **máquina de atração e conversão de leads qualificados (C-Level, Diretores de Operações e Fundadores)**, focando em ticket alto, autoridade técnica e ROI mensurável.
 
@@ -12,7 +12,7 @@
 
 ### O que o site já faz bem (Ativos de Valor)
 
-* **Credibilidade sólida de bastidores:** Histórico desde 1997 e liderança técnica experiente (Ronaldo Filardo, ex-professor PUCPR, criador do método proprietário STE-DEV).
+* **Credibilidade sólida de bastidores:** Histórico desde 1996 e liderança técnica experiente (Ronaldo Filardo, ex-professor PUCPR, criador do método proprietário STE-DEV).
 * **Solução de dores reais:** Seção de "Gargalos Operacionais" clara (rotinas manuais, dados descentralizados, legados instáveis).
 * **Portfólio com produtos reais em produção:** Sistemas em produção de alta complexidade (QWork, MundoAS, Omni Saúde, Reporte, LWOS).
 * **Canais de contato acessíveis:** WhatsApp em evidência, garantia de sigilo e rigor com LGPD desde a concepção.
@@ -52,10 +52,10 @@
 > **"Substitua processos manuais e sistemas lentos por plataformas sob medida que escalam a sua operação."**  
 >
 > **Subtítulo:**  
-> Desenhamos e construímos softwares web dedicados, automatizamos integrações bancárias e ERPs, e modernizamos sistemas legados. Engenharia sênior sob medida, com conformidade estrita à LGPD e acompanhamento direto com um arquiteto de software com mais de 28 anos de mercado.  
+> Desenhamos e construímos softwares web dedicados, automatizamos integrações bancárias e ERPs, e modernizamos sistemas legados. Engenharia sênior sob medida, com conformidade estrita à LGPD e acompanhamento direto com um arquiteto de software com 30 anos de mercado.  
 >
 > **Badges de Confiança (Diferenciais Comerciais):**  
-> * **28+ anos** de engenharia de software corporativo  
+> * **30 anos** de engenharia de software corporativo  
 > * **Arquitetura Dedicada:** Engenharia sênior sem repasse para terceiros  
 > * **Conformidade Nativa:** LGPD, sigilo contratual e criptografia ponta a ponta  
 >
@@ -196,7 +196,7 @@ Em vez de omitir que o atendimento é direto ou tentar simular uma fábrica gen�
 >
 > *"Na maioria das empresas de desenvolvimento, sua proposta é fechada por um vendedor, o planejamento é feito por um gerente intermediário e o código é entregue a programadores iniciantes. O resultado costuma ser atraso, código descartável e custos imprevistos.*
 >
-> *Na **Omni Sistemas**, seu projeto é modelado e construído com acompanhamento direto de **Ronaldo Domingues Filardo** — arquiteto de software desde 1997, ex-professor universitário da PUCPR e criador da metodologia STE-DEV.*
+> *Na **Omni Sistemas**, seu projeto é modelado e construído com acompanhamento direto de **Ronaldo Domingues Filardo** — arquiteto de software desde 1996, ex-professor universitário da PUCPR e criador da metodologia STE-DEV.*
 >
 > * **Rigor de Engenharia:** Arquitetura limpa, estável e escalável desde o primeiro dia.
 > * **Comunicação Direta com Especialista:** Alinhamento estratégico focado em modelo de negócio, processos e margem de lucro — sem intermediários comerciais ou ruído técnico.

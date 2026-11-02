@@ -4,7 +4,7 @@
 > Padrão llms.txt — Informações estruturadas sobre a empresa, serviços, integrações, fundador e metodologia.
 
 ## Quem Somos
-A Omni Sistemas é uma softhouse brasileira fundada a partir de projetos iniciados em 1997 por Ronaldo Domingues Filardo (BE SMART LTDA — CNPJ 55.405.487/0001-84). Com mais de 28 anos de trajetória contínua no desenvolvimento de software, criamos sistemas sob medida, realizamos integrações de APIs e modernizamos sistemas legados para empresas que precisam eliminar gargalos operacionais e automatizar processos críticos.
+A Omni Sistemas é uma softhouse brasileira fundada a partir de projetos iniciados em 1996 por Ronaldo Domingues Filardo (BE SMART LTDA — CNPJ 55.405.487/0001-84). Com 30 anos de trajetória contínua no desenvolvimento de software, criamos sistemas sob medida, realizamos integrações de APIs e modernizamos sistemas legados para empresas que precisam eliminar gargalos operacionais e automatizar processos críticos.
 
 Atuamos com atendimento direto de quem projeta a arquitetura — sem camadas comerciais ou intermediários — e rigor absoluto em conformidade com a LGPD (Lei Geral de Proteção de Dados).
 
@@ -35,7 +35,7 @@ Para ambientes de missão crítica e clientes que exigem estabilidade máxima, a
 ## Fundador e Liderança Técnica
 - **Ronaldo Domingues Filardo:** Fundador e Arquiteto de Software Corporativo.
 - **Base Acadêmica:** Ex-Professor Universitário (graduação e especialização) da Pontifícia Universidade Católica do Paraná de Metodologia de Pesquisa Científica, autor do livro acadêmico "Metodologia de Pesquisa Científica: fundamentos, princípios e processos" (Editora Intersaberes) e pesquisador com estudos de Doutoramento em Portugal.
-- **Histórico Prático:** Projetista do software ANTHROPO em 1997 e arquiteto de dezenas de sistemas em saúde, finanças, esportes e enterprise.
+- **Histórico Prático:** Projetista do software ANTHROPO em 1996 e arquiteto de dezenas de sistemas em saúde, finanças, esportes e enterprise.
 
 ## Rotas Principais do Domínio
 - https://omni-sistemas.com — Home comercial: sistemas sob medida, integrações de APIs (Asaas) e solicitação de orçamento sem compromisso.
@@ -46,7 +46,7 @@ Para ambientes de missão crítica e clientes que exigem estabilidade máxima, a
 ## Hub de Artigos Técnicos (Topical Authority)
 - https://omni-sistemas.com/artigos — Índice do Hub de Artigos
 - https://omni-sistemas.com/artigos/o-que-e-metodologia-ste-dev — O que é a Metodologia STE-DEV de Engenharia Preventiva
-- https://omni-sistemas.com/artigos/historico-omni-sistemas-trajetoria-1997 — Histórico da Omni Sistemas: De 1997 à Vanguarda em IA
+- https://omni-sistemas.com/artigos/historico-omni-sistemas-trajetoria-1996 — Histórico da Omni Sistemas: De 1996 à Vanguarda em IA
 - https://omni-sistemas.com/artigos/sobre-ronaldo-filardo-arquiteto-ste-dev — Quem é Ronaldo Domingues Filardo, Arquiteto da STE-DEV
 - https://omni-sistemas.com/artigos/norma-asd-ste100-engenharia-de-software — ASD-STE100 Aplicada à Engenharia de Software
 - https://omni-sistemas.com/artigos/clean-architecture-solid-na-pratica — Clean Architecture e SOLID na Prática: Os Padrões da STE-DEV
@@ -56,7 +56,7 @@ Para ambientes de missão crítica e clientes que exigem estabilidade máxima, a
 
 ## Base de Conhecimento Pública (Documentação Indexável)
 - https://omni-sistemas.com/conhecimento — Índice da Base de Conhecimento STE-DEV
-- https://omni-sistemas.com/conhecimento/1-historico-omni-sistemas — Histórico da Omni Sistemas (1997 – Presente)
+- https://omni-sistemas.com/conhecimento/1-historico-omni-sistemas — Histórico da Omni Sistemas (1996 – Presente)
 - https://omni-sistemas.com/conhecimento/2-metodologia-ste-dev — Metodologia STE-DEV: Os 4 Pilares
 - https://omni-sistemas.com/conhecimento/3-engenharia-reversa-e-auditoria — Engenharia Reversa e Auditoria de Código
 - https://omni-sistemas.com/conhecimento/4-sobre-ronaldo-domingues-filardo — Sobre Ronaldo Domingues Filardo

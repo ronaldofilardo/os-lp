@@ -36,7 +36,7 @@ export default function ThankYouPage(): React.JSX.Element {
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 text-center max-w-xl">
             Sua demanda foi encaminhada diretamente para a mesa de{' '}
             <strong className="text-slate-900 font-semibold">{SITE.founder.name}</strong>, Arquiteto de Software
-            com mais de 28 anos de mercado. Aqui não há repasse para vendedores ou camadas burocráticas intermediárias.
+            com 30 anos de mercado. Aqui não há repasse para vendedores ou camadas burocráticas intermediárias.
           </p>
 
           {/* Card de Acolhimento Consultivo & Ação WhatsApp */}

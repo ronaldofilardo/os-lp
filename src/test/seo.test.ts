@@ -86,6 +86,12 @@ describe('SITE config', () => {
     )
     expect(SITE.founder.alumniOf.name).toBe('Pontifícia Universidade Católica do Paraná')
   })
+
+  it('standardizes foundingDate to 1996 and includes the Curitiba keyword', () => {
+    expect(SITE.foundingDate).toBe('1996')
+    expect(SITE.keywords).toContain('softhouse curitiba desde 1996')
+    expect(SITE.keywords).not.toContain('softhouse curitiba desde 1997')
+  })
 })
 
 describe('JSON-LD schemas', () => {
@@ -433,6 +439,19 @@ describe('Fase 3 — llms manifests', () => {
     expect(full).toContain('/conhecimento/knowledge-context')
     expect(full).toContain('Base de Conhecimento Pública')
   })
+
+  it('standardizes institutional timeline to 30 anos and desde 1996 in llms manifests', () => {
+    const llms = readPublicFile('llms.txt').toString('utf8')
+    const full = readPublicFile('llms-full.txt').toString('utf8')
+    for (const text of [llms, full]) {
+      expect(text).toContain('1996')
+      expect(text).toContain('30 anos')
+      expect(text).not.toContain('1997')
+      expect(text).not.toContain('28 anos')
+    }
+    expect(llms).toContain('/artigos/historico-omni-sistemas-trajetoria-1996')
+    expect(llms).not.toContain('/artigos/historico-omni-sistemas-trajetoria-1997')
+  })
 })
 
 describe('Fase 5 — Omni Saúde (/omni-saude)', () => {
@@ -511,6 +530,50 @@ describe('Demandas CRO, Mobile e Atendimento Híbrido', () => {
     const schema = parseSchema(buildProfessionalServiceSchema())
     const catalog = schema.hasOfferCatalog as { itemListElement: Array<{ itemOffered: { name: string } }> }
     expect(catalog.itemListElement.some((o) => o.itemOffered.name.includes('In Loco'))).toBe(true)
+  })
+})
+
+describe('Padronização Institucional — 30 anos e Desde 1996', () => {
+  it('HeroSection has 30 anos de engenharia e 30 anos de mercado', () => {
+    const hero = fs.readFileSync(path.join(ROOT, 'src/common/HeroSection.tsx'), 'utf8')
+    expect(hero).toContain('30 anos de engenharia corporativa')
+    expect(hero).toContain('com 30 anos de mercado')
+    expect(hero).not.toContain('28 anos')
+    expect(hero).not.toContain('28+')
+  })
+
+  it('RigorStrip has 1996 and 30 anos', () => {
+    const rigor = fs.readFileSync(path.join(ROOT, 'src/common/RigorStrip.tsx'), 'utf8')
+    expect(rigor).toContain('1996')
+    expect(rigor).toContain('>30<')
+    expect(rigor).not.toContain('1997')
+    expect(rigor).not.toContain('28+')
+  })
+
+  it('Footer and CoverageSection have Desde 1996', () => {
+    const footer = fs.readFileSync(path.join(ROOT, 'src/common/Footer.tsx'), 'utf8')
+    const coverage = fs.readFileSync(path.join(ROOT, 'src/common/CoverageSection.tsx'), 'utf8')
+    expect(footer).toContain('Desde 1996')
+    expect(coverage).toContain('desde 1996')
+    expect(footer).not.toContain('Desde 1997')
+    expect(coverage).not.toContain('desde 1997')
+  })
+
+  it('ContactSection and ThankYouPage have 30 anos', () => {
+    const contact = fs.readFileSync(path.join(ROOT, 'src/common/ContactSection.tsx'), 'utf8')
+    const obrigado = fs.readFileSync(path.join(ROOT, 'app/obrigado/page.tsx'), 'utf8')
+    expect(contact).toContain('Arquiteto Sênior (30 anos)')
+    expect(obrigado).toContain('com 30 anos de mercado')
+    expect(contact).not.toContain('28+')
+    expect(obrigado).not.toContain('28 anos')
+  })
+
+  it('FAQ_TECHNICAL_DB references 1996 and 30 anos without contradictions', () => {
+    const founderFaq = FAQ_TECHNICAL_DB.find((f) => f.question.includes('Ronaldo Domingues Filardo'))
+    expect(founderFaq?.answer).toContain('1996')
+    expect(founderFaq?.answer).toContain('30 anos')
+    expect(founderFaq?.answer).not.toContain('1997')
+    expect(founderFaq?.answer).not.toContain('mais de 30 anos')
   })
 })
 

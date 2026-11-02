@@ -3,7 +3,7 @@ import { SectionHeader } from './SectionHeader'
 import { SITE } from '@/config/site'
 
 const trustPoints = [
-  { icon: 'person_check', text: 'Atendimento direto com Arquiteto Sênior (28+ anos) — sem vendedores ou repasses a júniores.' },
+  { icon: 'person_check', text: 'Atendimento direto com Arquiteto Sênior (30 anos) — sem vendedores ou repasses a júniores.' },
   { icon: 'schedule', text: 'Retorno consultivo em até 24 horas úteis com triagem técnica e viabilidade operacional.' },
   { icon: 'gavel', text: 'Diagnóstico preliminar sem custo e sigilo contratual rigoroso sobre a sua operação.' },
   { icon: 'shield_lock', text: 'Conformidade nativa com a LGPD e mentalidade de segurança Zero-Trust desde o primeiro dia.' },
