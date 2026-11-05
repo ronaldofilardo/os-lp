@@ -26,6 +26,16 @@ const OMNISAUDE_ROUTES: readonly {
   { path: '/omni-saude/contato', file: 'app/omni-saude/contato/page.tsx', priority: 0.5 },
 ]
 
+const TRUST_ROUTES: readonly {
+  readonly path: string
+  readonly file: string
+  readonly priority: number
+}[] = [
+  { path: '/about', file: 'app/about/page.tsx', priority: 0.8 },
+  { path: '/contact', file: 'app/contact/page.tsx', priority: 0.8 },
+  { path: '/privacy', file: 'app/privacy/page.tsx', priority: 0.5 },
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles().map((article) => ({
     url: `${SITE.domain}/artigos/${article.slug}`,
@@ -67,6 +77,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     ...OMNISAUDE_ROUTES.map((route) => ({
+      url: `${SITE.domain}${route.path}`,
+      lastModified: modifiedAt(route.file),
+      changeFrequency: 'monthly' as const,
+      priority: route.priority,
+    })),
+    ...TRUST_ROUTES.map((route) => ({
       url: `${SITE.domain}${route.path}`,
       lastModified: modifiedAt(route.file),
       changeFrequency: 'monthly' as const,

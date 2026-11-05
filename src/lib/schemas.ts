@@ -145,6 +145,26 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
               'Atendimento consultivo presencial na sede da empresa do cliente em todo o Brasil para diagnóstico de arquitetura e alinhamento executivo.',
           },
         },
+        {
+          '@type': 'Offer',
+          areaServed: 'BR',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Engenharia de APIs e Automação de Gateway Financeiro (Asaas/Bancos)',
+            description:
+              'Arquitetura, desenvolvimento de endpoints seguros, webhooks com retry idempotente e integração de APIs de pagamento e ERPs.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          areaServed: 'BR',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Auditoria de Código e Arquitetura Preventiva STE-DEV',
+            description:
+              'Revisão técnica profunda de repositórios, prevenção de débito técnico, modularização rigorosa e conformidade LGPD para desenvolvedores e CTOs.',
+          },
+        },
       ],
     },
   }

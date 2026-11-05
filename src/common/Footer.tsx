@@ -11,9 +11,11 @@ const HOME_ANCHORS: readonly NavLink[] = [
 ] as const
 
 const LINKS_INSTITUTIONAL: readonly NavLink[] = [
+  { href: '/about', label: 'Sobre a Empresa' },
   { href: '/metodologia', label: 'Metodologia STE-DEV' },
   { href: '/artigos', label: 'Artigos' },
   { href: '/conhecimento', label: 'Base de Conhecimento' },
+  { href: '/privacy', label: 'Privacidade & LGPD' },
 ] as const
 
 interface FooterProps {
@@ -132,8 +134,17 @@ export function Footer({
         <div className={`pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-xs ${muted}`}>
           <span>© 2026 Omni Sistema • BE SMART LTDA — CNPJ 55.405.487/0001-84</span>
           <div className="flex items-center gap-space-md">
-            <a href="/metodologia" className={`${linkHover} transition-colors`}>Metodologia STE-DEV</a>
-            <a href="/#contato" className={`${linkHover} transition-colors`}>Contato</a>
+            <a href="/about" className={`${linkHover} transition-colors`}>Sobre</a>
+            <a href="/contact" className={`${linkHover} transition-colors`}>Contato</a>
+            <a href="/privacy" className={`${linkHover} transition-colors`}>Privacidade</a>
+            <a
+              href="https://github.com/ronaldofilardo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${linkHover} transition-colors`}
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </div>

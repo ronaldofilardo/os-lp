@@ -29,6 +29,21 @@ const nextConfig: NextConfig = {
         destination: '/artigos/historico-omni-sistemas-trajetoria-1996',
         permanent: true,
       },
+      {
+        source: '/sobre',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/contato',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/privacidade',
+        destination: '/privacy',
+        permanent: true,
+      },
     ]
   },
   async headers() {

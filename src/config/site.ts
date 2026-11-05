@@ -46,8 +46,11 @@ export const SITE = {
     'metodologia STE-DEV',
     'auditoria de código',
     'softhouse curitiba desde 1996',
+    'integração asaas gateway',
+    'arquitetura de apis e webhooks',
   ],
   sameAs: [
+    'https://github.com/ronaldofilardo',
     'http://lattes.cnpq.br/1847440727366032',
     'https://livrariaintersaberes.com.br/produto/metodologia-de-pesquisa-cientifica-fundamentos-principios-e-processos/',
   ] as readonly string[],
@@ -62,5 +65,6 @@ export const SITE = {
     'Clean Architecture e SOLID',
     'Engenharia Reversa para Auditorias',
     'Strangler Pattern',
+    'Arquitetura de APIs e Webhooks',
   ],
 } as const

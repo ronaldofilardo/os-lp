@@ -577,3 +577,48 @@ describe('Padronização Institucional — 30 anos e Desde 1996', () => {
   })
 })
 
+describe('Agentic Readiness — Trust Anchors, Content Negotiation & Discoverability', () => {
+  it('sitemap lists trust anchor routes (/about, /contact, /privacy)', () => {
+    const urls = sitemap().map((entry) => entry.url)
+    expect(urls).toContain(`${SITE.domain}/about`)
+    expect(urls).toContain(`${SITE.domain}/contact`)
+    expect(urls).toContain(`${SITE.domain}/privacy`)
+  })
+
+  it('trust anchor pages exist physically and have substantive content (> 500 chars)', () => {
+    const pages = ['app/about/page.tsx', 'app/contact/page.tsx', 'app/privacy/page.tsx']
+    for (const p of pages) {
+      const fullPath = path.join(ROOT, p)
+      expect(fs.existsSync(fullPath), `${p} must exist physically`).toBe(true)
+      const content = fs.readFileSync(fullPath, 'utf8')
+      expect(content.length, `${p} must have > 500 chars`).toBeGreaterThan(500)
+    }
+  })
+
+  it('llms manifests define operational agent guidance and developer resources', () => {
+    const llms = readPublicFile('llms.txt').toString('utf8')
+    const full = readPublicFile('llms-full.txt').toString('utf8')
+
+    for (const text of [llms, full]) {
+      expect(text).toContain('When to Use')
+      expect(text).toContain('When Not to Use')
+      expect(text).toContain('Developer Resources')
+      expect(text).toContain('https://github.com/ronaldofilardo')
+    }
+  })
+
+  it('SITE.sameAs and schemas include GitHub official profile', () => {
+    expect(SITE.sameAs).toContain('https://github.com/ronaldofilardo')
+    const orgSchema = parseSchema(buildOrganizationSchema())
+    expect(orgSchema.sameAs).toContain('https://github.com/ronaldofilardo')
+  })
+
+  it('buildProfessionalServiceSchema includes API and STE-DEV Code Audit offers', () => {
+    const schema = parseSchema(buildProfessionalServiceSchema())
+    const catalog = schema.hasOfferCatalog as { itemListElement: Array<{ itemOffered: { name: string } }> }
+    expect(catalog.itemListElement.some((o) => o.itemOffered.name.includes('Engenharia de APIs'))).toBe(true)
+    expect(catalog.itemListElement.some((o) => o.itemOffered.name.includes('Auditoria de Código'))).toBe(true)
+  })
+})
+
+

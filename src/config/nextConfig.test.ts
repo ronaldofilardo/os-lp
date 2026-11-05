@@ -44,5 +44,25 @@ describe('next.config dev origins', () => {
       permanent: true,
     })
   })
+
+  it('redirects legacy portuguese trust slugs to canonical english paths', async () => {
+    expect(nextConfig.redirects).toBeDefined()
+    const redirectsList = await nextConfig.redirects!()
+    expect(redirectsList).toContainEqual({
+      source: '/sobre',
+      destination: '/about',
+      permanent: true,
+    })
+    expect(redirectsList).toContainEqual({
+      source: '/contato',
+      destination: '/contact',
+      permanent: true,
+    })
+    expect(redirectsList).toContainEqual({
+      source: '/privacidade',
+      destination: '/privacy',
+      permanent: true,
+    })
+  })
 })
 
