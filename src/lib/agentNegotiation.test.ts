@@ -51,3 +51,4 @@ describe('agentNegotiation', () => {
     expect(md).toContain('/sitemap.xml')
   })
 })
+

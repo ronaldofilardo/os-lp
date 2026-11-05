@@ -51,3 +51,4 @@ describe('middleware content negotiation', () => {
     expect(res.headers.get('content-type')).not.toContain('text/markdown')
   })
 })
+
