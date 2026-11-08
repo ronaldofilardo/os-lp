@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   Header,
   HeroSection,
+  KeyTakeawaysSection,
   BenefitsStrip,
   MicroCta,
   ProblemSection,
@@ -39,6 +40,7 @@ export default function HomePage(): React.JSX.Element {
       <Header theme="light" />
       <main>
         <HeroSection />
+        <KeyTakeawaysSection />
         <BenefitsStrip />
         <ProblemSection />
         <DifferentialsSection />

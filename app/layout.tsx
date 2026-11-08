@@ -75,7 +75,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>): React.JSX.Element {
   return (
-    <html lang={SITE.lang} className={`dark ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang={SITE.lang} className={`light ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <noscript>
           <style>{'.reveal{opacity:1;transform:none}'}</style>
@@ -93,7 +93,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen subpixel-antialiased">
+      <body className="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased">
         <JsonLd data={buildOrganizationSchema()} />
         <JsonLd data={buildWebSiteSchema()} />
         <JsonLd data={buildProfessionalServiceSchema()} />

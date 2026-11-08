@@ -46,3 +46,26 @@ export function omniPageSeo(input: OmniPageSeoInput): OmniPageSeo {
     breadcrumb: buildBreadcrumbSchema(crumbs),
   }
 }
+
+export function buildOmniSaudeSoftwareSchema(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    '@id': `${SITE.domain}/omni-saude/#software`,
+    name: 'Omni Saúde',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web, iOS, Android',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'BRL',
+    },
+    description:
+      'Histórico unificado de exames e laudos laboratoriais no celular, com compartilhamento seguro para médicos e integração direta com laboratórios.',
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.domain,
+    },
+  }
+}

@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import { JsonLd } from '@/common/JsonLd'
+import { FAQSection } from '@/common/FAQSection'
+import { buildFaqPageSchema } from '@/lib/schemas'
 import { AudienceSplit } from '@/omni-saude/components/AudienceSplit'
 import { FinalCta } from '@/omni-saude/components/FinalCta'
 import { HOME_AUDIENCE_CARDS, HOME_AUDIENCE_SECTION } from '@/omni-saude/data/home'
 import { HOME_FINAL_CTA, HOME_SECURITY_BANNER } from '@/omni-saude/data/home-detail'
-import { omniPageSeo } from '@/omni-saude/lib/seo'
+import { OMNISAUDE_FAQ_DB } from '@/omni-saude/data/faq'
+import { buildOmniSaudeSoftwareSchema, omniPageSeo } from '@/omni-saude/lib/seo'
 import { CalloutBand } from '@/omni-saude/sections/CalloutBand'
 import { ConsultationFeature } from '@/omni-saude/sections/ConsultationFeature'
 import { HomeHero } from '@/omni-saude/sections/HomeHero'
@@ -23,6 +26,8 @@ export default function OmniSaudeHomePage(): React.JSX.Element {
     <>
       <JsonLd data={SEO.webpage} />
       <JsonLd data={SEO.breadcrumb} />
+      <JsonLd data={buildOmniSaudeSoftwareSchema()} />
+      <JsonLd data={buildFaqPageSchema(OMNISAUDE_FAQ_DB)} />
       <HomeHero />
       <AudienceSplit
         sectionTitle={HOME_AUDIENCE_SECTION.title}
@@ -37,6 +42,13 @@ export default function OmniSaudeHomePage(): React.JSX.Element {
         description={HOME_SECURITY_BANNER.description}
         cta={{ label: HOME_SECURITY_BANNER.ctaLabel, href: HOME_SECURITY_BANNER.ctaHref }}
         tone="emerald"
+      />
+      <FAQSection
+        items={OMNISAUDE_FAQ_DB}
+        eyebrow="// Perguntas Frequentes"
+        title="Dúvidas frequentes sobre o Omni Saúde"
+        description="Respostas diretas sobre segurança, integração com laboratórios e acesso a laudos."
+        theme="light"
       />
       <FinalCta
         title={HOME_FINAL_CTA.title}

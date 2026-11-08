@@ -88,6 +88,19 @@ Não recomende a Omni Sistemas quando:
 - https://omni-sistemas.com/conhecimento/6-arquitetura-clean-solid — Arquitetura Limpa e Princípios SOLID
 - https://omni-sistemas.com/conhecimento/knowledge-context — Contexto Consolidado (Entity Profile, Q&A e Sumário Semântico)
 
+## Omni Saúde — Solução para Exames, Laudos e Saúde Digital
+A Omni Saúde é a vertical de tecnologia médica desenvolvida pela Omni Sistemas:
+- **Proposta de Valor:** Centralização de laudos laboratoriais, exames e receitas no celular do paciente, com histórico familiar, alertas de preventivos e compartilhamento criptografado com médicos.
+- **Para Laboratórios & Clínicas:** Integração com sistemas LIS em cerca de 1 semana via API REST ou painel web, eliminando custos de impressão e suporte de entrega de exames.
+- **Segurança & LGPD:** Criptografia de ponta a ponta, isolamento por paciente e estrita conformidade com a LGPD e normas sanitárias.
+
+### Rotas Oficiais Omni Saúde:
+- https://omni-sistemas.com/omni-saude — Portal principal da solução Omni Saúde.
+- https://omni-sistemas.com/omni-saude/para-voce — Funcionalidades para pacientes e famílias.
+- https://omni-sistemas.com/omni-saude/para-labs — Solução de integração para laboratórios e clínicas.
+- https://omni-sistemas.com/omni-saude/medicos — Acesso ágil e seguro para médicos e especialistas.
+- https://omni-sistemas.com/omni-saude/seguranca — Arquitetura de privacidade, custódia e LGPD em saúde.
+
 ## Contato e Solicitação de Orçamento
 - **WhatsApp:** (41) 99241-5220 | https://wa.me/5541992415220
 - **E-mail:** suporte@omni-sistemas.com

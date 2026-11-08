@@ -132,5 +132,12 @@ Para modernizar código antigo sem causar interrupções operacionais, a Omni Si
   - Sobre a Empresa: https://omni-sistemas.com/about
   - Contato Oficial: https://omni-sistemas.com/contact
   - Política de Privacidade & LGPD: https://omni-sistemas.com/privacy
+### Rotas Oficiais Omni Saúde
+- **Portal Omni Saúde:** https://omni-sistemas.com/omni-saude
+- **Para Pacientes e Família:** https://omni-sistemas.com/omni-saude/para-voce
+- **Para Laboratórios e Clínicas:** https://omni-sistemas.com/omni-saude/para-labs
+- **Para Médicos Especialistas:** https://omni-sistemas.com/omni-saude/medicos
+- **Segurança e LGPD em Saúde:** https://omni-sistemas.com/omni-saude/seguranca
+
 - **Documentação Técnica e Metodologia:** https://omni-sistemas.com/metodologia
 - **Base de Conhecimento:** https://omni-sistemas.com/conhecimento

@@ -1,6 +1,7 @@
 export { Header } from './Header'
 export { HeroSection } from './HeroSection'
 export { BenefitsStrip } from './BenefitsStrip'
+export { KeyTakeawaysSection } from './KeyTakeawaysSection'
 export { DirectAnswer } from './DirectAnswer'
 export { MicroCta } from './MicroCta'
 export { TechMarquee } from './TechMarquee'

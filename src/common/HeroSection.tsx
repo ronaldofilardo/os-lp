@@ -34,21 +34,26 @@ export function HeroSection(): JSX.Element {
               </p>
             </Rise>
             <Rise delayMs={300}>
-              <div className="flex flex-wrap items-center gap-space-md pt-space-xs">
-                <a
-                  className="skeuo-button-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-white font-semibold"
-                  href="#contato"
-                >
-                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[20px]">assignment</span>
-                  <span>Agendar Diagnóstico de Viabilidade (Sem Custo)</span>
-                </a>
-                <a
-                  className="skeuo-button-ghost inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[#0A192F] font-semibold"
-                  href="#como-trabalhamos"
-                >
-                  <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[18px]">route</span>
-                  <span>Entenda Como Trabalhamos</span>
-                </a>
+              <div className="flex flex-col gap-2 pt-space-xs">
+                <div className="flex flex-wrap items-center gap-space-md">
+                  <a
+                    className="skeuo-button-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-white font-semibold"
+                    href="#contato"
+                  >
+                    <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[20px]">assignment</span>
+                    <span>Agendar Diagnóstico de Viabilidade (Sem Custo)</span>
+                  </a>
+                  <a
+                    className="skeuo-button-ghost inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[#0A192F] font-semibold"
+                    href="#como-trabalhamos"
+                  >
+                    <span aria-hidden="true" translate="no" className="material-symbols-outlined text-[18px]">route</span>
+                    <span>Entenda Como Trabalhamos</span>
+                  </a>
+                </div>
+                <p className="text-xs text-slate-500 font-medium">
+                  Resposta técnica em até 24h úteis • Sem intermediários comerciais • Diagnóstico preliminar sem custo
+                </p>
               </div>
             </Rise>
             <Rise delayMs={400}>

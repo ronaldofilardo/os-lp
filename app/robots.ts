@@ -4,7 +4,7 @@ import { SITE } from '@/config/site'
 const AI_BOTS = [
   'GPTBot',
   'ChatGPT-User',
-  'OAISearchBot',
+  'OAI-SearchBot',
   'Google-Extended',
   'ClaudeBot',
   'anthropic-ai',
