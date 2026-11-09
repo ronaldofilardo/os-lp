@@ -5,6 +5,8 @@ root:
 architecture:
   clean-code:
     description: "Regras de coesão, arquivos modulares, validação defensiva e economia de tokens"
+  elephant-goldfish:
+    description: "Protocolo Spec-Driven (Google EGM) de separação entre planejamento (Elephant) e auditoria de premissas/regressão (Goldfish)"
 api:
   response-format:
     description: "Estrutura unificada de envelopes JSON (success/data/error) e códigos HTTP padrão"

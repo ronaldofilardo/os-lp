@@ -394,14 +394,25 @@ describe('Fase 3 — public knowledge base (/conhecimento)', () => {
 })
 
 describe('Fase 3 — robots and sitemap', () => {
-  it('disallows the api directory for every crawler at runtime', () => {
+  it('disallows the api directory for crawlers and blocks parasitic scrapers at runtime', () => {
     const result = robots()
     const rules = Array.isArray(result.rules) ? result.rules : [result.rules]
-    expect(rules.length).toBe(11)
-    for (const rule of rules) {
+    expect(rules.length).toBeGreaterThanOrEqual(11)
+
+    const contentRules = rules.filter((rule) => rule.allow === '/')
+    for (const rule of contentRules) {
       expect(rule.allow).toBe('/')
-      expect(rule.disallow).toBe('/api/')
+      const disallows = Array.isArray(rule.disallow) ? rule.disallow : [rule.disallow]
+      expect(disallows).toContain('/api/')
     }
+
+    const blockedRules = rules.filter((rule) => !rule.allow)
+    expect(blockedRules.length).toBeGreaterThan(0)
+    for (const rule of blockedRules) {
+      const disallows = Array.isArray(rule.disallow) ? rule.disallow : [rule.disallow]
+      expect(disallows).toContain('/')
+    }
+
     expect(result.sitemap).toBe(`${SITE.domain}/sitemap.xml`)
   })
 
