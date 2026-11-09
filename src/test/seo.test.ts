@@ -303,8 +303,8 @@ describe('Fase 3 — schema graph with canonical @ids', () => {
     const publisher = website.publisher as Record<string, unknown>
     expect(publisher['@id']).toBe(SCHEMA_IDS.organization)
     expect(service['@id']).toBe(SCHEMA_IDS.professionalService)
-    const provider = service.provider as Record<string, unknown>
-    expect(provider['@id']).toBe(SCHEMA_IDS.organization)
+    const parentOrganization = (service.parentOrganization ?? service.provider) as Record<string, unknown>
+    expect(parentOrganization['@id']).toBe(SCHEMA_IDS.organization)
   })
 
   it('every service Offer declares national coverage', () => {

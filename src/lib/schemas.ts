@@ -90,7 +90,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     name: `${SITE.name} — Arquitetura de Software & Modernização Corporativa`,
     url: SITE.domain,
     areaServed: 'BR',
-    provider: organizationRef(),
+    parentOrganization: organizationRef(),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Ofertas da Omni Sistemas',
