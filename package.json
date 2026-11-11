@@ -12,7 +12,8 @@
     "db:migrate": "node --env-file=.env.local scripts/migrate.js",
     "db:migrate:dev": "node scripts/migrate.js dev",
     "db:migrate:test": "node scripts/migrate.js test",
-    "db:migrate:prod": "node --env-file=.env.local scripts/migrate.js prod"
+    "db:migrate:prod": "node --env-file=.env.local scripts/migrate.js prod",
+    "indexnow:submit": "node scripts/submit-indexnow.js"
   },
   "dependencies": {
     "@react-three/fiber": "^9.8.1",
